@@ -1,0 +1,23 @@
+.intro-banner {
+  background: $deepPurple-1;
+  height: $h-100-vh;
+  overflow: hidden;
+  .banner-wrap {
+    height: $h-100;
+    animation: slideIn 1s linear 1;
+  }
+  .banner-image {
+    border-radius: $roundedLg;
+    overflow: hidden;
+  }
+  .banner-action {
+    width: $w-10 * 20;
+    margin-top: $m-10 * 2;
+    @include respond(mdPhone) {
+      width: $w-100;
+    }
+  }
+  @include respond(mdTablet) {
+    height: auto;
+  }
+}

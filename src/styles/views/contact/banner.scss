@@ -1,0 +1,50 @@
+.contact-banner {
+  width: $w-100;
+  height: $h-100-vh;
+  position: relative;
+  .banner-inner {
+    height: $h-100;
+    .inner-image {
+      position: relative;
+      z-index: 1;
+      &:hover .image-view {
+        transform: scale(0.95);
+      }
+      &::before {
+        content: "";
+        width: $w-10 * 30;
+        height: $h-10 * 20;
+        border: 5px solid $primary;
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        z-index: -1;
+        animation: clockwise 5s linear infinite;
+      }
+      &::after {
+        content: "";
+        width: $w-10 * 20;
+        height: $h-10 * 10;
+        border: 5px solid $blue-1;
+        position: absolute;
+        bottom: -10px;
+        left: -10px;
+        z-index: -1;
+        animation: antiClockwise 4s linear infinite;
+      }
+      .image-view {
+        border-radius: $roundedLg;
+        box-shadow: 0 0 5px $gray-2;
+        overflow: hidden;
+        transition: all $durationMd $func;
+      }
+      @include respond(mdTablet) {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+  @include respond(mdTablet) {
+    height: auto;
+  }
+}

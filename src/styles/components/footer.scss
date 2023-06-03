@@ -1,0 +1,43 @@
+.nvl-footer {
+  background: $deepBlue-1;
+  .footer-top {
+    padding-top: $p-10 * 2;
+    padding-bottom: $p-10 * 2;
+    .top-form {
+      .form-title {
+        color: $tSecondary;
+        font-weight: $semiBold;
+      }
+      .form-label {
+        span {
+          color: $tSecondary;
+        }
+      }
+    }
+    .top-address {
+      padding: $p-10;
+      background: $primary;
+      border-radius: $rounded;
+      & * {
+        color: $tSecondary;
+      }
+      .address-title {
+        font-weight: $semiBold;
+      }
+      .address-list {
+        margin-left: $m-10 * 2;
+      }
+    }
+    .top-divider {
+      margin: $m-10 * 2 0;
+    }
+  }
+  .footer-bottom {
+    padding-top: $p-10 * 2;
+    padding-bottom: $p-10 * 2;
+    text-align: center;
+    & * {
+      color: $tSecondary;
+    }
+  }
+}

@@ -1,0 +1,63 @@
+.nvl-badge {
+  min-width: max-content;
+  width: $w-10 * 3.5;
+  padding: $p-2 $p-5;
+  font-size: $body-2;
+  border: 1px solid $gray-1;
+  border-radius: $rounded;
+  background: $gray-1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Ghost mode
+.nvl-badge-ghost--info {
+  border-color: $blue-1;
+  color: $tBlue;
+  background: $RGBA-blue;
+}
+
+.nvl-badge-ghost--warning {
+  border-color: $orange-1;
+  color: $tOrange;
+  background: $RGBA-orange;
+}
+
+.nvl-badge-ghost--success {
+  border-color: $green-1;
+  color: $tGreen;
+  background: $RGBA-green;
+}
+
+.nvl-badge-ghost--danger {
+  border-color: $red-1;
+  color: $tRed;
+  background: $RGBA-red;
+}
+
+// Fill mode
+.nvl-badge-fill {
+  color: $tSecondary;
+  background: transparent;
+}
+
+.nvl-badge-fill--info {
+  border-color: $blue-1;
+  background: $blue-1;
+}
+
+.nvl-badge-fill--warning {
+  border-color: $orange-1;
+  background: $orange-1;
+}
+
+.nvl-badge-fill--success {
+  border-color: $green-1;
+  background: $green-1;
+}
+
+.nvl-badge-fill--danger {
+  border-color: $red-1;
+  background: $red-1;
+}

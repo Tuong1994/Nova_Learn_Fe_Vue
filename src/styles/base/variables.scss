@@ -1,0 +1,87 @@
+// BG COLOR
+$primary: #7462f9;
+$secondary: #fff;
+$dark-1: #222;
+$white-1: #eee;
+$gray-1: #ddd;
+$gray-2: #bbb;
+$deepPurple-1: #241d57;
+$red-1: #ff5b5b;
+$orange-1: #ffac4e;
+$yellow-1: #fffb15;
+$blue-1: #549eff;
+$deepBlue-1: #000c1b;
+$green-1: #46a34d;
+$RGBA-white-0: rgba(225, 225, 225, 0);
+$RGBA-white-1: rgba(225, 225, 225, 0.2);
+$RGBA-white-2: rgba(225, 225, 225, 0.4);
+$RGBA-white-3: rgba(225, 225, 225, 0.6);
+$RGBA-white-4: rgba(225, 225, 225, 0.9);
+$RGBA-dark-1: rgba(0, 0, 0, 0.2);
+$RGBA-dark-2: rgba(0, 0, 0, 0.4);
+$RGBA-dark-3: rgba(0, 0, 0, 0.6);
+$RGBA-dark-4: rgba(0, 0, 0, 0.8);
+$RGBA-purple: rgba(116, 98, 249, 0.4);
+$RGBA-red: rgba(255, 91, 91, 0.4);
+$RGBA-orange: rgba(255, 197, 131, 0.4);
+$RGBA-blue: rgba(84, 158, 255, 0.4);
+$RGBA-green: rgba(70, 163, 77, 0.4);
+
+// TEXT COLOR
+$tPrimary: #222;
+$tSecondary: #fff;
+$tGray: #aaa;
+$tYellow: #fffb15;
+$tPurple: #7462f9;
+$tRed: #ff5b5b;
+$tOrange: #ffac4e;
+$tBlue: #549eff;
+$tGreen: #46a34d;
+
+// FONT SIZE
+$h1: 36px;
+$h2: 32px;
+$h3: 28px;
+$h4: 24px;
+$h5: 22px;
+$h6: 20px;
+$subtitle: 18px;
+$default: 15px;
+$body-1: 14px;
+$body-2: 13px;
+
+// FONT WEIGHT
+$light: 300;
+$regular: 400;
+$semiBold: 600;
+$bold: 700;
+
+// WIDTH
+$w-100: 100%;
+$w-10: 10px;
+$w-100-vw: 100vw;
+
+// HEIGHT
+$h-100: 100%;
+$h-10: 10px;
+$h-100-vh: 100vh;
+
+// MARGIN
+$m-2: 2px;
+$m-5: 5px;
+$m-10: 10px;
+
+// PADDING
+$p-2: 2px;
+$p-5: 5px;
+$p-10: 10px;
+
+// RADIUS
+$rounded: 4px;
+$roundedLg: 25px;
+$circle: 50%;
+
+// TRANSITION PROPS
+$durationSm: 0.2s;
+$durationMd: 0.4s;
+$func: linear;

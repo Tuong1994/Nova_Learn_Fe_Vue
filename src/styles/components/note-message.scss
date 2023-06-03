@@ -1,0 +1,16 @@
+.note-message {
+  padding-top: $p-5;
+  font-size: $body-2;
+}
+
+.note-message-info {
+  font-weight: $semiBold;
+}
+
+.note-message-error {
+  color: $tRed;
+}
+
+.note-message--italic {
+  font-style: italic;
+}

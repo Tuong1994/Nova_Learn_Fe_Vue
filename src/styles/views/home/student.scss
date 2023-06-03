@@ -1,0 +1,24 @@
+.home-student {
+  width: $w-100;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  z-index: 1;
+  &::after {
+    content: "";
+    width: $w-100;
+    height: $h-100;
+    background: $RGBA-white-4;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  .student-action {
+    width: $w-10 * 40;
+    @include respond(mdPhone) {
+      width: $w-10 * 30;
+    }
+  }
+}

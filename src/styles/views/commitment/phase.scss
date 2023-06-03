@@ -1,0 +1,16 @@
+.commitment-phase {
+  .phase-tab {
+    height: $h-10 * 40;
+    .tab-inner {
+      height: $h-100;
+      .inner-col {
+        height: $h-100;
+        .col-image {
+          height: $h-100;
+          border-radius: $roundedLg;
+          overflow: hidden;
+        }
+      }
+    }
+  }
+}

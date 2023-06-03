@@ -1,0 +1,84 @@
+.nvl-modal-backdrop {
+  width: $w-100;
+  height: $h-100-vh;
+  background: $RGBA-dark-2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 40;
+  opacity: 0;
+  visibility: hidden;
+  transition: all $durationSm $func;
+}
+
+.nvl-modal {
+  border-radius: $rounded;
+  background: $secondary;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 60;
+  overflow: hidden;
+  transform: translate(-50%, -50%) scale(0);
+  transition: all $durationSm $func;
+  .modal-header {
+    padding: $p-10 * 2 $p-10;
+    background: $primary;
+    color: $tSecondary;
+  }
+  .modal-body {
+    padding: $p-10 * 2;
+    max-height: calc($h-100-vh - $h-10 * 20);
+    overflow-y: auto;
+  }
+  .modal-footer {
+    padding: $p-10 * 2 $p-10;
+    border-top: 1px solid $gray-1;
+    display: flex;
+    justify-content: flex-end;
+    .footer-action {
+      min-width: min-content;
+      width: $w-10 * 8;
+      &:first-child {
+        margin-right: $m-10;
+      }
+    }
+  }
+}
+
+.nvl-modal--sm {
+  width: $w-10 * 40;
+}
+
+.nvl-modal--md {
+  width: $w-10 * 50;
+}
+
+.nvl-modal--lg {
+  width: $w-10 * 80;
+}
+
+.nvl-modal--sm,
+.nvl-modal--md,
+.nvl-modal--lg {
+  @include respond(mdTablet) {
+    width: $w-10 * 50;
+  }
+  @include respond(mdPhone) {
+    width: $w-10 * 36;
+  }
+  @include respond(smPhone) {
+    width: $w-10 * 31;
+  }
+}
+
+.nvl-modal-backdrop--active {
+  opacity: 1;
+  visibility: visible;
+  animation: fadeIn $durationSm $func 1;
+}
+
+.nvl-modal--active {
+  transform: translate(-50%, -50%) scale(1);
+  animation: showIn $durationSm $func 1;
+}

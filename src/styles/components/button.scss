@@ -1,0 +1,185 @@
+.nvl-button {
+  font-size: $body-1;
+  border: 1px solid $gray-2;
+  border-radius: $rounded;
+  transition: all $durationSm $func;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  &:hover {
+    color: $tPrimary;
+  }
+  &:hover::after {
+    left: 0;
+    right: 0;
+    opacity: 1;
+    transform: scale(1);
+  }
+  &::after {
+    content: "";
+    width: $w-100;
+    height: $h-100;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    background: $secondary;
+    z-index: -1;
+    transform: scale(0);
+    transition: all $durationSm $func;
+  }
+  .button-ripple {
+    width: $w-10 * 2;
+    height: $h-10 * 2;
+    border-radius: $circle;
+    background: $gray-1;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    animation: ripple 1s ease 1 forwards;
+    z-index: 2;
+  }
+}
+
+// Variant
+.nvl-button--primary {
+  border-color: $primary;
+  background: $primary;
+  color: $tSecondary;
+  &:active {
+    box-shadow: 0 0 10px $RGBA-purple;
+    transition: all 0.1s $func;
+  }
+  .button-ripple {
+    background: $RGBA-purple;
+  }
+}
+
+.nvl-button--secondary {
+  border-color: $blue-1;
+  background: $blue-1;
+  color: $tSecondary;
+  &:active {
+    box-shadow: 0 0 10px $RGBA-blue;
+    transition: all 0.1s $func;
+  }
+  .button-ripple {
+    background: $RGBA-blue;
+  }
+}
+
+.nvl-button--success {
+  border-color: $green-1;
+  background: $green-1;
+  color: $tSecondary;
+  &:active {
+    box-shadow: 0 0 10px $RGBA-green;
+    transition: all 0.1s $func;
+  }
+  .button-ripple {
+    background: $RGBA-green;
+  }
+}
+
+.nvl-button--danger {
+  border-color: $red-1;
+  background: $red-1;
+  color: $tSecondary;
+  &:active {
+    box-shadow: 0 0 10px $RGBA-red;
+    transition: all 0.1s $func;
+  }
+  .button-ripple {
+    background: $RGBA-red;
+  }
+}
+
+// Ghost
+.nvl-button-ghost {
+  background: transparent;
+  &:hover::after {
+    width: 0;
+    height: 0;
+    transform: scale(0);
+  }
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.nvl-button-ghost--primary {
+  background: transparent;
+  color: $tPurple;
+  &:hover {
+    color: $tPurple;
+  }
+}
+
+.nvl-button-ghost--secondary {
+  background: transparent;
+  color: $tBlue;
+  &:hover {
+    color: $tBlue;
+  }
+}
+
+.nvl-button-ghost--success {
+  background: transparent;
+  color: $tGreen;
+  &:hover {
+    color: $tGreen;
+  }
+}
+
+.nvl-button-ghost--danger {
+  background: transparent;
+  color: $tRed;
+  &:hover {
+    color: $tRed;
+  }
+}
+
+// Disabled
+.nvl-button--disabled {
+  background: $gray-1;
+  border-color: $gray-1;
+  color: $tGray;
+  cursor: not-allowed;
+  user-select: none;
+  &:hover {
+    color: $tGray;
+  }
+  &:hover::after {
+    transform: scale(0);
+  }
+  &:active {
+    box-shadow: unset;
+  }
+}
+
+// Size
+.nvl-button-sm {
+  padding: $p-2 * 2 $p-2 * 4;
+  font-size: $body-2;
+}
+
+.nvl-button-md {
+  padding: $p-5 $p-2 * 4;
+}
+
+.nvl-button-lg {
+  padding: $p-2 * 4;
+}
+
+@keyframes ripple {
+  from {
+    width: 0;
+    height: 0;
+    opacity: 0.5;
+  }
+  to {
+    width: $w-10 * 50;
+    height: $h-10 * 50;
+    opacity: 0;
+  }
+}

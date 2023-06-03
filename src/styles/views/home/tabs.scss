@@ -1,0 +1,48 @@
+.home-tabs {
+  padding: $p-10 * 5 $p-10 * 25;
+  .tabs-item {
+    height: $h-10 * 25;
+    .item-text {
+      margin-bottom: $m-10 * 2;
+    }
+    .item-action {
+      width: $w-10 * 20;
+    }
+    .item-content {
+      margin-bottom: $m-10;
+      padding: $p-10 $p-10 * 2;
+      background: $gray-1;
+      border-radius: $roundedLg;
+    }
+    .item-image {
+      overflow: hidden;
+      border-radius: $roundedLg;
+    }
+    .item-info {
+      padding: $p-5 $p-10 * 2;
+      border: 1px solid $gray-2;
+      border-radius: $roundedLg;
+      & * {
+        font-size: $body-2 - 2;
+      }
+      p {
+        &:first-child {
+          font-size: $body-2;
+          font-weight: $semiBold;
+        }
+      }
+    }
+    @include respond(mdPhone) {
+      height: $h-10 * 40;
+    }
+  }
+  @include respond(laptop) {
+    padding: $p-10 * 5 $p-10 * 5;
+  }
+  @include respond(mdTablet) {
+    padding: $p-10 * 5 $p-10 * 2;
+  }
+  @include respond(mdPhone) {
+    padding: $p-10 * 5 $p-10;
+  }
+}

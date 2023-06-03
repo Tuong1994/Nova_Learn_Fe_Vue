@@ -1,0 +1,67 @@
+.photo-library {
+  .library-image {
+    height: $h-10 * 25;
+    border-radius: $roundedLg;
+    overflow: hidden;
+    position: relative;
+    &:hover::before {
+      left: 125%;
+    }
+    &:hover::after {
+      opacity: 1;
+    }
+    &:hover .image-icon {
+      opacity: 1;
+      top: 50%;
+    }
+    &::before {
+      content: "";
+      width: $w-100 - 50;
+      height: $h-100;
+      position: absolute;
+      top: 0;
+      left: -100%;
+      background: linear-gradient(
+        to right,
+        $RGBA-white-0 0,
+        $RGBA-white-2 100%
+      );
+      transform: skewX(-25deg);
+      transition: all $durationMd $func;
+    }
+    &::after {
+      content: "";
+      width: $w-100;
+      height: $h-100;
+      background: $RGBA-dark-1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      transition: all $durationMd $func;
+    }
+    .image-icon {
+      width: $w-10 * 6;
+      height: $h-10 * 6;
+      border: 2px solid $secondary;
+      border-radius: $circle;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      position: absolute;
+      top: 60%;
+      left: 50%;
+      z-index: 10;
+      opacity: 0;
+      transform: translate(-50%, -50%);
+      transition: all $durationMd $func;
+      .icon-search {
+        font-size: $subtitle;
+        path {
+          color: $tSecondary;
+        }
+      }
+    }
+  }
+}

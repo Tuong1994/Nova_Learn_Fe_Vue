@@ -1,0 +1,162 @@
+.home-banner {
+  width: $w-100;
+  height: $h-100-vh;
+  position: relative;
+  overflow: hidden;
+  .banner-video {
+    width: $w-100;
+    height: $h-100-vh;
+    object-fit: cover;
+  }
+  .banner-content {
+    width: $w-100;
+    height: $h-100;
+    background: $RGBA-dark-3;
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    .content-action {
+      width: $w-10 * 20;
+      height: $h-10 * 20;
+      border: 5px solid $primary;
+      border-radius: $circle;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      bottom: 20px;
+      left: 100px;
+      z-index: 5;
+      transition: all $durationMd $func;
+      &:hover {
+        background: $RGBA-purple;
+      }
+      .action-line {
+        display: block;
+        border: 5px solid $secondary;
+        border-top: 5px solid transparent;
+        border-radius: $circle;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 5;
+        transform: translate(-50%, -50%);
+        &:nth-child(1) {
+          width: $w-10 * 30;
+          height: $h-10 * 30;
+        }
+        &:nth-child(2) {
+          width: $w-10 * 40;
+          height: $h-10 * 40;
+        }
+        &:nth-child(3) {
+          width: $w-10 * 50;
+          height: $h-10 * 50;
+        }
+        &:nth-child(4) {
+          width: $w-10 * 60;
+          height: $h-10 * 60;
+        }
+        &:nth-child(odd) {
+          animation: rotateLeft 5s linear infinite;
+        }
+        &:nth-child(even) {
+          animation: rotateRight 8s linear infinite;
+        }
+      }
+      .action-icon {
+        font-size: $h1 + 50;
+        position: relative;
+        path {
+          color: $tSecondary;
+        }
+      }
+      .action-line-coords {
+        width: $w-10 * 25;
+        height: 5px;
+        background: $primary;
+        position: absolute;
+        &:nth-child(6) {
+          top: -230px;
+          left: 200px;
+          transform: rotate(130deg);
+        }
+        &:nth-child(7) {
+          top: -270px;
+          left: -200px;
+          transform: rotate(60deg);
+        }
+        &:nth-child(8) {
+          bottom: 50px;
+          left: 370px;
+          transform: rotate(180deg);
+        }
+      }
+      @include respond(lgTablet) {
+        display: none;
+      }
+    }
+    .content-detail {
+      width: $w-100 - 50;
+      height: $h-100;
+      padding-right: $p-10 * 10;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-end;
+      .detail-title {
+        font-size: $h1 + 20;
+        color: $tPurple;
+        text-transform: uppercase;
+        @include respond(lgTablet) {
+          font-size: $h2;
+        }
+      }
+      .detail-text {
+        color: $tSecondary;
+        font-size: $h3;
+        @include respond(lgTablet) {
+          font-size: $h4;
+        }
+      }
+      @include respond(lgTablet) {
+        width: $w-100;
+        padding: $p-10 * 5;
+      }
+      @include respond(smTablet) {
+        width: $w-100;
+        padding: $p-10 * 2;
+      }
+    }
+  }
+  @include respond(lgTablet) {
+    height: $h-100-vh - 40;
+  }
+  @include respond(mdTablet) {
+    height: $h-100-vh - 45;
+  }
+  @include respond(smTablet) {
+    height: $h-100-vh - 30;
+  }
+}
+
+@keyframes rotateLeft {
+  from {
+    transform: translate(-50%, -50%) rotate(0);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes rotateRight {
+  from {
+    transform: translate(-50%, -50%) rotate(0);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
+}

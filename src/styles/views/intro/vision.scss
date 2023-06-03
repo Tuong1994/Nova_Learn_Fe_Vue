@@ -1,0 +1,16 @@
+.intro-vision {
+  .vision-wrap {
+    @include respond(mdTablet) {
+      align-items: center;
+    }
+    @include respond(mdPhone) {
+      flex-direction: column;
+    }
+  }
+  .vision-title {
+    text-transform: uppercase;
+  }
+  .vision-subtitle {
+    font-weight: $regular;
+  }
+}

@@ -1,0 +1,59 @@
+.content-image {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  &:hover::before {
+    background: $RGBA-purple;
+  }
+  &:hover::after {
+    background: $RGBA-blue;
+  }
+  &::before {
+    content: "";
+    width: $w-10 * 20;
+    height: $h-10 * 20;
+    border: 5px solid $primary;
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    z-index: -1;
+    transition: all $durationMd $func;
+    @include respond(mdTablet) {
+      width: $w-10 * 30;
+      top: -10px;
+      right: -10px;
+    }
+    @include respond(mdPhone) {
+      width: $w-10 * 25;
+      top: -10px;
+      right: -10px;
+    }
+  }
+  &::after {
+    content: "";
+    width: $w-10 * 10;
+    height: $h-10 * 10;
+    border: 5px solid $blue-1;
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+    z-index: -1;
+    transition: all $durationMd $func;
+    @include respond(mdTablet) {
+      width: $w-10 * 20;
+      bottom: -20px;
+      right: 20px;
+    }
+  }
+  .image-inner {
+    width: $w-10 * 30;
+    height: $h-100;
+    border-radius: $roundedLg;
+    overflow: hidden;
+    box-shadow: 0 0 5px $gray-2;
+    @include respond(mdTablet) {
+      width: $w-100;
+    }
+  }
+}

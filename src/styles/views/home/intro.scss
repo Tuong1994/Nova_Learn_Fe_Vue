@@ -1,0 +1,52 @@
+.home-intro {
+  padding-bottom: $p-10 * 10;
+  background: $deepPurple-1;
+  position: relative;
+  .intro-slogan {
+    width: $w-100;
+    height: $h-10 * 10;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    z-index: 5;
+    .slogan-wrap {
+      padding: $p-10 * 2;
+      position: relative;
+      z-index: 1;
+      &::after {
+        content: "";
+        width: $w-100 - 10;
+        height: $h-100 - 20;
+        border-top-right-radius: $rounded;
+        border-bottom-right-radius: $rounded;
+        background: $secondary;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        @include respond(mdPhone) {
+          width: $w-100 - 5;
+        }
+      }
+      .wrap-title {
+        &:nth-child(2) {
+          font-weight: $regular;
+        }
+        @include respond(laptop) {
+          font-size: $h4;
+        }
+        @include respond(mdTablet) {
+          font-size: $subtitle;
+        }
+      }
+      .wrap-link {
+        .link-btn {
+          width: $w-10 * 20;
+          @include respond(mdPhone) {
+            width: $w-100;
+          }
+        }
+      }
+    }
+  }
+}

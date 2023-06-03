@@ -1,0 +1,27 @@
+.home-slogan {
+  background: $deepPurple-1;
+  position: relative;
+  padding-top: $p-10 * 20;
+  .slogan-image {
+    width: $w-10 * 70;
+    height: $h-10 * 35;
+    border-radius: $roundedLg;
+    box-shadow: 0 0 10px $dark-1;
+    overflow: hidden;
+    position: absolute;
+    top: calc(-350px / 2);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+    @include respond(mdTablet) {
+      width: $w-100 - 10;
+      height: $h-10 * 30;
+    }
+  }
+  .slogan-action {
+    width: $w-10 * 20;
+    @include respond(mdPhone) {
+        width: $w-100;
+    }
+  }
+}

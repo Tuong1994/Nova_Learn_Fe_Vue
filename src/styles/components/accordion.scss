@@ -1,0 +1,38 @@
+.nvl-accordion {
+  border: 1px solid $gray-2;
+  border-radius: $rounded;
+  .accordion-title {
+    padding: $p-5 $p-10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    .title-text {
+      font-weight: $semiBold;
+      .text-icon {
+        margin-right: $m-10;
+        font-size: $body-1;
+      }
+    }
+    .title-icon {
+      transition: all $durationMd $func;
+    }
+    .title-icon--active {
+      transform: rotate(180deg);
+    }
+  }
+  .accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    border-top: 1px solid transparent;
+    transition: all $durationMd $func;
+    .content-inner {
+      padding: $p-10;
+    }
+  }
+  .accordion-content--active {
+    max-height: $h-10 * 30;
+    border-top: 1px solid $gray-2;
+    transition: all $durationMd $func;
+  }
+}

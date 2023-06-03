@@ -1,0 +1,16 @@
+.intro-mission {
+  .mission-wrap {
+    @include respond(mdTablet) {
+      align-items: center;
+    }
+    @include respond(mdPhone) {
+      flex-direction: column-reverse;
+    }
+  }
+  .mission-title {
+    text-transform: uppercase;
+  }
+  .mission-subtitle {
+    font-weight: $regular;
+  }
+}

@@ -1,0 +1,83 @@
+.course-list {
+  .list-card {
+    .list-card-header {
+      padding: $p-10;
+      background: $primary;
+      border-bottom: 0;
+      & * {
+        color: $tSecondary;
+      }
+    }
+    .list-card-body {
+      position: relative;
+      &:hover .list-card-action {
+        top: 50%;
+        opacity: 1;
+      }
+      &:hover:before {
+        opacity: 1;
+      }
+      &:hover::after {
+        left: 125%;
+      }
+      &::before {
+        content: "";
+        width: $w-100;
+        height: $h-100;
+        background: $RGBA-dark-2;
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        transition: all $durationMd $func;
+      }
+      &::after {
+        content: "";
+        width: $w-100 - 50;
+        height: $h-100;
+        background: linear-gradient(
+          to right,
+          $RGBA-white-0 0,
+          $RGBA-white-2 100%
+        );
+        position: absolute;
+        top: 0;
+        left: -100%;
+        z-index: 1;
+        transform: skew(-25deg);
+        transition: all $durationMd $func;
+      }
+    }
+    .list-card-image {
+      width: $w-100;
+      height: $h-10 * 15;
+      border-radius: $rounded;
+      overflow: hidden;
+    }
+    .list-card-content {
+      padding: 0;
+      color: $tGray;
+      font-size: $body-1;
+    }
+    .list-card-action {
+      width: $w-100 - 50;
+      background: transparent;
+      border-color: $secondary;
+      color: $tSecondary;
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      opacity: 0;
+      transform: translate(-50%, -50%);
+      transition: all $durationMd $func;
+      &:hover {
+        opacity: 0.7;
+      }
+      &::after {
+        width: 0;
+        height: 0;
+      }
+    }
+  }
+}

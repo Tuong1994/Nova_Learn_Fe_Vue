@@ -1,0 +1,10 @@
+.nvl-section {
+  width: $w-100;
+  padding: $p-10 * 5;
+  @include respond(lgTablet) {
+    padding: $p-10 * 2;
+  }
+  @include respond(mdPhone) {
+    padding: $p-10;
+  }
+}

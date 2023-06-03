@@ -1,0 +1,61 @@
+.nvl-tabs {
+  .tabs-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: $m-10 * 2;
+    background: $white-1;
+    border-radius: $rounded;
+    overflow-y: hidden;
+    overflow-x: auto;
+    .title-item {
+      min-width: max-content;
+      padding: $p-5 $p-10;
+      cursor: pointer;
+      text-align: center;
+      transition: all $durationSm $func;
+      &:hover {
+        background: $RGBA-purple;
+        .item-icon {
+          path {
+            color: $tSecondary;
+          }
+        }
+        .item-text {
+          color: $tSecondary;
+        }
+      }
+      .item-icon {
+        font-size: $body-2;
+        margin-right: $m-10;
+      }
+      .item-text {
+        font-size: $body-1;
+        @include respond(mdPhone) {
+          font-size: $body-2;
+        }
+      }
+    }
+    .title-item--active {
+      background: $primary;
+      .item-icon {
+        path {
+          color: $tSecondary;
+        }
+      }
+      .item-text {
+        color: $tSecondary;
+      }
+    }
+    @include respond(lgTablet) {
+      &::-webkit-scrollbar {
+        height: 0;
+      }
+    }
+  }
+  .tabs-content {
+    width: $w-100;
+    & > * {
+      animation: fadeIn $durationMd $func 1;
+    }
+  }
+}

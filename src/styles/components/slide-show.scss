@@ -1,0 +1,427 @@
+// Slide default
+.nvl-slide-default {
+  width: $w-100;
+  height: $h-100;
+  border-radius: $rounded;
+  overflow: hidden;
+  position: relative;
+  &:hover .slide-default-action {
+    opacity: 1;
+    &:nth-child(1) {
+      left: 10px;
+    }
+    &:nth-child(2) {
+      right: 10px;
+    }
+  }
+  .slide-default-action {
+    width: $w-10 * 5;
+    height: $h-10 * 5;
+    border: unset;
+    background: transparent;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+    opacity: 0;
+    transform: translateY(-50%);
+    transition: all $durationMd $func;
+    &:nth-child(1) {
+      left: 0;
+    }
+    &:nth-child(2) {
+      right: 0;
+    }
+    .action-icon {
+      font-size: $h4;
+    }
+  }
+  .slide-default-action--white {
+    .action-icon {
+      path {
+        color: $tSecondary;
+      }
+    }
+  }
+  .slide-default-action-disabled {
+    user-select: none;
+    cursor: not-allowed;
+    .action-icon {
+      path {
+        color: $tGray;
+      }
+    }
+  }
+  .slide-default-container {
+    width: $w-100;
+    height: $h-100;
+    display: flex;
+    .container-slide {
+      width: $w-100;
+      height: $h-100;
+      flex-shrink: 0;
+      flex-grow: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $tSecondary;
+      transition: all $durationMd $func;
+    }
+  }
+  .slide-default-dots {
+    width: $w-100;
+    position: absolute;
+    bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .dots-item {
+      width: $w-10;
+      height: $h-10;
+      margin: 0 $m-5;
+      border-radius: $circle;
+      background: $dark-1;
+      transition: all $durationMd $func;
+      cursor: pointer;
+    }
+    .dots-item--white {
+      background: $secondary;
+    }
+    .dots-item--active {
+      width: $w-10 * 2;
+      border-radius: $roundedLg;
+    }
+  }
+  @include respond(lgTablet) {
+    height: $h-10 * 50;
+  }
+  @include respond(mdPhone) {
+    height: $h-10 * 30;
+  }
+}
+
+// Slide hexagon
+.nvl-slide-hexagon {
+  width: $w-100;
+  height: $h-100;
+  display: flex;
+  align-items: center;
+  .hexagon-dots {
+    width: $w-100 - 50;
+    .dots-group {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
+      .group-item {
+        width: $w-10 * 14;
+        height: $h-10 * 14;
+        padding: $p-5;
+        margin: 0 $m-10;
+        background: $gray-1;
+        color: $tSecondary;
+        clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        cursor: pointer;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        &::after {
+          content: "";
+          width: $w-100;
+          height: $h-100;
+          background: $primary;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          clip-path: polygon(
+            0% 25%,
+            0% 75%,
+            50% 100%,
+            100% 75%,
+            100% 25%,
+            50% 0
+          );
+          transform: scale(0);
+          transition: transform $durationSm $func;
+        }
+        &:hover {
+          .item-title {
+            color: $tSecondary;
+          }
+          .item-icon {
+            path {
+              color: $tSecondary;
+            }
+          }
+        }
+        &:hover::after {
+          transform: scale(1);
+        }
+        .item-title {
+          transition: all $durationMd $func;
+          text-align: center;
+          @include respond(smTablet) {
+            font-size: $body-2 - 2;
+          }
+        }
+        .item-icon {
+          font-size: $h3;
+          margin-bottom: $m-5;
+          path {
+            transition: all $durationMd $func;
+          }
+          @include respond(smTablet) {
+            font-size: $body-2;
+          }
+        }
+        @include respond(smTablet) {
+          width: $w-10 * 8;
+          height: $h-10 * 8;
+          margin: 0 $m-5;
+        }
+      }
+      .group-item--active {
+        &::after {
+          transform: scale(1);
+        }
+        .item-title {
+          color: $tSecondary;
+        }
+        .item-icon {
+          path {
+            color: $tSecondary;
+          }
+        }
+      }
+    }
+    @include respond(mdTablet) {
+      width: $w-100;
+    }
+  }
+  .hexagon-slides {
+    width: $w-100 - 50;
+    height: $h-100;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .slides-container {
+      width: $w-100;
+      height: $h-100;
+      display: flex;
+      position: relative;
+      overflow: hidden;
+      &::before,
+      &::after {
+        content: "";
+        width: $w-10 * 4;
+        height: $h-100;
+        position: absolute;
+        top: 0;
+        z-index: 1;
+      }
+      &::before {
+        left: 0;
+        background: linear-gradient(
+          270deg,
+          hsla(0deg, 0%, 100%, 0),
+          $secondary 70%
+        );
+      }
+      &::after {
+        right: 0;
+        background: linear-gradient(
+          90deg,
+          hsla(0deg, 0%, 100%, 0),
+          $secondary 70%
+        );
+      }
+      .container-item {
+        width: $w-100;
+        height: $h-100;
+        flex-shrink: 0;
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: $h2;
+        color: $tPurple;
+        transition: all $durationMd $func;
+      }
+    }
+    .slides-actions {
+      padding: $p-10;
+      align-self: flex-end;
+      .actions-btn {
+        width: $w-10 * 8;
+        &:first-child {
+          margin-right: $m-10;
+        }
+        &:hover {
+          .btn-icon {
+            path {
+              color: $tPrimary;
+            }
+          }
+        }
+        .btn-icon {
+          font-size: $body-2;
+          path {
+            color: $tSecondary;
+          }
+        }
+      }
+      @include respond(mdTablet) {
+        align-self: center;
+      }
+    }
+    @include respond(mdTablet) {
+      width: $w-100;
+    }
+  }
+  @include respond(mdTablet) {
+    flex-direction: column;
+  }
+}
+
+.slide--transition {
+  transition-duration: 0.1s;
+}
+
+// Slide gallery
+.nvl-slide-gallery {
+  width: $w-100;
+  height: $h-100-vh;
+  background: $RGBA-dark-4;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  opacity: 0;
+  visibility: hidden;
+  transition: all $durationSm $func;
+  .gallery-view-col {
+    height: $h-100;
+    position: relative;
+  }
+  .gallery-view {
+    width: $w-100;
+    height: $h-100;
+    .view-header {
+      width: $w-100;
+      padding: $p-10 * 2;
+      background: $RGBA-dark-2;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 5;
+      & * {
+        color: $tSecondary;
+      }
+      .header-icon {
+        font-size: $subtitle;
+        cursor: pointer;
+      }
+      @include respond(mdPhone) {
+        padding: $p-10;
+      }
+    }
+    .view-container {
+      width: $w-100;
+      height: $h-100;
+      display: flex;
+      position: relative;
+      overflow: hidden;
+      .container-action {
+        width: $w-10 * 4;
+        height: $h-10 * 4;
+        border: 0;
+        background: $RGBA-dark-2;
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        z-index: 5;
+        transform: translateY(-50%);
+        transition: all $durationSm $func;
+        &:hover {
+          opacity: 0.7;
+        }
+        & * {
+          color: $tSecondary;
+        }
+        &:nth-child(1) {
+          left: 5px;
+        }
+        &:nth-child(2) {
+          right: 5px;
+        }
+      }
+      .container-item {
+        width: $w-100;
+        height: $h-100;
+        flex-grow: 1;
+        flex-shrink: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: grab;
+        transition: all $durationSm $func;
+        .item-image {
+          width: $w-10 * 70;
+          height: $h-10 * 50;
+          border-radius: $roundedLg;
+          overflow: hidden;
+          @include respond(lgTablet) {
+            width: $w-100 - 5;
+            height: $h-10 * 40;
+          }
+          @include respond(smTablet) {
+            width: $w-100 - 5;
+            height: $h-10 * 30;
+          }
+        }
+      }
+    }
+  }
+  .gallery-list {
+    height: $h-100;
+    padding: $p-5;
+    background: $secondary;
+    overflow-y: auto;
+    position: relative;
+    z-index: 10;
+    .list-image {
+      width: $w-100;
+      height: $h-10 * 10;
+      border: 1px solid transparent;
+      border-radius: $rounded;
+      overflow: hidden;
+      cursor: pointer;
+      transition: all $durationSm $func;
+    }
+    .list-image--active {
+      border-color: $primary;
+    }
+  }
+}
+
+.nvl-slide-gallery--active {
+  opacity: 1;
+  visibility: visible;
+  animation: fadeIn $durationSm $func 1;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}

@@ -1,0 +1,598 @@
+.nvl-grid-row {
+  width: $w-100;
+  display: flex;
+  flex-wrap: wrap;
+  // span
+  .nvl-grid-col-auto {
+    width: max-content;
+  }
+  .nvl-grid-col-0 {
+    display: none;
+  }
+  .nvl-grid-col-1 {
+    width: calc($w-100 / 24 - 10px);
+  }
+  .nvl-grid-col-2 {
+    width: calc(($w-100 / 24) * 2 - 10px);
+  }
+  .nvl-grid-col-3 {
+    width: calc(($w-100 / 24) * 3 - 10px);
+  }
+  .nvl-grid-col-4 {
+    width: calc(($w-100 / 24) * 4 - 10px);
+  }
+  .nvl-grid-col-5 {
+    width: calc(($w-100 / 24) * 5 - 10px);
+  }
+  .nvl-grid-col-6 {
+    width: calc(($w-100 / 24) * 6 - 10px);
+  }
+  .nvl-grid-col-7 {
+    width: calc(($w-100 / 24) * 7 - 10px);
+  }
+  .nvl-grid-col-8 {
+    width: calc(($w-100 / 24) * 8 - 10px);
+  }
+  .nvl-grid-col-9 {
+    width: calc(($w-100 / 24) * 9 - 10px);
+  }
+  .nvl-grid-col-10 {
+    width: calc(($w-100 / 24) * 10 - 10px);
+  }
+  .nvl-grid-col-11 {
+    width: calc(($w-100 / 24) * 11 - 10px);
+  }
+  .nvl-grid-col-12 {
+    width: calc(($w-100 / 24) * 12 - 10px);
+  }
+  .nvl-grid-col-13 {
+    width: calc(($w-100 / 24) * 13 - 10px);
+  }
+  .nvl-grid-col-14 {
+    width: calc(($w-100 / 24) * 14 - 10px);
+  }
+  .nvl-grid-col-15 {
+    width: calc(($w-100 / 24) * 15 - 10px);
+  }
+  .nvl-grid-col-16 {
+    width: calc(($w-100 / 24) * 16 - 10px);
+  }
+  .nvl-grid-col-17 {
+    width: calc(($w-100 / 24) * 17 - 10px);
+  }
+  .nvl-grid-col-18 {
+    width: calc(($w-100 / 24) * 18 - 10px);
+  }
+  .nvl-grid-col-19 {
+    width: calc(($w-100 / 24) * 19 - 10px);
+  }
+  .nvl-grid-col-20 {
+    width: calc(($w-100 / 24) * 20 - 10px);
+  }
+  .nvl-grid-col-21 {
+    width: calc(($w-100 / 24) * 21 - 10px);
+  }
+  .nvl-grid-col-22 {
+    width: calc(($w-100 / 24) * 22 - 10px);
+  }
+  .nvl-grid-col-23 {
+    width: calc(($w-100 / 24) * 23 - 10px);
+  }
+  .nvl-grid-col-24 {
+    width: $w-100;
+    margin: 0;
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  // lg span
+  .nvl-grid-col-lg-0 {
+    @include respond(laptop) {
+      display: none;
+    }
+  }
+  .nvl-grid-col-lg-1 {
+    @include respond(laptop) {
+      width: calc($w-100 / 24 - 10px);
+      display: block;
+    }
+  }
+  .nvl-grid-col-lg-2 {
+    @include respond(laptop) {
+      width: calc(($w-100 / 24) * 2 - 10px);
+      display: block;
+    }
+  }
+  .nvl-grid-col-lg-3 {
+    @include respond(laptop) {
+      width: calc(($w-100 / 24) * 3 - 10px);
+      display: block;
+    }
+  }
+  .nvl-grid-col-lg-4 {
+    @include respond(laptop) {
+      width: calc(($w-100 / 24) * 4 - 10px);
+      display: block;
+    }
+  }
+  .nvl-grid-col-lg-5 {
+    @include respond(laptop) {
+      width: calc(($w-100 / 24) * 5 - 10px);
+      display: block;
+    }
+  }
+  .nvl-grid-col-lg-6 {
+    @include respond(laptop) {
+      width: calc(($w-100 / 24) * 6 - 10px);
+      display: block;
+    }
+  }
+  .nvl-grid-col-lg-7 {
+    @include respond(laptop) {
+      width: calc(($w-100 / 24) * 7 - 10px);
+      display: block;
+    }
+  }
+  .nvl-grid-col-lg-8 {
+    @include respond(laptop) {
+      width: calc(($w-100 / 24) * 8 - 10px);
+      display: block;
+    }
+  }
+  .nvl-grid-col-lg-9 {
+    @include respond(laptop) {
+      width: calc(($w-100 / 24) * 9 - 10px);
+      display: block;
+    }
+  }
+  .nvl-grid-col-lg-10 {
+    @include respond(laptop) {
+      width: calc(($w-100 / 24) * 10 - 10px);
+      display: block;
+    }
+  }
+  .nvl-grid-col-lg-11 {
+    @include respond(laptop) {
+      width: calc(($w-100 / 24) * 11 - 10px);
+      display: block;
+    }
+  }
+  .nvl-grid-col-lg-12 {
+    @include respond(laptop) {
+      width: calc(($w-100 / 24) * 12 - 10px);
+      display: block;
+    }
+  }
+  .nvl-grid-col-lg-13 {
+    @include respond(laptop) {
+      width: calc(($w-100 / 24) * 13 - 10px);
+      display: block;
+    }
+  }
+  .nvl-grid-col-lg-14 {
+    @include respond(laptop) {
+      width: calc(($w-100 / 24) * 14 - 10px);
+      display: block;
+    }
+  }
+  .nvl-grid-col-lg-15 {
+    @include respond(laptop) {
+      width: calc(($w-100 / 24) * 15 - 10px);
+      display: block;
+    }
+  }
+  .nvl-grid-col-lg-16 {
+    @include respond(laptop) {
+      width: calc(($w-100 / 24) * 16 - 10px);
+      display: block;
+    }
+  }
+  .nvl-grid-col-lg-17 {
+    @include respond(laptop) {
+      width: calc(($w-100 / 24) * 17 - 10px);
+      display: block;
+    }
+  }
+  .nvl-grid-col-lg-18 {
+    @include respond(laptop) {
+      width: calc(($w-100 / 24) * 18 - 10px);
+      display: block;
+    }
+  }
+  .nvl-grid-col-lg-19 {
+    @include respond(laptop) {
+      width: calc(($w-100 / 24) * 19 - 10px);
+      display: block;
+    }
+  }
+  .nvl-grid-col-lg-20 {
+    @include respond(laptop) {
+      width: calc(($w-100 / 24) * 20 - 10px);
+      display: block;
+    }
+  }
+  .nvl-grid-col-lg-21 {
+    @include respond(laptop) {
+      width: calc(($w-100 / 24) * 21 - 10px);
+      display: block;
+    }
+  }
+  .nvl-grid-col-lg-22 {
+    @include respond(laptop) {
+      width: calc(($w-100 / 24) * 22 - 10px);
+      display: block;
+    }
+  }
+  .nvl-grid-col-lg-23 {
+    @include respond(laptop) {
+      width: calc(($w-100 / 24) * 23 - 10px);
+      display: block;
+    }
+  }
+  .nvl-grid-col-lg-24 {
+    @include respond(laptop) {
+      width: $w-100;
+      display: block;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+  }
+
+  // md span
+  .nvl-grid-col-md-0 {
+    @include respond(mdTablet) {
+      display: none;
+    }
+  }
+  .nvl-grid-col-md-1 {
+    @include respond(mdTablet) {
+      width: calc($w-100 / 24 - 10px);
+      display: block;
+    }
+  }
+  .nvl-grid-col-md-2 {
+    @include respond(mdTablet) {
+      width: calc(($w-100 / 24) * 2 - 10px);
+      display: block;
+    }
+  }
+  .nvl-grid-col-md-3 {
+    @include respond(mdTablet) {
+      width: calc(($w-100 / 24) * 3 - 10px);
+      display: block;
+    }
+  }
+  .nvl-grid-col-md-4 {
+    @include respond(mdTablet) {
+      width: calc(($w-100 / 24) * 4 - 10px);
+      display: block;
+    }
+  }
+  .nvl-grid-col-md-5 {
+    @include respond(mdTablet) {
+      width: calc(($w-100 / 24) * 5 - 10px);
+      display: block;
+    }
+  }
+  .nvl-grid-col-md-6 {
+    @include respond(mdTablet) {
+      width: calc(($w-100 / 24) * 6 - 10px);
+      display: block;
+    }
+  }
+  .nvl-grid-col-md-7 {
+    @include respond(mdTablet) {
+      width: calc(($w-100 / 24) * 7 - 10px);
+      display: block;
+    }
+  }
+  .nvl-grid-col-md-8 {
+    @include respond(mdTablet) {
+      width: calc(($w-100 / 24) * 8 - 10px);
+      display: block;
+    }
+  }
+  .nvl-grid-col-md-9 {
+    @include respond(mdTablet) {
+      width: calc(($w-100 / 24) * 9 - 10px);
+      display: block;
+    }
+  }
+  .nvl-grid-col-md-10 {
+    @include respond(mdTablet) {
+      width: calc(($w-100 / 24) * 10 - 10px);
+      display: block;
+    }
+  }
+  .nvl-grid-col-md-11 {
+    @include respond(mdTablet) {
+      width: calc(($w-100 / 24) * 11 - 10px);
+      display: block;
+    }
+  }
+  .nvl-grid-col-md-12 {
+    @include respond(mdTablet) {
+      width: calc(($w-100 / 24) * 12 - 10px);
+      display: block;
+    }
+  }
+  .nvl-grid-col-md-13 {
+    @include respond(mdTablet) {
+      width: calc(($w-100 / 24) * 13 - 10px);
+      display: block;
+    }
+  }
+  .nvl-grid-col-md-14 {
+    @include respond(mdTablet) {
+      width: calc(($w-100 / 24) * 14 - 10px);
+      display: block;
+    }
+  }
+  .nvl-grid-col-md-15 {
+    @include respond(mdTablet) {
+      width: calc(($w-100 / 24) * 15 - 10px);
+      display: block;
+    }
+  }
+  .nvl-grid-col-md-16 {
+    @include respond(mdTablet) {
+      width: calc(($w-100 / 24) * 16 - 10px);
+      display: block;
+    }
+  }
+  .nvl-grid-col-md-17 {
+    @include respond(mdTablet) {
+      width: calc(($w-100 / 24) * 17 - 10px);
+      display: block;
+    }
+  }
+  .nvl-grid-col-md-18 {
+    @include respond(mdTablet) {
+      width: calc(($w-100 / 24) * 18 - 10px);
+      display: block;
+    }
+  }
+  .nvl-grid-col-md-19 {
+    @include respond(mdTablet) {
+      width: calc(($w-100 / 24) * 19 - 10px);
+      display: block;
+    }
+  }
+  .nvl-grid-col-md-20 {
+    @include respond(mdTablet) {
+      width: calc(($w-100 / 24) * 20 - 10px);
+      display: block;
+    }
+  }
+  .nvl-grid-col-md-21 {
+    @include respond(mdTablet) {
+      width: calc(($w-100 / 24) * 21 - 10px);
+      display: block;
+    }
+  }
+  .nvl-grid-col-md-22 {
+    @include respond(mdTablet) {
+      width: calc(($w-100 / 24) * 22 - 10px);
+      display: block;
+    }
+  }
+  .nvl-grid-col-md-23 {
+    @include respond(mdTablet) {
+      width: calc(($w-100 / 24) * 23 - 10px);
+      display: block;
+    }
+  }
+  .nvl-grid-col-md-24 {
+    @include respond(mdTablet) {
+      width: $w-100;
+      display: block;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+  }
+
+  // xs span
+  .nvl-grid-col-xs-0 {
+    @include respond(mdPhone) {
+      display: none;
+    }
+  }
+  .nvl-grid-col-xs-1 {
+    @include respond(mdPhone) {
+      width: calc($w-100 / 24 - 10px);
+      display: block;
+    }
+  }
+  .nvl-grid-col-xs-2 {
+    @include respond(mdPhone) {
+      width: calc(($w-100 / 24) * 2 - 10px);
+      display: block;
+    }
+  }
+  .nvl-grid-col-xs-3 {
+    @include respond(mdPhone) {
+      width: calc(($w-100 / 24) * 3 - 10px);
+      display: block;
+    }
+  }
+  .nvl-grid-col-xs-4 {
+    @include respond(mdPhone) {
+      width: calc(($w-100 / 24) * 4 - 10px);
+      display: block;
+    }
+  }
+  .nvl-grid-col-xs-5 {
+    @include respond(mdPhone) {
+      width: calc(($w-100 / 24) * 5 - 10px);
+      display: block;
+    }
+  }
+  .nvl-grid-col-xs-6 {
+    @include respond(mdPhone) {
+      width: calc(($w-100 / 24) * 6 - 10px);
+      display: block;
+    }
+  }
+  .nvl-grid-col-xs-7 {
+    @include respond(mdPhone) {
+      width: calc(($w-100 / 24) * 7 - 10px);
+      display: block;
+    }
+  }
+  .nvl-grid-col-xs-8 {
+    @include respond(mdPhone) {
+      width: calc(($w-100 / 24) * 8 - 10px);
+      display: block;
+    }
+  }
+  .nvl-grid-col-xs-9 {
+    @include respond(mdPhone) {
+      width: calc(($w-100 / 24) * 9 - 10px);
+      display: block;
+    }
+  }
+  .nvl-grid-col-xs-10 {
+    @include respond(mdPhone) {
+      display: block;
+      width: calc(($w-100 / 24) * 10 - 10px);
+    }
+  }
+  .nvl-grid-col-xs-11 {
+    @include respond(mdPhone) {
+      display: block;
+      width: calc(($w-100 / 24) * 11 - 10px);
+    }
+  }
+  .nvl-grid-col-xs-12 {
+    @include respond(mdPhone) {
+      display: block;
+      width: calc(($w-100 / 24) * 12 - 10px);
+    }
+  }
+  .nvl-grid-col-xs-13 {
+    @include respond(mdPhone) {
+      display: block;
+      width: calc(($w-100 / 24) * 13 - 10px);
+    }
+  }
+  .nvl-grid-col-xs-14 {
+    @include respond(mdPhone) {
+      display: block;
+      width: calc(($w-100 / 24) * 14 - 10px);
+    }
+  }
+  .nvl-grid-col-xs-15 {
+    @include respond(mdPhone) {
+      display: block;
+      width: calc(($w-100 / 24) * 15 - 10px);
+    }
+  }
+  .nvl-grid-col-xs-16 {
+    @include respond(mdPhone) {
+      display: block;
+      width: calc(($w-100 / 24) * 16 - 10px);
+    }
+  }
+  .nvl-grid-col-xs-17 {
+    @include respond(mdPhone) {
+      display: block;
+      width: calc(($w-100 / 24) * 17 - 10px);
+    }
+  }
+  .nvl-grid-col-xs-18 {
+    @include respond(mdPhone) {
+      display: block;
+      width: calc(($w-100 / 24) * 18 - 10px);
+    }
+  }
+  .nvl-grid-col-xs-19 {
+    @include respond(mdPhone) {
+      display: block;
+      width: calc(($w-100 / 24) * 19 - 10px);
+    }
+  }
+  .nvl-grid-col-xs-20 {
+    @include respond(mdPhone) {
+      display: block;
+      width: calc(($w-100 / 24) * 20 - 10px);
+    }
+  }
+  .nvl-grid-col-xs-21 {
+    @include respond(mdPhone) {
+      display: block;
+      width: calc(($w-100 / 24) * 21 - 10px);
+    }
+  }
+  .nvl-grid-col-xs-22 {
+    @include respond(mdPhone) {
+      display: block;
+      width: calc(($w-100 / 24) * 22 - 10px);
+    }
+  }
+  .nvl-grid-col-xs-23 {
+    @include respond(mdPhone) {
+      display: block;
+      width: calc(($w-100 / 24) * 23 - 10px);
+    }
+  }
+  .nvl-grid-col-xs-24 {
+    @include respond(mdPhone) {
+      width: $w-100;
+      display: block;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+  }
+
+  .nvl-grid-col {
+    &:first-child {
+      margin-left: 0;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+// Justify
+.nvl-grid-row--justify-start {
+  justify-content: flex-start;
+}
+
+.nvl-grid-row--justify-center {
+  justify-content: center;
+}
+
+.nvl-grid-row--justify-between {
+  justify-content: space-between;
+}
+
+.nvl-grid-row--justify-evenly {
+  justify-content: space-evenly;
+}
+
+.nvl-grid-row--justify-end {
+  justify-content: flex-end;
+}
+
+// Align
+.nvl-grid-row--align-base {
+  align-items: baseline;
+}
+
+.nvl-grid-row--align-start {
+  align-items: flex-start;
+}
+
+.nvl-grid-row--align-center {
+  align-items: center;
+}
+
+.nvl-grid-row--align-end {
+  align-items: flex-start;
+}
+
+.nvl-grid-row--align-stretch {
+  align-items: stretch;
+}

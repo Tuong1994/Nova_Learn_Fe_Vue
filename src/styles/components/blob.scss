@@ -1,0 +1,40 @@
+.nvl-blob {
+  border-radius: $circle;
+  animation: blob 7s ease infinite;
+}
+
+.nvl-blob--purple {
+  background: $primary;
+}
+
+.nvl-blob--blue {
+  background: $blue-1;
+}
+
+.nvl-blob--red {
+  background: $red-1;
+}
+
+.nvl-blob--green {
+  background: $green-1;
+}
+
+.nvl-blob--orange {
+  background: $orange-1;
+}
+
+@keyframes blob {
+  0%,
+  100% {
+    border-radius: 64% 36% 27% 73% / 55% 58% 42% 45%;
+  }
+  25% {
+    border-radius: 73% 27% 26% 38% / 73% 36% 64% 27%;
+  }
+  50% {
+    border-radius: 28% 72% 44% 56% / 49% 40% 60% 51%;
+  }
+  75% {
+    border-radius: 40% 60% 70% 30% / 47% 42% 38% 53%;
+  }
+}

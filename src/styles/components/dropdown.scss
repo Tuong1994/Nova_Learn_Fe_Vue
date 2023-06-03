@@ -1,0 +1,121 @@
+.nvl-dropdown {
+  width: max-content;
+  position: relative;
+  .dropdown-title {
+    cursor: pointer;
+  }
+  .dropdown-wrap {
+    min-width: max-content;
+    width: $w-10 * 15;
+    border-radius: $rounded;
+    position: absolute;
+    top: 110%;
+    z-index: 20;
+    opacity: 0;
+    visibility: hidden;
+    transition: all $durationSm $func;
+    &::after {
+      content: "";
+      width: 0;
+      height: 0;
+      border: 8px solid transparent;
+      border-bottom-color: $secondary;
+      position: absolute;
+      top: -14px;
+      z-index: 20;
+      transition: all $durationSm $func;
+    }
+    .wrap-item {
+      width: $w-100;
+      padding: $p-5 $p-10;
+      &:hover .item-inner {
+        .inner-icon {
+          path {
+            color: $tPurple;
+          }
+        }
+        .inner-title {
+          color: $tPurple;
+        }
+      }
+      .item-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        .inner-icon {
+          margin-right: $m-10 * 2;
+          font-size: $body-2;
+          path {
+            transition: all $durationSm $func;
+          }
+        }
+        .inner-title {
+          font-size: $body-1;
+          transition: all $durationSm $func;
+        }
+      }
+      .item-link {
+        text-decoration: none;
+      }
+    }
+    .wrap-item--active {
+      .item-inner {
+        .inner-icon {
+          path {
+            color: $tPurple;
+          }
+        }
+        .inner-title {
+          color: $tPurple;
+        }
+      }
+    }
+  }
+  .dropdown-wrap--bottom-left {
+    left: -10px;
+    &::after {
+      left: 10px;
+    }
+  }
+  .dropdown-wrap--bottom-right {
+    right: -10px;
+    &::after {
+      right: 10px;
+    }
+  }
+  .dropdown-wrap--dark {
+    background: $dark-1;
+    border-color: $dark-1;
+    .inner-icon {
+      path {
+        color: $tSecondary;
+      }
+    }
+    .inner-title {
+      color: $tSecondary;
+    }
+  }
+  .dropdown-wrap--light {
+    background: $secondary;
+    .inner-icon {
+      path {
+        color: $tPrimary;
+      }
+    }
+    .inner-title {
+      color: $tPrimary;
+    }
+  }
+  .dropdown-wrap--active {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.nvl-dropdown--hover {
+  &:hover .dropdown-wrap {
+    opacity: 1;
+    visibility: visible;
+  }
+}

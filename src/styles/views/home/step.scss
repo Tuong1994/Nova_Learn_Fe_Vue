@@ -1,0 +1,57 @@
+.home-step {
+  .step-action {
+    width: $w-10 * 15;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .step-wrap {
+    border-left: 2px solid $primary;
+    padding: $p-10 0;
+    .step-item {
+      display: flex;
+      align-items: center;
+      margin: $m-10 * 3 0;
+      &:hover .item-number {
+        background: $primary;
+        color: $tSecondary;
+      }
+      .item-number {
+        width: $w-10 * 6;
+        height: $h-10 * 6;
+        font-size: $h4;
+        background: $secondary;
+        border: 1px solid $primary;
+        border-radius: $circle;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        left: -30px;
+        transition: all $durationMd $func;
+        @include respond(mdPhone) {
+          left: 0;
+          width: $w-10 * 5;
+          height: $h-10 * 5;
+          font-size: $h6;
+        }
+      }
+      .item-content {
+        width: $w-100;
+        padding: $p-10 * 2;
+        font-weight: $semiBold;
+        border-radius: $rounded;
+        box-shadow: 2px 2px 5px $gray-1;
+        @include respond(mdPhone) {
+          font-size: $body-1;
+        }
+      }
+      @include respond(mdPhone) {
+        margin: $m-10 * 2 0;
+      }
+    }
+    @include respond(mdPhone) {
+      border: unset;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+.contact-form {
+  .form-map {
+    .map-address {
+      font-weight: $semiBold;
+    }
+    .map-view {
+      width: $w-100;
+      height: $h-10 * 30;
+      border: 1px solid $gray-1;
+      border-radius: $rounded;
+    }
+  }
+  .form-action {
+    width: $w-10 * 20;
+  }
+}

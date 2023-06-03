@@ -1,0 +1,45 @@
+.home-course {
+  background: $deepPurple-1;
+  .course-card {
+    margin-bottom: $m-10;
+    border-width: 2px;
+    &:last-child {
+      margin: 0;
+    }
+    &:hover {
+      border-color: $primary;
+    }
+    .card-body-content {
+      .content-times {
+        .times-item {
+          display: inline-block;
+          &:first-child {
+            padding-right: $p-10;
+            border-right: 1px solid $gray-2;
+          }
+          &:last-child {
+            padding-left: $p-10;
+          }
+        }
+      }
+      .content-action {
+        display: inline-flex;
+        align-items: center;
+        & * {
+          color: $tPurple;
+        }
+        &:hover .action-icon {
+          opacity: 0;
+          transform: translateX(100%);
+        }
+        .action-title {
+          margin-right: $m-10;
+        }
+        .action-icon {
+          opacity: 1;
+          transition: all $durationSm $func;
+        }
+      }
+    }
+  }
+}

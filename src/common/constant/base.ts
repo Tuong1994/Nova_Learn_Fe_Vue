@@ -1,0 +1,1 @@
+export const ACCEPT_IMAGE_TYPE = ["image/png", "image/jpg", "image/jpeg"];

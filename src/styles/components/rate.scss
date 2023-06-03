@@ -1,0 +1,25 @@
+.rate-star {
+  .star-point {
+    span {
+      &:nth-child(1) {
+        color: $tPurple;
+        font-size: $subtitle;
+        font-weight: $semiBold;
+      }
+    }
+  }
+  .star-icon {
+    path {
+      color: $tGray;
+    }
+  }
+  .star-icon--active {
+    path {
+      color: $tYellow;
+    }
+  }
+  .star-rater {
+    color: $tGray;
+    font-size: $body-1;
+  }
+}

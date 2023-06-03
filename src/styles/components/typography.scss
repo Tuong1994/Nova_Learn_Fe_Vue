@@ -1,0 +1,96 @@
+// Title
+.nvl-title {
+  font-weight: $semiBold;
+  margin-bottom: $m-10 * 2;
+}
+
+.nvl-title--left {
+  text-align: left;
+}
+
+.nvl-title--center {
+  text-align: center;
+}
+
+.nvl-title--right {
+  text-align: right;
+}
+
+.nvl-title--dark {
+  color: $tPrimary;
+}
+
+.nvl-title--light {
+  color: $tSecondary;
+}
+
+.nvl-title-h1 {
+  font-size: $h1;
+  @include respond(mdPhone) {
+    font-size: $h6;
+  }
+}
+
+.nvl-title-h2 {
+  font-size: $h2;
+  @include respond(mdPhone) {
+    font-size: $h6;
+  }
+}
+
+.nvl-title-h3 {
+  font-size: $h3;
+  @include respond(mdPhone) {
+    font-size: $h6;
+  }
+}
+
+.nvl-title-h4 {
+  font-size: $h4;
+  @include respond(mdPhone) {
+    font-size: $h6;
+  }
+}
+
+.nvl-title-h5 {
+  font-size: $h5;
+  @include respond(mdPhone) {
+    font-size: $h6;
+  }
+}
+
+.nvl-title-h6 {
+  font-size: $h6;
+  @include respond(mdPhone) {
+    font-size: $h6;
+  }
+}
+
+// Paragraph
+.nvl-paragraph {
+  padding: $p-10 0;
+}
+
+.nvl-paragraph--dark {
+  color: $tPrimary;
+}
+
+.nvl-paragraph--light {
+  color: $tSecondary;
+}
+
+.nvl-paragraph--left {
+  text-align: left;
+}
+
+.nvl-paragraph--center {
+  text-align: center;
+}
+
+.nvl-paragraph--right {
+  text-align: right;
+}
+
+.nvl-paragraph--justify {
+  text-align: justify;
+}

@@ -1,0 +1,22 @@
+.nvl-card {
+  overflow: hidden;
+  border: 1px solid $gray-1;
+  border-radius: $rounded;
+  transition: all $durationSm $func;
+  .card-header {
+    padding: $p-10 * 2;
+    background: $secondary;
+    border-bottom: 1px solid $gray-1;
+  }
+  .card-body {
+    padding: $p-10 * 2;
+    background: $secondary;
+  }
+}
+
+.nvl-card--hover {
+  &:hover {
+    box-shadow: 0 0 8px $RGBA-dark-3;
+    border-color: transparent;
+  }
+}

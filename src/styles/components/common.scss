@@ -1,0 +1,181 @@
+// Statistics
+.nvl-common-statistics {
+  .statistics-item {
+    .item-icon {
+      width: $w-10 * 5;
+      height: $h-10 * 5;
+      border-radius: $circle;
+      background: $primary;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      svg {
+        font-size: $h4;
+        path {
+          color: $tSecondary;
+        }
+      }
+    }
+    .item-text {
+      font-size: $h1;
+      font-weight: $bold;
+      color: $tPurple;
+      &:nth-child(1) {
+        line-height: $h-10 * 3;
+      }
+      &:nth-child(2) {
+        font-size: $subtitle;
+        font-weight: $light;
+        color: $tGray;
+      }
+    }
+    @include respond(mdPhone) {
+      padding-left: $p-10 * 10;
+    }
+    @include respond(smPhone) {
+      padding-left: $p-10 * 5;
+    }
+  }
+}
+
+// Course
+.nvl-common-course {
+  background: $deepPurple-1;
+  .course-card {
+    margin-bottom: $m-10;
+    border-width: 2px;
+    &:last-child {
+      margin: 0;
+    }
+    &:hover {
+      border-color: $primary;
+    }
+    .card-body-content {
+      .content-times {
+        .times-item {
+          display: inline-block;
+          &:first-child {
+            padding-right: $p-10;
+            border-right: 1px solid $gray-2;
+          }
+          &:last-child {
+            padding-left: $p-10;
+          }
+        }
+      }
+      .content-action {
+        display: inline-flex;
+        align-items: center;
+        & * {
+          color: $tPurple;
+        }
+        &:hover .action-icon {
+          opacity: 0;
+          transform: translateX(100%);
+        }
+        .action-title {
+          margin-right: $m-10;
+        }
+        .action-icon {
+          opacity: 1;
+          transition: all $durationSm $func;
+        }
+      }
+    }
+  }
+}
+
+// Student card
+.nvl-student-card {
+  height: $h-10 * 20;
+  border: unset !important;
+  border-radius: $roundedLg !important;
+  position: relative;
+  overflow: hidden;
+  &:hover::before {
+    left: 125%;
+  }
+  &:hover::after {
+    opacity: 1;
+  }
+  &::before {
+    content: "";
+    width: $w-100 - 50;
+    height: $h-100;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    background: linear-gradient(to right, $RGBA-white-0 0, $RGBA-white-2 100%);
+    transform: skewX(-25deg);
+    transition: all $durationMd $func;
+  }
+  &::after {
+    content: "";
+    width: $w-100;
+    height: $h-100;
+    background: $RGBA-dark-1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all $durationMd $func;
+  }
+  .nvl-student-card-body {
+    height: $h-100;
+    background: $primary !important;
+  }
+  .card-image {
+    width: $w-10 * 15;
+    height: $h-10 * 15;
+    position: relative;
+    z-index: 1;
+    &::before {
+      content: "";
+      width: $w-10 * 12;
+      height: $h-10 * 12;
+      background: $red-1;
+      border-top-right-radius: $roundedLg;
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      z-index: -1;
+    }
+    &::after {
+      content: "";
+      width: $w-10 * 5;
+      height: $h-10 * 5;
+      background: $blue-1;
+      border-bottom-left-radius: $roundedLg;
+      position: absolute;
+      bottom: -5px;
+      left: -5px;
+      z-index: -1;
+    }
+    .image-wrap {
+      width: $w-100;
+      height: $h-100;
+      border-radius: $roundedLg;
+      overflow: hidden;
+    }
+    @include respond(mdTablet) {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  .card-title {
+    @include respond(mdPhone) {
+      text-align: center;
+    }
+  }
+  .card-info {
+    & * {
+      font-size: $body-2;
+    }
+  }
+  @include respond(laptop) {
+    height: $h-10 * 25;
+  }
+  @include respond(mdTablet) {
+    height: auto;
+  }
+}

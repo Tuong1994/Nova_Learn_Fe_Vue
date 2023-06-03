@@ -1,0 +1,27 @@
+.nvl-divider {
+  width: $w-100;
+  height: 1px;
+  background: $gray-2;
+  position: relative;
+  margin: $m-10 * 3 0;
+  .divider-content {
+    background: $secondary;
+    padding: $p-2 $p-5;
+    font-weight: $semiBold;
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+  }
+  .divider-content--left {
+    left: 10px;
+    transform: translate(0, -50%);
+  }
+  .divider-content--center {
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .divider-content--right {
+    right: 10px;
+    transform: translate(0, -50%);
+  }
+}

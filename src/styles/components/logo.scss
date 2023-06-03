@@ -1,0 +1,79 @@
+.nvl-logo {
+  width: max-content;
+  display: inline-block;
+  .logo-text {
+    display: flex;
+    align-items: baseline;
+    line-height: 20px;
+    .text-first {
+      font-size: $h1;
+      font-weight: $semiBold;
+      font-style: italic;
+      color: $tPurple;
+      position: relative;
+      z-index: 1;
+      &::after {
+        content: "";
+        width: $w-10 * 2.5;
+        height: $h-10 * 2.5;
+        border: 2px solid $blue-1;
+        border-radius: $circle;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: -1;
+        transform: translate(-50%, -50%);
+        @include respond(mdPhone) {
+          width: $w-10 * 1.5;
+          height: $h-10 * 1.5;
+        }
+      }
+      @include respond(mdPhone) {
+        font-size: $h4;
+      }
+    }
+    .text-middle {
+      font-size: $h4;
+      color: $tPurple;
+      @include respond(mdPhone) {
+        font-size: $subtitle;
+      }
+    }
+    .text-last {
+      font-size: $subtitle;
+      font-style: italic;
+      @include respond(mdPhone) {
+        font-size: $default;
+      }
+    }
+  }
+  .logo-line {
+    width: $w-100;
+    .line-first {
+      width: $w-100 - 20;
+      height: 1px;
+      background: $dark-1;
+      margin-bottom: $m-5;
+    }
+    .line-last {
+      width: $w-100 - 40;
+      height: 1px;
+      background: $dark-1;
+    }
+  }
+}
+
+.nvl-logo--white {
+  .logo-text {
+    .text-last,
+    .text-line {
+      color: $tSecondary;
+    }
+  }
+  .logo-line {
+    .line-first,
+    .line-last {
+      background: $secondary;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.nvl-link-item {
+  display: block;
+  padding: $p-10 $p-10 * 4;
+  transition: all $durationSm $func;
+  &:hover {
+    background: $RGBA-purple;
+  }
+}
+
+.nvl-link-item--active {
+  background: $primary;
+  color: $tSecondary;
+}

@@ -1,0 +1,63 @@
+.sign-up {
+  width: $w-100;
+  min-height: $h-100-vh;
+  padding: $p-10 * 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $primary;
+  .sign-up-wrap {
+    position: relative;
+    z-index: 1;
+    &::before {
+      content: "";
+      width: $w-10 * 30;
+      height: $h-10 * 30;
+      border: 5px solid $red-1;
+      position: absolute;
+      top: -15px;
+      right: -15px;
+      z-index: -1;
+      animation: clockwise 5s $func infinite;
+      @include respond(mdPhone) {
+        width: $w-10 * 20;
+        height: $h-10 * 20;
+        right: 15px;
+      }
+    }
+    &::after {
+      content: "";
+      width: $w-10 * 20;
+      height: $h-10 * 20;
+      border: 5px solid $orange-1;
+      position: absolute;
+      bottom: -15px;
+      left: -15px;
+      z-index: -1;
+      animation: antiClockwise 4s $func infinite;
+      @include respond(mdPhone) {
+        width: $w-10 * 10;
+        height: $h-10 * 10;
+        left: 15px;
+      }
+    }
+    .wrap-card {
+      width: $w-10 * 50;
+      border-color: transparent;
+      .wrap-card-header {
+        font-size: $h6;
+        font-weight: $semiBold;
+        color: $tPurple;
+      }
+      .wrap-card-action {
+        width: $w-100;
+      }
+      @include respond(mdPhone) {
+        width: $w-10 * 31;
+      }
+    }
+  }
+  @include respond(smTablet) {
+    height: auto;
+  }
+}

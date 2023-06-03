@@ -1,0 +1,12 @@
+.intro-col {
+  position: sticky;
+  top: 80px;
+  z-index: 5;
+  .col-side-nav {
+    width: $w-10 * 25;
+    background: $secondary;
+    border-radius: $rounded;
+    box-shadow: 2px 2px 10px $gray-2;
+    overflow: hidden;
+  }
+}

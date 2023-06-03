@@ -1,0 +1,34 @@
+.commitment-banner {
+  width: $w-100;
+  height: $h-100-vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  &::after {
+    content: "";
+    width: $w-100;
+    height: $h-100;
+    background: $RGBA-dark-3;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .banner-content {
+    width: $w-100 - 50;
+    height: $h-100;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    .content-action {
+      width: $w-10 * 30;
+    }
+    @include respond(smTablet) {
+      width: $w-100;
+    }
+  }
+  @include respond(lgTablet) {
+    height: auto;
+  }
+}

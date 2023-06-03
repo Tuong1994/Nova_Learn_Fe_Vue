@@ -1,0 +1,73 @@
+.nvl-table {
+  min-width: $w-100;
+  border: 1px solid $gray-1;
+  border-radius: $rounded;
+  .table-filter {
+    padding: $p-10;
+    .filter-select {
+      margin: 0;
+    }
+  }
+  .table-inner {
+    min-width: $w-100;
+    overflow-y: hidden;
+    overflow-x: auto;
+    table {
+      min-width: $w-100;
+      border-color: $gray-1;
+      border-collapse: collapse;
+      thead {
+        tr {
+          background: $gray-1;
+          th {
+            padding: $p-2 * 2 $p-2 * 6;
+            position: relative;
+            &:last-child {
+              &::after {
+                display: none;
+              }
+            }
+            &::after {
+              content: "";
+              width: 1px;
+              height: $h-100 - 30;
+              background: $gray-2;
+              position: absolute;
+              top: 50%;
+              right: 0;
+              transform: translateY(-50%);
+            }
+            .table-head {
+              font-size: $body-1;
+              font-weight: $semiBold;
+            }
+          }
+        }
+      }
+      tbody {
+        tr {
+          transition: all $durationSm $func;
+          border-bottom: 1px solid $gray-1;
+          &:last-child {
+            border-bottom: unset;
+          }
+          &:hover {
+            background: $white-1;
+          }
+          td {
+            padding: $p-10;
+            .table-cell {
+              min-width: max-content;
+              text-align: center;
+              font-size: $body-2;
+            }
+          }
+        }
+      }
+    }
+    .cell-icon {
+      font-size: $body-2;
+      cursor: pointer;
+    }
+  }
+}

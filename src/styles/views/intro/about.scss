@@ -1,0 +1,74 @@
+.intro-about {
+  .about-title {
+    text-transform: uppercase;
+  }
+  .about-image {
+    width: $w-100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover .image-wrap {
+      transform: scale(0.95);
+    }
+    &:hover .image-wrap::before {
+      background: $RGBA-purple;
+      height: $h-10 * 25;
+    }
+    &:hover .image-wrap::after {
+      background: $RGBA-blue;
+      height: $h-10 * 15;
+    }
+    .image-wrap {
+      width: $w-10 * 30;
+      height: $h-10 * 30;
+      border-radius: $roundedLg;
+      box-shadow: 0 0 10px $gray-2;
+      position: relative;
+      z-index: 1;
+      transition: all $durationMd $func;
+      &::before {
+        content: "";
+        width: $w-10 * 20;
+        height: $h-10 * 20;
+        border: 5px solid $primary;
+        border-top-right-radius: $roundedLg;
+        position: absolute;
+        top: -20px;
+        right: -20px;
+        z-index: -1;
+        transition: all $durationMd $func;
+      }
+      &::after {
+        content: "";
+        width: $w-10 * 10;
+        height: $h-10 * 10;
+        border: 5px solid $blue-1;
+        border-bottom-left-radius: $roundedLg;
+        position: absolute;
+        bottom: -15px;
+        left: -15px;
+        z-index: -1;
+        transition: all $durationMd $func;
+      }
+      .wrap-inner {
+        border-radius: $roundedLg;
+        overflow: hidden;
+      }
+    }
+  }
+  .about-info {
+    margin-top: $m-10 * 2;
+    .info-title {
+      margin: 0;
+      &:nth-child(1) {
+        color: $tPurple;
+      }
+      &:nth-child(2) {
+        font-weight: $regular;
+      }
+    }
+  }
+  .about-sub-content {
+    margin-top: $m-10 * 2;
+  }
+}

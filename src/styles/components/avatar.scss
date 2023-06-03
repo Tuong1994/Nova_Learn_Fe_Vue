@@ -1,0 +1,43 @@
+.nvl-avatar {
+  position: relative;
+  .avatar-badge {
+    min-width: max-content;
+    padding: $p-5;
+    width: $w-10 * 2;
+    height: $h-10 * 2;
+    border-radius: $roundedLg;
+    background: $red-1;
+    color: $tSecondary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -5px;
+    left: 60%;
+    z-index: 5;
+    font-size: $body-2;
+  }
+  .avatar-inner {
+    width: $w-100;
+    height: $h-100;
+    .inner-item {
+      width: $w-100;
+      height: $h-100;
+      background: $primary;
+      border: 0.5px solid $primary;
+      border-radius: $circle;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .item-icon {
+        path {
+          color: $tSecondary;
+        }
+      }
+      &:last-child {
+        background: transparent;
+      }
+    }
+  }
+}

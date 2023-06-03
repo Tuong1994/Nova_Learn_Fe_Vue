@@ -1,0 +1,21 @@
+.nvl-body-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: $p-10 * 2 $p-10 * 5;
+  .header-title {
+    min-width: max-content;
+    & * {
+      margin: 0;
+    }
+  }
+  .header-right {
+    min-width: max-content;
+    & * {
+      margin: 0;
+    }
+  }
+  @include respond(mdPhone) {
+    padding: $p-10 * 2 $p-10;
+  }
+}

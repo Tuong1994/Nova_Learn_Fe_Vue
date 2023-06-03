@@ -1,0 +1,193 @@
+// Default
+.nvl-input-group {
+  margin: $m-10 0;
+  position: relative;
+  .group-label {
+    display: flex;
+    margin-bottom: $m-5;
+    .label-mark {
+      color: $tRed;
+      margin-right: $m-5;
+    }
+  }
+  .group-control {
+    width: $w-100;
+    border: 1px solid $gray-2;
+    border-radius: $rounded;
+    transition: all $durationSm $func;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &:focus-within {
+      border: 1px solid $primary;
+    }
+    .control-prefix {
+      min-width: max-content;
+      width: $w-10 * 3;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-right: 1px solid $gray-2;
+      background: $secondary;
+    }
+    .control-suffix {
+      min-width: max-content;
+      width: $w-10 * 3;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-left: 1px solid $gray-2;
+      background: $secondary;
+    }
+    .control-input {
+      width: $w-100;
+      padding: $p-2 * 2 $p-2 * 4;
+      border: unset;
+      &::placeholder {
+        font-size: $body-2;
+      }
+    }
+    .control-input--sm {
+      padding: $p-2 + 1 $p-2 * 4;
+      font-size: $body-2;
+    }
+    .control-input--md {
+      padding: $p-2 * 2 $p-2 * 4;
+    }
+    .control-input--lg {
+      padding: $p-2 * 3 $p-2 * 4;
+    }
+    .control-icon {
+      padding: 0 $p-2 * 3;
+      background: $secondary;
+      cursor: pointer;
+      svg {
+        font-size: $body-2;
+      }
+      .icon-x {
+        font-size: $body-2;
+        path {
+          color: $tGray;
+        }
+      }
+    }
+  }
+  .group-select {
+    min-width: max-content;
+    width: $w-100;
+    border: 1px solid $gray-1;
+    border-radius: $rounded;
+    background: $secondary;
+    position: absolute;
+    top: 110%;
+    left: 0;
+    z-index: 9;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    transition: all $durationSm $func;
+    .select-option {
+      min-width: max-content;
+      padding: $p-5 $p-10;
+      border-bottom: 1px solid $gray-1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: all $durationSm $func;
+      cursor: pointer;
+      &:hover {
+        background: $white-1;
+      }
+      span {
+        font-size: $body-1;
+      }
+    }
+    .select-option--border {
+      border-bottom: unset;
+    }
+    .select-option-selected {
+      background: $white-1;
+    }
+    .select-option-empty {
+      padding: $p-10 * 2;
+      text-align: center;
+      font-size: $body-2;
+      color: $tGray;
+    }
+    .select-option-pagination {
+      padding: $p-5 $p-10;
+      border-top: 1px solid $gray-1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .pagination-content {
+        font-size: $body-2;
+      }
+      .pagination-actions {
+        display: flex;
+        .actions-button {
+          border-radius: 0;
+          width: $w-10 * 3;
+          height: $w-10 * 3;
+          &:first-child {
+            border-right: 0;
+            border-start-start-radius: $rounded;
+            border-end-start-radius: $rounded;
+          }
+          &:last-child {
+            border-end-end-radius: $rounded;
+            border-start-end-radius: $rounded;
+          }
+          .button-icon {
+            font-size: $body-1;
+          }
+        }
+      }
+    }
+  }
+  .group-select--overflow {
+    height: $h-10 * 25;
+    overflow-y: auto;
+  }
+  .group-select-active {
+    opacity: 1;
+    visibility: visible;
+  }
+  .group-error-message {
+    padding-top: $p-5;
+    color: $tRed;
+    font-size: $body-2;
+  }
+  .group-control-error--border {
+    border-color: $tRed;
+  }
+}
+
+// Upload
+.nvl-single-upload {
+  width: $w-10 * 10;
+  height: $h-10 * 10;
+  border: 1px dashed $gray-2;
+  border-radius: $rounded;
+  position: relative;
+  overflow: hidden;
+  transition: all $durationSm $func;
+  &:hover {
+    border-color: $primary;
+  }
+  .upload-control {
+    width: $w-100;
+    height: $h-100;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .control-icon {
+      font-size: $h5;
+    }
+    .control-input {
+      display: none;
+    }
+  }
+}

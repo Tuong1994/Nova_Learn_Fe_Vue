@@ -1,0 +1,28 @@
+.nvl-hover-row {
+  width: $w-100;
+  padding: $p-10 0;
+  position: relative;
+  cursor: pointer;
+  transition: all $durationSm $func;
+  * {
+    transition: all $durationSm $func;
+  }
+  &:hover::after {
+    width: $w-100;
+  }
+  &:hover,
+  &:hover * {
+    color: $tPurple;
+  }
+  &::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background: $primary;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 5;
+    transition: all $durationSm $func;
+  }
+}
