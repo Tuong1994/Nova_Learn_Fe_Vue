@@ -7,6 +7,7 @@ import Section from "@/components/Section/Section.vue";
 import Title from "@/components/Typography/Title.vue";
 import Paragraph from "@/components/Typography/Paragraph.vue";
 import IconCheck from "@/components/Icons/IconCheck.vue";
+import useReveal from "@/common/hooks/useReveal";
 
 defineComponent({ name: "IntroMentor" });
 
@@ -15,12 +16,14 @@ interface IntroMentorProps {
 }
 
 defineProps<IntroMentorProps>();
+
+useReveal("mentorInner");
 </script>
 
 <template>
-  <Section wrapClass="intro-mentor">
+  <Section wrapClass="intro-mentor" id="mentorInner">
     <Title :level="3" wrapClass="mentor-title">
-      {{ langs?.intro.mentor.title }}
+      {{ langs?.intro.sideNav.mentor }}
     </Title>
     <Paragraph wrapClass="mentor-content">
       <Row>

@@ -42,9 +42,9 @@ const tabs = computed<ITabs[]>(() => [
             {{ langs?.home.tabs.subTitle_1 }}
           </Title>
           <p class="item-text">{{ langs?.home.tabs.content_1 }}</p>
-          <router-link to="/">
+          <router-link to="/about/intro">
             <Button wrapClass="item-action" variant="primary">
-              {{ langs?.common.actions.courses }}
+              {{ langs?.common.actions.seeMore }}
             </Button>
           </router-link>
         </div>

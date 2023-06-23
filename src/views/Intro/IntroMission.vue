@@ -7,6 +7,7 @@ import Col from "@/components/Grid/Col.vue";
 import Title from "@/components/Typography/Title.vue";
 import Paragraph from "@/components/Typography/Paragraph.vue";
 import IntroImage from "./IntroImage.vue";
+import useReveal from "@/common/hooks/useReveal";
 
 defineComponent({ name: "IntroMission" });
 
@@ -15,17 +16,19 @@ interface IntroMissionProps {
 }
 
 defineProps<IntroMissionProps>();
+
+useReveal("missionInner");
 </script>
 
 <template>
-  <Section wrapClass="intro-mission">
+  <Section wrapClass="intro-mission" id="missionInner">
     <Row align="start" justify="spaceBetween" wrapClass="mission-wrap">
       <Col :xs="24" :md="12" :span="8">
         <IntroImage :src="require('../../assets/images/banner/banner_4.jpg')" />
       </Col>
       <Col :xs="24" :md="12" :span="15">
         <Title :level="3" wrapClass="mission-title">
-          {{ langs?.intro.mission.title }}
+          {{ langs?.intro.sideNav.mission }}
         </Title>
         <Title :level="5" wrapClass="mission-subtitle">
           {{ langs?.intro.mission.subTitle }}

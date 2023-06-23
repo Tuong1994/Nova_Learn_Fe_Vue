@@ -122,6 +122,9 @@
           font-size: $h4;
         }
       }
+      .detail-action {
+        width: $w-10 * 20;
+      }
       @include respond(lgTablet) {
         width: $w-100;
         padding: $p-10 * 5;

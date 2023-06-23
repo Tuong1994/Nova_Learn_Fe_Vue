@@ -13,7 +13,7 @@ import useLang from "@/common/hooks/useLang";
 
 defineComponent({ name: "SignInView" });
 
-const langs = useLang();
+const { langs } = useLang();
 </script>
 
 <template>
@@ -47,11 +47,7 @@ const langs = useLang();
             </Row>
 
             <FormFooter>
-              <Button
-                variant="primary"
-                size="lg"
-                wrapClass="wrap-card-action"
-              >
+              <Button variant="primary" size="lg" wrapClass="wrap-card-action">
                 {{ langs?.common.actions.signIn }}
               </Button>
             </FormFooter>

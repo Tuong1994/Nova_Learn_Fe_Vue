@@ -1,0 +1,83 @@
+.detail-intro {
+  overflow: hidden;
+  .intro-image {
+    width: $w-10 * 35;
+    height: $h-10 * 30;
+    border-radius: $roundedLg;
+    box-shadow: 0 0 5px $gray-1;
+    margin: auto;
+    margin-top: $m-10 * 2;
+    margin-bottom: $m-10 * 10;
+    position: relative;
+    z-index: 1;
+    &::before {
+      content: "";
+      width: $w-10 * 30;
+      height: $h-10 * 20;
+      border: 5px solid $primary;
+      position: absolute;
+      top: -20px;
+      right: -20px;
+      z-index: -1;
+      animation: clockwise 5s $func infinite;
+      @include respond(laptop) {
+        width: $w-10 * 20;
+        height: $h-10 * 15;
+      }
+    }
+    &::after {
+      content: "";
+      width: $w-10 * 10;
+      height: $h-10 * 10;
+      border: 5px solid $blue-1;
+      position: absolute;
+      bottom: -20px;
+      left: -20px;
+      z-index: -1;
+      animation: antiClockwise 4s $func infinite;
+    }
+    .image-view {
+      overflow: hidden;
+      border-radius: $roundedLg;
+    }
+    .image-blob {
+      transform: translate(-50%, -50%);
+      @include respond(laptop) {
+        width: $w-10 * 35 !important;
+        height: $h-10 * 35 !important;
+      }
+    }
+    @include respond(laptop) {
+      width: $w-10 * 30;
+      height: $h-10 * 25;
+    }
+    @include respond(mdTablet) {
+      margin-top: $m-10 * 5;
+    }
+    @include respond(mdPhone) {
+      margin-top: $m-10 * 10;
+    }
+  }
+  .intro-tags {
+    width: $w-10 * 30;
+    margin: auto;
+  }
+  .intro-rate {
+    margin: $m-10 0;
+  }
+  .intro-card-time {
+    margin-bottom: $m-10 * 2;
+    border: unset;
+    box-shadow: 0 0 5px $gray-2;
+    .time-item {
+      font-weight: $semiBold;
+      & * {
+        font-size: $h5;
+        color: $tPurple;
+      }
+    }
+  }
+  .intro-action {
+    width: $w-100;
+  }
+}

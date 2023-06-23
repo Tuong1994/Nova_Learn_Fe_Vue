@@ -5,6 +5,7 @@ defineComponent({ name: "IconPlay" });
 
 interface Props {
   class?: string | string[];
+  size?: number;
 }
 
 const props = defineProps<Props>();
@@ -15,5 +16,10 @@ const onClick = () => emits("onClick");
 </script>
 
 <template>
-  <fa :icon="['fas', 'play']" :class="props.class" @click="onClick" />
+  <fa
+    :icon="['fas', 'play']"
+    :class="props.class"
+    :style="{ fontSize: `${size}px` }"
+    @click="onClick"
+  />
 </template>

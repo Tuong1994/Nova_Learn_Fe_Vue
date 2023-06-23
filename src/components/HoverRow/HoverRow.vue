@@ -1,18 +1,35 @@
 <script lang="ts" setup>
-import { StyleValue, defineComponent, defineProps } from "vue";
+import {
+  StyleValue,
+  defineComponent,
+  defineProps,
+  defineEmits,
+  computed,
+} from "vue";
 
 defineComponent({ name: "NVLHoverRow" });
 
 interface NVLHoverRowProps {
   wrapClass?: string;
+  isActive?: boolean;
   style?: StyleValue;
 }
 
-defineProps<NVLHoverRowProps>();
+const props = defineProps<NVLHoverRowProps>();
+
+const activeClass = computed(() => props.isActive && "nvl-hover-row--active");
+
+const emits = defineEmits(["onHover"]);
+
+const onMouseEnter = () => emits("onHover");
 </script>
 
 <template>
-  <div :class="['nvl-hover-row', wrapClass]" :style="style">
+  <div
+    :class="['nvl-hover-row', activeClass, wrapClass]"
+    :style="style"
+    @mouseenter="onMouseEnter"
+  >
     <slot></slot>
   </div>
 </template>

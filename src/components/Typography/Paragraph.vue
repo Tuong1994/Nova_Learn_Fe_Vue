@@ -8,11 +8,13 @@ interface NVLParagraphProps {
   size?: number;
   theme?: "dark" | "light";
   align?: "left" | "center" | "right" | "justify";
+  transform?: "uppercase" | "lowercase" | "capitalize" | "none";
 }
 
 const props = withDefaults(defineProps<NVLParagraphProps>(), {
   theme: "dark",
   align: "left",
+  transform: "none",
   size: 15,
 });
 
@@ -33,11 +35,27 @@ const getAlignClass = computed(() => {
   };
   return aligns[props.align];
 });
+
+const transformClass = computed(() => {
+  const transforms: any = {
+    uppercase: "nvl-paragraph--uppercase",
+    lowercase: "nvl-paragraph--lowercase",
+    capitalize: "nvl-paragraph--capitalize",
+    none: "nvl-paragraph--none",
+  };
+  return transforms[props.transform];
+});
 </script>
 
 <template>
   <p
-    :class="['nvl-paragraph', getAlignClass, getThemeClass, wrapClass]"
+    :class="[
+      'nvl-paragraph',
+      getAlignClass,
+      transformClass,
+      getThemeClass,
+      wrapClass,
+    ]"
     :style="{ fontSize: `${size}px` }"
   >
     <slot></slot>

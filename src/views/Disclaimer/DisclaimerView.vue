@@ -15,7 +15,7 @@ import useLang from "@/common/hooks/useLang";
 
 defineComponent({ name: "DisclaimerView" });
 
-const langs = useLang();
+const { langs } = useLang();
 
 const tabletHeaders = computed(() => [
   langs.value?.common.table.header.number ?? "",

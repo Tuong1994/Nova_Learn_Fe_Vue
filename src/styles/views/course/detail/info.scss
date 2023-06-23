@@ -1,0 +1,70 @@
+.detail-info {
+  background: $deepPurple-1;
+  border-radius: $rounded;
+  & * {
+    color: $tSecondary;
+  }
+  .info-image {
+    width: $w-10 * 35;
+    height: $h-10 * 25;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+    &:hover::before {
+      background: $RGBA-purple;
+    }
+    &:hover::after {
+      background: $RGBA-blue;
+    }
+    &:hover .image-view img {
+      transform: scale(1.2);
+    }
+    &::before {
+      content: "";
+      width: $w-10 * 25;
+      height: $h-10 * 20;
+      border: 5px solid $primary;
+      position: absolute;
+      bottom: -10px;
+      right: -20px;
+      z-index: -1;
+      transition: all $durationMd $func;
+      @include respond(mdPhone) {
+       right: 10px;
+      }
+    }
+    &::after {
+      content: "";
+      width: $w-10 * 10;
+      height: $h-10 * 10;
+      border: 5px solid $blue-1;
+      position: absolute;
+      bottom: -20px;
+      right: -10px;
+      z-index: -1;
+      transition: all $durationMd $func;
+      @include respond(mdPhone) {
+        right: 20px;
+      }
+    }
+    .image-view {
+      border-radius: $roundedLg;
+      overflow: hidden;
+      img {
+        transition: all $durationMd $func;
+      }
+    }
+    @include respond(smPhone) {
+      width: $w-100;
+    }
+  }
+  .info-benefit {
+    margin-top: $m-10 * 5;
+    .benefit-title {
+      & * {
+        font-size: $h6;
+        color: $tBlue;
+      }
+    }
+  }
+}

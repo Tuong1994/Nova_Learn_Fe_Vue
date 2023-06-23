@@ -9,13 +9,13 @@ import HomeTabs from "./HomeTabs.vue";
 import HomeStudent from "./HomeStudent.vue";
 import HomeIntro from "./HomeIntro.vue";
 import HomeBlog from "./HomeBlog.vue";
-import Statistics from "@/components/Common/Statistics.vue";
-import Course from "@/components/Common/Course.vue";
+import Statistics from "@/components/Common/Statistics/Statistics.vue";
+import Course from "@/components/Common/Course/Course.vue";
 import useLang from "@/common/hooks/useLang";
 
 defineComponent({ name: "HomeView" });
 
-const langs = useLang();
+const { langs } = useLang();
 </script>
 
 <template>

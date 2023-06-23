@@ -1,0 +1,28 @@
+.detail-project {
+  .project-inner {
+    .inner-body {
+      @include respond(mdPhone) {
+        padding: 0;
+      }
+    }
+    .inner-task {
+      .task-card {
+        & * {
+          color: $tSecondary;
+        }
+        &:nth-child(2) {
+          margin: $m-10 0;
+        }
+        .task-card-header {
+          background: $dark-1;
+        }
+        .task-card-body {
+          background: $blue-1;
+        }
+      }
+    }
+    @include respond(mdPhone) {
+      border: unset;
+    }
+  }
+}

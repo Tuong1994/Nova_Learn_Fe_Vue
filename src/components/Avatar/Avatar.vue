@@ -43,7 +43,7 @@ const showSlot = () => !!slots.default;
         <IconUser class="item-icon" />
       </div>
 
-      <div v-if="showSlot()" class="inner-item">
+      <div v-if="showSlot()" class="inner-item inner-item--background">
         <slot></slot>
       </div>
     </div>

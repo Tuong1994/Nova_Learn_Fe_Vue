@@ -12,7 +12,6 @@ const introEng = {
     mentor: "Mentors",
   },
   about: {
-    title: "About Nova Learn",
     content_1:
       "We have a wide range of values ​​to prove to you our outstanding capabilities for you to make the right decision. Why choose us for your career.We came from the top 10 best students in IT majors in 2007 at Ho Chi Minh University of Natural Sciences - Vietnam National University, Ho Chi Minh City.",
     content_2:
@@ -26,21 +25,18 @@ const introEng = {
       "Nova Learn was born to help students have full career skills and soft skills, to meet the right goals of businesses. Through that, businesses can find a quality staff that can easily adapt to the project without having to re-train, saving time and costs.",
   },
   vision: {
-    title: "Vision",
     subTitle:
       "To become the region's leading professional programming training system",
     content:
       "To become the region's leading professional programming training system, providing highly skilled and specialized human resources for the development of the software industry in the current digital age. Contributing to the development of society, making Vietnam a powerhouse in software development and high-quality skilled personnel for the world",
   },
   mission: {
-    title: "Mission",
     subTitle:
       "Using modern training methods to create a team of high-quality programmers",
     content:
       "Nova Learn uses advanced and modern training methods on the basis of educational technology, combining traditional methods, online methods, and flipped classrooms in teaching. Students learn based on real projects, coordination between experienced coaching staff and professional requirements in projects from companies and businesses. Thereby, Nova Learn helps learners develop thinking, analysis, career depth, lifelong learning, ready to meet all the needs of businesses",
   },
   mentor: {
-    title: "Mentor",
     content_1:
       "Nova Learn recruits Lecturers who are Seniors who are working at companies and corporations such as ELCA, NashTech, Global CyberSoft, KMS, ... rich in practical experience, good communication and dedication",
     content_2:

@@ -4,10 +4,10 @@ import { Langs } from "@/common/lang";
 import Row from "@/components/Grid/Row.vue";
 import Col from "@/components/Grid/Col.vue";
 import Section from "@/components/Section/Section.vue";
-import Image from "@/components/Image/Image.vue";
 import Title from "@/components/Typography/Title.vue";
 import Paragraph from "@/components/Typography/Paragraph.vue";
 import IntroImage from "./IntroImage.vue";
+import useReveal from "@/common/hooks/useReveal";
 
 defineComponent({ name: "IntroVision" });
 
@@ -16,14 +16,16 @@ interface IntroVisionProps {
 }
 
 defineProps<IntroVisionProps>();
+
+useReveal("visionInner")
 </script>
 
 <template>
-  <Section wrapClass="intro-vision">
+  <Section wrapClass="intro-vision" id="visionInner">
     <Row align="start" justify="spaceBetween" wrapClass="vision-wrap">
       <Col :xs="24" :md="12" :span="15">
         <Title :level="3" wrapClass="vision-title">
-          {{ langs?.intro.vision.title }}
+          {{ langs?.intro.sideNav.vision }}
         </Title>
         <Title :level="5" wrapClass="vision-subtitle">
           {{ langs?.intro.vision.subTitle }}

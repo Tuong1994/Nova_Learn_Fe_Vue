@@ -1,0 +1,13 @@
+.business-col {
+  position: sticky;
+  top: 80px;
+  z-index: 5;
+  .col-side-nav {
+    width: $w-10 * 25;
+    margin-top: $m-10;
+    background: $secondary;
+    border-radius: $rounded;
+    box-shadow: 2px 2px 10px $dark-1;
+    overflow: hidden;
+  }
+}

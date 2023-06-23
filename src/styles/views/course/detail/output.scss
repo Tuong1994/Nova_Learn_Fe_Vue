@@ -1,0 +1,35 @@
+.detail-output {
+  .output-image {
+    width: $w-10 * 30;
+    height: $h-10 * 40;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+    &::before {
+      content: "";
+      width: $w-10 * 20;
+      height: $h-10 * 20;
+      background: $primary;
+      border-radius: $rounded;
+      position: absolute;
+      bottom: -10px;
+      right: -20px;
+      z-index: -1;
+    }
+    &::after {
+      content: "";
+      width: $w-10 * 10;
+      height: $h-10 * 10;
+      background: $blue-1;
+      border-radius: $rounded;
+      position: absolute;
+      bottom: -20px;
+      right: -10px;
+      z-index: -1;
+    }
+    .image-view {
+      border-radius: $roundedLg;
+      overflow: hidden;
+    }
+  }
+}

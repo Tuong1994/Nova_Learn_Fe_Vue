@@ -5,6 +5,7 @@ import IconPlus from "../Icons/IconPlus.vue";
 import Image from "../Image/Image.vue";
 import NoteMessage from "../NoteMessage/NoteMessage.vue";
 import useLang from "@/common/hooks/useLang";
+import ImagePreview from "../Image/ImagePreview.vue";
 
 defineComponent({ name: "NVLSingleUpload" });
 
@@ -14,9 +15,9 @@ interface NVLSingleUploadProps {
   inputClass?: string;
 }
 
-const props = defineProps<NVLSingleUploadProps>();
+const { langs } = useLang();
 
-const langs = useLang();
+const props = defineProps<NVLSingleUploadProps>();
 
 const previewUrl = ref<string>(props.defaultImage ?? "");
 
@@ -94,11 +95,10 @@ const onRemove = () => {
     </label>
 
     <!-- Preview image -->
-    <Image
+    <ImagePreview
       v-if="previewUrl"
       fit="contain"
       :src="previewUrl"
-      :hasPreview="true"
       :hasRemove="true"
       @onRemove="onRemove"
     />

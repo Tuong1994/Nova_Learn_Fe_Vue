@@ -10,7 +10,7 @@ import useLang from "@/common/hooks/useLang";
 
 defineComponent({ name: "PhotoLibraryView" });
 
-const langs = useLang();
+const { langs } = useLang();
 
 const isPreview = ref({
   active: false,
@@ -63,9 +63,5 @@ const onClose = () => {
     <PhotoLibrarySub :langs="langs" :images="images" @onPreview="onPreview" />
   </Section>
 
-  <SlideGallery
-    :items="images"
-    :open="isPreview.active"
-    @onClose="onClose"
-  />
+  <SlideGallery :items="images" :open="isPreview.active" @onClose="onClose" />
 </template>

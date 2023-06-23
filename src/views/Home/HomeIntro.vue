@@ -32,14 +32,14 @@ defineProps<HomeIntroProps>();
         </Title>
         <Row wrapClass="wrap-link" justify="center">
           <Col :xs="10">
-            <router-link to="/">
+            <router-link to="/course/list">
               <Button wrapClass="link-btn" variant="primary" size="lg">
                 {{ langs?.common.actions.courses }}
               </Button>
             </router-link>
           </Col>
           <Col :xs="10">
-            <router-link to="/">
+            <router-link to="/about/contact">
               <Button wrapClass="link-btn" variant="primary" size="lg">
                 {{ langs?.common.actions.advise }}
               </Button>

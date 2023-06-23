@@ -1,0 +1,13 @@
+.blog-detail {
+  .detail-relative-item {
+    .item-image {
+      margin-bottom: $m-10;
+      height: $h-10 * 20;
+      border-radius: $rounded;
+      overflow: hidden;
+    }
+    .item-title {
+      margin: 0;
+    }
+  }
+}

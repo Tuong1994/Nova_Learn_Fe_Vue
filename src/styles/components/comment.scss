@@ -1,0 +1,28 @@
+.nvl-comment {
+  .nvl-comment-list {
+    list-style: none;
+  }
+  .nvl-comment-item {
+    .item-group {
+      .group-content {
+        margin-bottom: $m-10;
+        padding: $p-10;
+        border-radius: $rounded;
+        background: $gray-1;
+      }
+    }
+    .item-child-list {
+      margin-top: $m-10;
+      padding-left: $p-10;
+      position: relative;
+      .list-line {
+        width: 1px;
+        height: $h-100;
+        background: $gray-2;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+}

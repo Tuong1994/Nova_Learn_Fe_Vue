@@ -1,0 +1,6 @@
+.nvl-layout {
+  padding-top: $p-10 * 9.5;
+  @include respond(lgTablet) {
+    padding-top: $p-10 * 5.5;
+  }
+}

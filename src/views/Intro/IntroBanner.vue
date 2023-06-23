@@ -37,7 +37,7 @@ defineProps<IntroBannerProps>();
       <Col :xs="24" :md="24" :lg="10" :span="8">
         <div class="banner-image">
           <Image
-            fit="contain"
+            wrapClass="image-inner"
             :src="require('../../assets/images/banner/banner_3.jpg')"
           />
         </div>

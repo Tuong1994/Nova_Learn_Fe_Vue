@@ -52,7 +52,7 @@ const props = withDefaults(defineProps<NVLAsyncSelectProps>(), {
   rules: () => [],
 });
 
-const langs = useLang();
+const { langs } = useLang();
 
 const slots = useSlots();
 

@@ -19,8 +19,8 @@ withDefaults(defineProps<NVLListItemProps>(), {
 
 <template>
   <li :class="['nvl-list-item', wrapClass]" :style="style">
-    <Row>
-      <Col :span="2">
+    <Row :gutters="[8]">
+      <Col>
         <IconCustom :icon="icon" />
       </Col>
       <Col :span="22">

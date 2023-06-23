@@ -3,7 +3,7 @@ import { computed } from "vue";
 import { IMenuItem } from "../interface/base";
 
 const useMenu = () => {
-  const langs = useLang();
+  const { langs } = useLang();
 
   const mainMenu = computed<IMenuItem[]>(() => [
     {
@@ -20,32 +20,32 @@ const useMenu = () => {
             {
               id: "fe",
               title: langs.value?.menu.courses.subs.category_bootCamp.fe,
-              link: "/course/bootcamp/fe",
+              link: "/course/detail",
             },
             {
               id: "be",
               title: langs.value?.menu.courses.subs.category_bootCamp.be,
-              link: "/course/bootcamp/be",
+              link: "/course/detail",
             },
             {
               id: "fs",
               title: langs.value?.menu.courses.subs.category_bootCamp.fs,
-              link: "/course/bootcamp/fs",
+              link: "/course/detail",
             },
             {
               id: "mobile",
               title: langs.value?.menu.courses.subs.category_bootCamp.mobile,
-              link: "/course/bootcamp/mobile",
+              link: "/course/detail",
             },
             {
               id: "java",
               title: langs.value?.menu.courses.subs.category_bootCamp.java,
-              link: "/course/bootcamp/java",
+              link: "/course/detail",
             },
             {
               id: "cSharp",
               title: langs.value?.menu.courses.subs.category_bootCamp.cSharp,
-              link: "/course/bootcamp/cSharp",
+              link: "/course/detail",
             },
           ],
         },
@@ -56,22 +56,22 @@ const useMenu = () => {
             {
               id: "java",
               title: langs.value?.menu.courses.subs.category_background.java,
-              link: "/course/backend/java",
+              link: "/course/detail",
             },
             {
               id: "cSharp",
               title: langs.value?.menu.courses.subs.category_background.cSharp,
-              link: "/course/backend/cSharp",
+              link: "/course/detail",
             },
             {
               id: "python",
               title: langs.value?.menu.courses.subs.category_background.python,
-              link: "/course/backend/python",
+              link: "/course/detail",
             },
             {
               id: "data",
               title: langs.value?.menu.courses.subs.category_background.data,
-              link: "/course/backend/data",
+              link: "/course/detail",
             },
           ],
         },
@@ -82,22 +82,22 @@ const useMenu = () => {
             {
               id: "android",
               title: langs.value?.menu.courses.subs.category_mobile.android,
-              link: "/course/mobile/android",
+              link: "/course/detail",
             },
             {
               id: "ios",
               title: langs.value?.menu.courses.subs.category_mobile.ios,
-              link: "/course/mobile/ios",
+              link: "/course/detail",
             },
             {
               id: "reactNative",
               title: langs.value?.menu.courses.subs.category_mobile.reactNative,
-              link: "/course/mobile/reactNative",
+              link: "/course/detail",
             },
             {
               id: "flutter",
               title: langs.value?.menu.courses.subs.category_mobile.flutter,
-              link: "/course/mobile/flutter",
+              link: "/course/detail",
             },
           ],
         },
@@ -110,11 +110,11 @@ const useMenu = () => {
       type: "main",
       typeSubs: "default",
       subs: [
-        {
-          id: "stories",
-          title: langs.value?.menu.student.subs.stories,
-          link: "/student/stories",
-        },
+        // {
+        //   id: "stories",
+        //   title: langs.value?.menu.student.subs.stories,
+        //   link: "/student/stories",
+        // },
         {
           id: "photo",
           title: langs.value?.menu.student.subs.photo,

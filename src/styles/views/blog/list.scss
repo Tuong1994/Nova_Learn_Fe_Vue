@@ -1,0 +1,18 @@
+.blog-list {
+  .list-item {
+    border-radius: $roundedLg;
+    transition: all $durationMd $func;
+    &:hover {
+      transform: scale(1.04);
+    }
+    .item-body {
+      background: $deepPurple-1;
+      .body-image {
+        width: $w-100;
+        height: $h-10 * 20;
+        border-radius: $roundedLg;
+        overflow: hidden;
+      }
+    }
+  }
+}

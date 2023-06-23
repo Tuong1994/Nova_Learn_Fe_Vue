@@ -1,0 +1,56 @@
+.detail-goals {
+  background: $orange-1;
+  border-radius: $rounded;
+  .goals-item {
+    &:hover .item-icon::after {
+      transform: scale(0);
+      opacity: 0;
+    }
+    &:hover .item-icon svg path {
+      color: $tSecondary;
+    }
+    .item-icon {
+      width: $w-10 * 6;
+      height: $h-10 * 6;
+      border-radius: $circle;
+      border: 2px solid $blue-1;
+      background: $blue-1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+      &::after {
+        content: "";
+        width: $w-100;
+        height: $h-100;
+        background: $orange-1;
+        border-radius: $circle;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        opacity: 1;
+        transform: scale(1);
+        transition: all $durationMd $func;
+      }
+      svg {
+        font-size: $subtitle;
+        path {
+          color: $tBlue;
+          transition: all $durationMd $func;
+        }
+      }
+    }
+  }
+  .goals-action {
+    width: $w-100;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    button {
+      width: $w-100;
+    }
+  }
+}

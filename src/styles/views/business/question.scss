@@ -1,0 +1,34 @@
+.business-question {
+  position: relative;
+  z-index: 1;
+  .question-item {
+    margin: $m-10 * 2 0;
+    border: 0;
+    background: $primary;
+    & * {
+      color: $tSecondary;
+    }
+    .item-title {
+      border: 0;
+      padding: $p-10 * 2;
+      span {
+        font-size: $subtitle;
+        @include respond(mdPhone) {
+          font-size: $default;
+        }
+      }
+    }
+    .item-content {
+      border: 0;
+      .content-inner {
+        padding: $p-10 * 2;
+      }
+    }
+  }
+  @include respond(lgTablet) {
+    padding: $p-10 * 5;
+  }
+  @include respond(smTablet) {
+    padding: $p-10;
+  }
+}

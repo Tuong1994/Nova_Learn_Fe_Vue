@@ -1,19 +1,20 @@
 .nvl-body-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   padding: $p-10 * 2 $p-10 * 5;
+  padding-bottom: 0;
   .header-title {
-    min-width: max-content;
+    width: $w-100;
     & * {
       margin: 0;
     }
   }
   .header-right {
-    min-width: max-content;
+    width: $w-100;
     & * {
       margin: 0;
     }
+  }
+  @include respond(lgTablet) {
+    padding: $p-10 * 2;
   }
   @include respond(mdPhone) {
     padding: $p-10 * 2 $p-10;

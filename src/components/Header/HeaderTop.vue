@@ -10,7 +10,6 @@ defineComponent({ name: "NVLHeaderTop" });
 
 interface HeaderTopProps {
   langs: Langs;
-  isHideTop: boolean;
 }
 
 const { mainMenu } = useMenu();
@@ -23,7 +22,7 @@ const filterMenu = computed<IMenuItem[]>(() =>
 </script>
 
 <template>
-  <div :class="['header-top', isHideTop ? 'header-top--height' : '']">
+  <div id="headerTop" class="header-top">
     <Row :style="{ height: '100%' }" align="center" justify="end">
       <Col v-for="menu in filterMenu" :key="menu.id" className="top-link">
         <router-link :to="menu.link ?? '/'" class="link-item">{{

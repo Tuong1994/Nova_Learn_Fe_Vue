@@ -43,6 +43,7 @@ interface NVLGridColProps {
   xs?: ColSpan;
   md?: ColSpan;
   lg?: ColSpan;
+  grow?: number;
   wrapClass?: string;
   style?: StyleValue;
 }
@@ -52,6 +53,8 @@ const props = withDefaults(defineProps<NVLGridColProps>(), {
   xs: -1,
   md: -1,
   lg: -1,
+  grow: 0,
+  style: () => ({}),
 });
 
 const spanClass = computed(() => {
@@ -183,7 +186,7 @@ const lgClass = computed(() => {
 <template>
   <div
     :class="['nvl-grid-col', spanClass, lgClass, mdClass, xsClass, wrapClass]"
-    :style="style"
+    :style="[style, { flexGrow: grow }]"
   >
     <slot></slot>
   </div>

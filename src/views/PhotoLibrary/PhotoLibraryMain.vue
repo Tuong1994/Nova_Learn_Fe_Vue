@@ -3,8 +3,7 @@ import { defineComponent, defineProps, defineEmits } from "vue";
 import { ISlideGalleryImage } from "@/common/interface/base";
 import Row from "@/components/Grid/Row.vue";
 import Col from "@/components/Grid/Col.vue";
-import IconSearch from "@/components/Icons/IconSearch.vue";
-import Image from "@/components/Image/Image.vue";
+import LibraryImage from "@/components/Common/LibraryImage/LibraryImage.vue";
 
 defineComponent({ name: "PhotoLibraryMain" });
 
@@ -28,12 +27,7 @@ const onPreview = (idx: number) => emits("onPreview", idx);
       :md="12"
       :span="8"
     >
-      <div class="library-image">
-        <Image fit="cover" :src="image.src" />
-        <div class="image-icon" @click="() => onPreview(idx)">
-          <IconSearch class="icon-search" />
-        </div>
-      </div>
+      <LibraryImage :image="image" :idx="idx" @onPreview="onPreview" />
     </Col>
   </Row>
 </template>

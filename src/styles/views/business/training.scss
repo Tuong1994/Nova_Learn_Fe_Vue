@@ -1,0 +1,15 @@
+.business-training {
+  background: $dark-1;
+  border-bottom-left-radius: $rounded;
+  border-bottom-right-radius: $rounded;
+  .training-item {
+    height: $h-10 * 25;
+    background: $gray-1;
+    .item-title {
+      font-size: $h1 + 20;
+      color: $tPurple;
+      margin-bottom: $m-10;
+      border-bottom: 1px solid $primary;
+    }
+  }
+}

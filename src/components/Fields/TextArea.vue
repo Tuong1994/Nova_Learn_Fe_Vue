@@ -40,7 +40,7 @@ const props = withDefaults(defineProps<NVLTextAreaProps>(), {
   rows: 8,
 });
 
-const langs = useLang();
+const { langs } = useLang();
 
 const slots = useSlots();
 

@@ -6,8 +6,7 @@ import Row from "@/components/Grid/Row.vue";
 import Col from "@/components/Grid/Col.vue";
 import List from "@/components/List/List.vue";
 import ListItem from "@/components/List/ListItem.vue";
-import IconSearch from "@/components/Icons/IconSearch.vue";
-import Image from "@/components/Image/Image.vue";
+import LibraryImage from "@/components/Common/LibraryImage/LibraryImage.vue";
 
 defineComponent({ name: "PhotoLibrarySub" });
 
@@ -50,12 +49,7 @@ const onPreview = (idx: number) => emits("onPreview", idx);
           :md="12"
           :span="8"
         >
-          <div class="library-image">
-            <Image fit="cover" :src="image.src" />
-            <div class="image-icon" @click="() => onPreview(idx)">
-              <IconSearch class="icon-search" />
-            </div>
-          </div>
+          <LibraryImage :image="image" :idx="idx" @onPreview="onPreview" />
         </Col>
       </Row>
     </Col>

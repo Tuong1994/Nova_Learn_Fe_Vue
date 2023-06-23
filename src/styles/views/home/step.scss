@@ -12,23 +12,40 @@
       display: flex;
       align-items: center;
       margin: $m-10 * 3 0;
+      &:hover .item-number::after {
+        opacity: 0;
+        transform: scale(0);
+      }
       &:hover .item-number {
-        background: $primary;
         color: $tSecondary;
       }
       .item-number {
         width: $w-10 * 6;
         height: $h-10 * 6;
         font-size: $h4;
-        background: $secondary;
-        border: 1px solid $primary;
+        background: $primary;
+        border: 2px solid $primary;
         border-radius: $circle;
         display: flex;
         justify-content: center;
         align-items: center;
         position: relative;
         left: -30px;
+        z-index: 1;
         transition: all $durationMd $func;
+        &::after {
+          content: "";
+          width: $w-100;
+          height: $h-100;
+          border-radius: $circle;
+          background: $secondary;
+          position: absolute;
+          top: 0;
+          left: 0;
+          opacity: 1;
+          z-index: -1;
+          transition: all $durationMd $func;
+        }
         @include respond(mdPhone) {
           left: 0;
           width: $w-10 * 5;

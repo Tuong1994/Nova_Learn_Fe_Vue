@@ -1,0 +1,46 @@
+.nvl-breadcrumb {
+  padding: $p-10 * 5 0;
+  display: flex;
+  flex-wrap: wrap;
+  .breadcrumb-item {
+    display: flex;
+    &:last-child .item-separator {
+      display: none;
+    }
+    .item-title {
+      font-size: $body-2;
+      transition: all $durationMd $func;
+      &:hover {
+        color: $tPrimary;
+      }
+    }
+    .item-separator {
+      padding: 0 $p-5;
+      font-size: $body-2;
+    }
+  }
+  @include respond(mdPhone) {
+    padding: $p-10 * 2 0;
+  }
+}
+
+.nvl-breadcrumb--dark {
+  .breadcrumb-item {
+    & * {
+      color: $tGray;
+    }
+  }
+}
+
+.nvl-breadcrumb--light {
+  .breadcrumb-item {
+    & * {
+      color: $tSecondary;
+    }
+    .item-title {
+      &:hover {
+        color: $tGray;
+      }
+    }
+  }
+}

@@ -7,6 +7,9 @@
     padding: $p-10 * 2;
     background: $secondary;
     border-bottom: 1px solid $gray-1;
+    & * {
+      margin: 0;
+    }
   }
   .card-body {
     padding: $p-10 * 2;

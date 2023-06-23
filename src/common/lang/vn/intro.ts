@@ -9,10 +9,9 @@ const introVn = {
     about: "Về Nova Learn",
     vision: "Tầm nhìn",
     mission: "Sứ mệnh",
-    mentor: "Đội ngũ giảng viên",
+    mentor: "Giảng viên",
   },
   about: {
-    title: "Về Nova Learn",
     content_1:
       "Chúng tôi có hàng loạt những giá trị để chứng minh với bạn về năng lực vượt trội của chúng tôi để bạn ra quyết định ngay. Lý do tại sao chọn chúng tôi cho sự nghiệp của bạn.",
     content_2:
@@ -26,21 +25,18 @@ const introVn = {
       "Nova Learn ra đời để giúp học viên có đầy đủ kỹ năng nghề nghiệp và kỹ năng mềm, nhằm đáp ứng đúng mục tiêu của doanh nghiệp. Thông qua đó, doanh nghiệp tìm được đội ngũ nhân sự chất lượng, dễ dàng thích nghi vào dự án mà không cần phải đào tạo lại, tiết kiệm thời gian và chi phí.",
   },
   vision: {
-    title: "Tầm nhìn",
     subTitle:
       "Trở thành hệ thống đào tạo lập trình chuyên sâu theo nghề hàng đầu khu vực",
     content:
       "Trở thành hệ thống đào tạo lập trình chuyên sâu theo nghề hàng đầu khu vực, cung cấp nhân lực có tay nghề cao, chuyên môn sâu cho sự phát triển công nghiệp phần mềm trong thời đại công nghệ số hiện nay. Đóng góp cho sự phát triển của xã hội, đưa Việt Nam thành cường quốc về phát triển phần mềm và nhân sự lành nghề chất lượng cao cho thế giới",
   },
   mission: {
-    title: "Sứ mệnh",
     subTitle:
       "Sử dụng các phương pháp đào tạo hiện đại để tạo ra đội ngũ nhân sự lập trình chất lượng cao",
     content:
       "Nova Learn sử dụng các phương pháp đào tạo tiên tiến và hiện đại trên nền tảng công nghệ giáo dục, kết hợp phương pháp truyền thống, phương pháp trực tuyến, lớp học đảo ngược trong giảng dạy. Học viên học tập dựa trên dự án thực tế, phối hợp giữa đội ngũ huấn luyện nhiều kinh nghiệm và yêu cầu nghiệp vụ trong dự án từ các công ty, doanh nghiệp. Qua đó, Nova Learn giúp người học phát triển cả tư duy, phân tích, chuyên sâu nghề nghiệp, học tập suốt đời, sẵn sàng đáp ứng mọi nhu cầu của doanh nghiệp",
   },
   mentor: {
-    title: "Giảng viên",
     content_1:
       "Nova Learn tuyển chọn các Giảng viên là các Senior đang làm tại các công ty, tập đoàn lớp như ELCA, NashTech, Global CyberSoft, KMS, ...giàu kinh nghiệm thực tế, truyển đạt tốt và tận tâm",
     content_2:

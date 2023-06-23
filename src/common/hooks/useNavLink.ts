@@ -1,8 +1,9 @@
 import { onUnmounted, watchEffect } from "vue";
 
 const useNavLink = () => {
+  // Anchor active when scroll to el match anchor href id
   const handleScroll = () => {
-    const contents = document.querySelectorAll('.nvl-link-content');
+    const contents = document.querySelectorAll(".nvl-link-content");
 
     const menuItems = document.querySelectorAll(".nvl-link-item");
 

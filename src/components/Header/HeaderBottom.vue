@@ -34,7 +34,7 @@ const onShowMenu = () => emits("onShowMenu");
 
       <!-- Menu -->
       <Col :xs="0" :md="0" :lg="0" :span="10">
-        <Menu />
+        <Menu :langs="langs" />
       </Col>
 
       <!-- Search -->

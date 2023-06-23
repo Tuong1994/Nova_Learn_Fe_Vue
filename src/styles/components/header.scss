@@ -1,12 +1,14 @@
 .nvl-header {
   width: $w-100;
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
   z-index: 20;
   // Header top
   .header-top {
     height: $h-10 * 3.5;
     padding: 0 $p-10 * 2;
+    background: $secondary;
     transition: all $durationSm $func;
     .top-link {
       text-transform: uppercase;
@@ -118,16 +120,18 @@
             transition: all $durationSm $func;
           }
         }
-        .col-dropdown--left {
-          left: -110%;
+        .col-dropdown--mega {
+          width: $w-10 * 70;
+          left: -150%;
           &::after {
-            left: 150px;
-            @include respond(laptop) {
-              left: 250px;
-            }
+            left: 200px;
           }
-          @include respond(laptop) {
-            left: -220%;
+          .dropdown-sub-group {
+            height: $h-10 * 30;
+            padding-left: $p-10 * 2;
+            border-left: 1px solid $gray-2;
+            overflow-x: hidden;
+            overflow-y: auto;
           }
         }
         .dropdown-group {
@@ -151,6 +155,7 @@
       padding: $p-10;
     }
   }
+  // Header search
   .header-search {
     margin: 0;
     & * {
@@ -158,6 +163,7 @@
       color: $tSecondary;
     }
   }
+  // Header translate
   .header-translate {
     path {
       color: $tSecondary;

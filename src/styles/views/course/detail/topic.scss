@@ -1,0 +1,24 @@
+.detail-topic {
+  .topic-title {
+    text-transform: uppercase;
+  }
+  .topic-card {
+    border: unset;
+    border-radius: $roundedLg;
+    &:hover .topic-card-body .body-image img {
+      transform: scale(1.2);
+    }
+    .topic-card-body {
+      background: $primary;
+      .body-image {
+        width: $w-100;
+        height: $h-10 * 20;
+        border-radius: $roundedLg;
+        overflow: hidden;
+        img {
+          transition: all $durationMd $func;
+        }
+      }
+    }
+  }
+}

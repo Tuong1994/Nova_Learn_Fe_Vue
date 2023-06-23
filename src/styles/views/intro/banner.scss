@@ -7,6 +7,7 @@
     animation: slideIn 1s linear 1;
   }
   .banner-image {
+    height: $h-10 * 25;
     border-radius: $roundedLg;
     overflow: hidden;
   }

@@ -8,11 +8,9 @@ import useOverflow from "@/common/hooks/useOverflow";
 
 defineComponent({ name: "NVLHeader" });
 
-const langs = useLang();
+const { langs } = useLang();
 
 const isShowMenu = ref<boolean>(false);
-
-const isHideTop = ref<boolean>(false);
 
 const isLogin = ref<boolean>(false);
 
@@ -23,9 +21,12 @@ const onShowMenu = () => (isShowMenu.value = true);
 const onCloseMenu = () => (isShowMenu.value = false);
 
 const handleScroll = () => {
-  const scrollY = window.scrollY;
-  if (scrollY > 20) isHideTop.value = true;
-  else if (scrollY === 0) isHideTop.value = false;
+  const headerTopEl = document.getElementById("headerTop");
+  if (headerTopEl) {
+    const scrollY = window.scrollY;
+    if (scrollY > 20) headerTopEl.classList.add("header-top--height");
+    else if (scrollY === 0) headerTopEl.classList.remove("header-top--height");
+  }
 };
 
 watchEffect(() => {
@@ -38,7 +39,7 @@ onUnmounted(() => window.removeEventListener("scroll", handleScroll));
 <template>
   <header class="nvl-header">
     <!-- Header top -->
-    <HeaderTop :isHideTop="isHideTop" :langs="langs" />
+    <HeaderTop :langs="langs" />
     <!-- Header bottom -->
     <HeaderBottom :isLogin="isLogin" :langs="langs" @onShowMenu="onShowMenu" />
     <!-- Slide menu -->

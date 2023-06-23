@@ -1,11 +1,12 @@
 <script lang="ts" setup>
 import { defineComponent, defineProps, computed, ref } from "vue";
+import { IBenefitItem } from "@/common/interface/base";
 import { Langs } from "@/common/lang";
 import Section from "@/components/Section/Section.vue";
 import Title from "@/components/Typography/Title.vue";
 import Row from "@/components/Grid/Row.vue";
 import Col from "@/components/Grid/Col.vue";
-import IconCustom from "@/components/Icons/IconCustom.vue";
+import BenefitItem from "@/components/Common/BenefitItem/BenefitItem.vue";
 
 defineComponent({ name: "HomeBenefit" });
 
@@ -15,7 +16,7 @@ interface HomeBenefitProps {
 
 const props = defineProps<HomeBenefitProps>();
 
-const items = computed(() => [
+const items = computed<IBenefitItem[]>(() => [
   {
     id: "1",
     title: props.langs?.home.benefit.benefit_1.title,
@@ -74,19 +75,7 @@ const items = computed(() => [
         :lg="12"
         :span="7"
       >
-        <div class="benefit-item">
-          <div class="item-icon">
-            <div class="icon-inner">
-              <IconCustom :icon="item.icon" />
-            </div>
-            <div class="icon-line"></div>
-          </div>
-
-          <div class="item-content">
-            <Title :level="6">{{ item.title }}</Title>
-            <div class="content-text">{{ item.content }}</div>
-          </div>
-        </div>
+        <BenefitItem :benefit="item" />
       </Col>
     </Row>
   </Section>

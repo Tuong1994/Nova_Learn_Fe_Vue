@@ -8,6 +8,8 @@ import commitmentEng from "./commitment";
 import photoEng from "./photo";
 import authEng from "./auth";
 import courseEng from "./course";
+import businessEng from "./business";
+import blogEng from "./blog";
 
 const eng = {
   common: commonEng,
@@ -20,6 +22,8 @@ const eng = {
   disclaimer: disclaimerEng,
   auth: authEng,
   course: courseEng,
+  business: businessEng,
+  blog: blogEng,
 };
 
 export type ENG = typeof eng;

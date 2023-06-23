@@ -8,6 +8,8 @@ import commitmentVn from "./commitment";
 import photoVn from "./photo";
 import authVn from "./auth";
 import courseVn from "./course";
+import businessVn from "./business";
+import blogVn from "./blog";
 
 const vn = {
   common: commonVn,
@@ -20,6 +22,8 @@ const vn = {
   disclaimer: disclaimerVn,
   auth: authVn,
   course: courseVn,
+  business: businessVn,
+  blog: blogVn,
 };
 
 export type VN = typeof vn;

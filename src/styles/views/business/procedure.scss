@@ -1,0 +1,106 @@
+.business-procedure {
+  .procedure-title {
+    @include respond(mdTablet) {
+      text-align: center;
+    }
+  }
+  .procedure-action {
+    width: $w-10 * 20;
+    @include respond(mdTablet) {
+      width: $w-100;
+    }
+  }
+  .procedure-item {
+    min-height: $h-10 * 10;
+    border-left: 2px solid $primary;
+    position: relative;
+    &:hover .item-number {
+      color: $tSecondary;
+    }
+    &:hover .item-number::after {
+      transform: scale(0);
+      opacity: 0;
+    }
+    &:nth-child(1) {
+      &::before {
+        content: "";
+        width: 2px;
+        height: $h-10 * 2;
+        background: $primary;
+        position: absolute;
+        bottom: 100%;
+        left: 0;
+        z-index: 1;
+        @include respond(mdTablet) {
+          content: unset;
+        }
+      }
+    }
+    .item-number {
+      width: $w-10 * 8;
+      height: $h-10 * 8;
+      color: $tPurple;
+      font-size: $h2;
+      background: $primary;
+      border: 2px solid $primary;
+      border-radius: $circle;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      position: absolute;
+      left: -40px;
+      z-index: 1;
+      transition: all $durationMd $func;
+      &::after {
+        content: "";
+        width: $w-100;
+        height: $h-100;
+        border-radius: $circle;
+        background: $secondary;
+        position: absolute;
+        opacity: 1;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all $durationMd $func;
+      }
+      @include respond(mdTablet) {
+        position: relative;
+        left: 0;
+        margin-bottom: $m-10;
+      }
+    }
+    .item-group {
+      margin-left: $m-10 * 5;
+      border-radius: $rounded;
+      box-shadow: 2px 2px 5px $gray-2;
+      .group-title {
+        padding: $p-10 $p-10 * 2;
+        cursor: pointer;
+      }
+      .group-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: all $durationMd $func;
+        .content-inner {
+          padding: $p-10 * 2;
+        }
+      }
+      .group-content--active {
+        max-height: $h-10 * 30;
+        transition: all $durationMd $func;
+      }
+      @include respond(mdTablet) {
+        margin: 0;
+      }
+    }
+    @include respond(mdTablet) {
+      margin-bottom: $m-10 * 2;
+      border: unset;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+}

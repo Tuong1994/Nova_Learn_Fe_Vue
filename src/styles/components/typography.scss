@@ -24,6 +24,22 @@
   color: $tSecondary;
 }
 
+.nvl-title--uppercase {
+  text-transform: uppercase;
+}
+
+.nvl-title--lowercase {
+  text-transform: lowercase;
+}
+
+.nvl-title--capitalize {
+  text-transform: capitalize;
+}
+
+.nvl-title--none {
+  text-transform: none;
+}
+
 .nvl-title-h1 {
   font-size: $h1;
   @include respond(mdPhone) {
@@ -69,6 +85,22 @@
 // Paragraph
 .nvl-paragraph {
   padding: $p-10 0;
+}
+
+.nvl-paragraph--uppercase {
+  text-transform: uppercase;
+}
+
+.nvl-paragraph--lowercase {
+  text-transform: lowercase;
+}
+
+.nvl-paragraph--capitalize {
+  text-transform: capitalize;
+}
+
+.nvl-paragraph--none {
+  text-transform: none;
 }
 
 .nvl-paragraph--dark {

@@ -86,7 +86,7 @@
 }
 
 // Student card
-.nvl-student-card {
+.nvl-common-student-card {
   height: $h-10 * 20;
   border: unset !important;
   border-radius: $roundedLg !important;
@@ -177,5 +177,162 @@
   }
   @include respond(mdTablet) {
     height: auto;
+  }
+}
+
+// Benefit item
+.nvl-common-benefit-item {
+  width: $w-100;
+  min-height: $h-10 * 25;
+  display: flex;
+  position: relative;
+  margin: $m-10 0;
+  &:hover .item-icon .icon-inner {
+    &::after {
+      opacity: 0;
+      transform: scale(0);
+    }
+    svg {
+      path {
+        color: $tSecondary;
+      }
+    }
+  }
+  .item-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .icon-inner {
+      width: $w-10 * 8;
+      height: $h-10 * 8;
+      border: 2px solid $primary;
+      border-radius: $circle;
+      background: $primary;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      &::after {
+        content: "";
+        width: $w-100;
+        height: $h-100;
+        background: $secondary;
+        border-radius: $circle;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 1;
+        transition: all $durationMd $func;
+      }
+      svg {
+        font-size: $h1;
+        position: relative;
+        z-index: 1;
+        path {
+          transition: all $durationMd $func;
+        }
+        @include respond(laptop) {
+          font-size: $h3;
+        }
+        @include respond(mdTablet) {
+          font-size: $h4;
+        }
+      }
+      @include respond(laptop) {
+        width: $w-10 * 6;
+        height: $h-10 * 6;
+        left: 0;
+      }
+    }
+    .icon-line {
+      width: 1px;
+      height: calc($h-100 - $h-10 * 8);
+      background: $secondary;
+      @include respond(mdTablet) {
+        display: none;
+      }
+    }
+  }
+  .item-content {
+    margin-left: $m-10 * 2;
+    .content-text {
+      padding: 0;
+    }
+  }
+  @include respond(mdTablet) {
+    min-height: auto;
+    height: auto;
+    border: unset;
+    padding-top: 0;
+  }
+}
+
+// Library image
+.nvl-common-library-image {
+  height: $h-10 * 25;
+  border-radius: $roundedLg;
+  overflow: hidden;
+  position: relative;
+  &:hover::before {
+    left: 125%;
+  }
+  &:hover::after {
+    opacity: 1;
+  }
+  &:hover .image-icon {
+    opacity: 1;
+    top: 50%;
+  }
+  &::before {
+    content: "";
+    width: $w-100 - 50;
+    height: $h-100;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    z-index: 1;
+    background: linear-gradient(
+      to right,
+      $RGBA-white-0 0,
+      $RGBA-white-2 100%
+    );
+    transform: skewX(-25deg);
+    transition: all $durationMd $func;
+  }
+  &::after {
+    content: "";
+    width: $w-100;
+    height: $h-100;
+    background: $RGBA-dark-1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+    transition: all $durationMd $func;
+  }
+  .image-icon {
+    width: $w-10 * 6;
+    height: $h-10 * 6;
+    border: 2px solid $secondary;
+    border-radius: $circle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    z-index: 10;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    transition: all $durationMd $func;
+    .icon-search {
+      font-size: $subtitle;
+      path {
+        color: $tSecondary;
+      }
+    }
   }
 }

@@ -4,12 +4,12 @@ import CommitmentBanner from "./CommitmentBanner.vue";
 import CommitmentStatistics from "./CommitmentStatistics.vue";
 import CommitmentPhase from "./CommitmentPhase.vue";
 import CommitmentQuestion from "./CommitmentQuestion.vue";
-import Course from "@/components/Common/Course.vue";
+import Course from "@/components/Common/Course/Course.vue";
 import useLang from "@/common/hooks/useLang";
 
 defineComponent({ name: "CommitmentView" });
 
-const langs = useLang();
+const { langs } = useLang();
 </script>
 
 <template>

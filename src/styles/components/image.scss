@@ -1,44 +1,11 @@
+// Image
 .nvl-image {
   width: $w-100;
   height: $h-100;
-  object-position: center;
-  .nvl-image-preview {
-    width: $w-100;
-    height: $h-100;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 5;
-    .preview-inner {
-      width: $w-100;
-      height: $h-100;
-      position: relative;
-      &:hover .inner-actions {
-        opacity: 1;
-        visibility: visible;
-      }
-      .inner-actions {
-        width: $w-100;
-        height: $h-100;
-        background: $RGBA-dark-3;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: absolute;
-        top: 0;
-        left: 0;
-        opacity: 0;
-        visibility: hidden;
-        transition: all $durationSm $func;
-        .actions-icon {
-          margin: 0 $m-5;
-          cursor: pointer;
-          path {
-            color: $tSecondary;
-          }
-        }
-      }
-    }
+  background: $RGBA-white-4;
+  position: relative;
+  .image-view {
+    transition: all $durationMd $func;
   }
   .image--fit-none {
     object-fit: none;
@@ -72,4 +39,44 @@
 .nvl-image-lg {
   width: $w-10 * 30;
   height: $h-10 * 30;
+}
+
+// Image preview
+.nvl-image-preview {
+  width: $w-100;
+  height: $h-100;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  .preview-inner {
+    width: $w-100;
+    height: $h-100;
+    position: relative;
+    &:hover .inner-actions {
+      opacity: 1;
+      visibility: visible;
+    }
+    .inner-actions {
+      width: $w-100;
+      height: $h-100;
+      background: $RGBA-dark-3;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      visibility: hidden;
+      transition: all $durationSm $func;
+      .actions-icon {
+        margin: 0 $m-5;
+        cursor: pointer;
+        path {
+          color: $tSecondary;
+        }
+      }
+    }
+  }
 }

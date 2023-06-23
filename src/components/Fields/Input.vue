@@ -37,7 +37,7 @@ const props = withDefaults(defineProps<NVLInputProps>(), {
   rules: () => [],
 });
 
-const langs = useLang();
+const { langs } = useLang();
 
 const slots = useSlots();
 

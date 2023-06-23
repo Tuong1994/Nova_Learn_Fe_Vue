@@ -33,14 +33,14 @@ defineProps<HomeSloganProps>();
     </Title>
     <Row justify="center">
       <Col :xs="24">
-        <router-link to="/">
+        <router-link to="/course/list">
           <Button wrapClass="slogan-action" variant="primary" size="lg">
             {{ langs?.common.actions.courses }}
           </Button>
         </router-link>
       </Col>
       <Col :xs="24">
-        <router-link to="/">
+        <router-link to="/about/contact">
           <Button wrapClass="slogan-action" variant="primary" size="lg">
             {{ langs?.common.actions.advise }}
           </Button>

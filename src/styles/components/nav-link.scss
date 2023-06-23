@@ -1,13 +1,32 @@
 .nvl-link-item {
   display: block;
   padding: $p-10 $p-10 * 4;
+  position: relative;
+  z-index: 1;
   transition: all $durationSm $func;
   &:hover {
-    background: $RGBA-purple;
+    color: $tSecondary;
+  }
+  &:hover::after {
+    width: $w-100;
+  }
+  &::after {
+    content: "";
+    width: 0;
+    height: $h-100;
+    background: $blue-1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all $durationSm $func;
   }
 }
 
 .nvl-link-item--active {
-  background: $primary;
   color: $tSecondary;
+  &::after {
+    width: $w-100;
+    background: $primary;
+  }
 }

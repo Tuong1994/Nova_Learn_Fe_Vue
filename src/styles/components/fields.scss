@@ -191,3 +191,13 @@
     }
   }
 }
+
+// Radio
+.nvl-radio-group {
+  margin: $m-10 0;
+  .group-control {
+    width: $w-10 * 1.8;
+    height: $h-10 * 1.8;
+    margin-top: $m-5 - 2;
+  }
+}

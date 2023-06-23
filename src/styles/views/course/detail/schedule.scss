@@ -1,0 +1,17 @@
+.detail-schedule {
+  .schedule-info {
+    background: $gray-1;
+    .info-price {
+      color: $tPurple;
+    }
+  }
+  .schedule-detail {
+    .detail-name {
+      font-weight: $semiBold;
+      color: $tPurple;
+    }
+  }
+  .schedule-action {
+    width: $w-100;
+  }
+}

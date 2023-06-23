@@ -42,7 +42,7 @@ const props = withDefaults(defineProps<NVLSelectProps>(), {
   rules: () => [],
 });
 
-const langs = useLang();
+const { langs } = useLang();
 
 const slots = useSlots();
 

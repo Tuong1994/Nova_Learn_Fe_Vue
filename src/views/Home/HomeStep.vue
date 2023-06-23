@@ -24,16 +24,16 @@ const steps = computed(() => [
 
 <template>
   <Section wrapClass="home-step">
-    <Row justify="spaceBetween">
+    <Row justify="spaceBetween" :gutters="[5]">
       <Col :xs="24" :span="8">
         <Title :level="3">{{ langs?.home.step.title }}</Title>
-        <router-link to="/">
-          <Button wrapClass="step-action" variant="primary" size="lg">{{
-            langs?.common.actions.advise
-          }}</Button>
+        <router-link to="/about/contact">
+          <Button wrapClass="step-action" variant="primary" size="lg">
+            {{ langs?.common.actions.advise }}
+          </Button>
         </router-link>
       </Col>
-      <Col :xs="24" :span="14">
+      <Col :xs="24" :span="15">
         <div class="step-wrap">
           <div v-for="(step, idx) in steps" :key="step.id" class="step-item">
             <div class="item-number">{{ idx + 1 }}</div>

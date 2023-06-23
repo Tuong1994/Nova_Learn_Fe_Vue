@@ -16,7 +16,9 @@ import useNavLink from "@/common/hooks/useNavLink";
 
 defineComponent({ name: "IntroView" });
 
-const langs = useLang();
+useNavLink();
+
+const { langs } = useLang();
 
 const links = computed<ILinkItem[]>(() => [
   { id: "about", title: langs.value?.intro.sideNav.about },
@@ -24,8 +26,6 @@ const links = computed<ILinkItem[]>(() => [
   { id: "mission", title: langs.value?.intro.sideNav.mission },
   { id: "mentor", title: langs.value?.intro.sideNav.mentor },
 ]);
-
-useNavLink();
 </script>
 
 <template>
@@ -38,9 +38,7 @@ useNavLink();
       <Row align="start" justify="spaceBetween">
         <Col :xs="0" :md="0" :lg="0" :span="4" wrapClass="intro-col">
           <div class="col-side-nav">
-            <LinkItem v-for="link in links" :key="link.id" :link="link">
-              {{ link.title }}
-            </LinkItem>
+            <LinkItem v-for="link in links" :key="link.id" :link="link" />
           </div>
         </Col>
 
@@ -54,7 +52,7 @@ useNavLink();
           </LinkContent>
 
           <LinkContent
-            wrapClass="intro-background"
+            wrapClass="background"
             :style="{
               backgroundImage: `url(${require('../../assets/images/banner/banner_6.jpg')})`,
             }"

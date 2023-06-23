@@ -36,7 +36,7 @@ const props = withDefaults(defineProps<NVLInputPasswordProps>(), {
   rules: () => [],
 });
 
-const langs = useLang();
+const { langs } = useLang();
 
 const slots = useSlots();
 

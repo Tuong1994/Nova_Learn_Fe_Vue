@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { computed, defineComponent, defineProps } from "vue";
 import { Langs } from "@/common/lang";
-import Statistics from "@/components/Common/Statistics.vue";
+import Statistics from "@/components/Common/Statistics/Statistics.vue";
 import Section from "@/components/Section/Section.vue";
 import Title from "@/components/Typography/Title.vue";
 import Row from "@/components/Grid/Row.vue";

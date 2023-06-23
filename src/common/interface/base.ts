@@ -67,6 +67,19 @@ export interface ILinkItem {
   title?: string;
 }
 
+export interface IBenefitItem {
+  id: string;
+  title?: string;
+  content?: string;
+  icon: string;
+}
+
+export interface IBreadCrumbItem {
+  id: string;
+  title: string;
+  link: string;
+}
+
 export interface IStudentCard {
   id: string;
   name: string;

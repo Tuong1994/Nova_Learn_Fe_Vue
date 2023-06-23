@@ -7,7 +7,7 @@ import Row from "@/components/Grid/Row.vue";
 import Col from "@/components/Grid/Col.vue";
 import Title from "@/components/Typography/Title.vue";
 import Button from "@/components/Button/Button.vue";
-import StudentCard from "@/components/Common/StudentCard.vue";
+import StudentCard from "@/components/Common/StudentCard/StudentCard.vue";
 
 defineComponent({ name: "HomeStudent" });
 
@@ -93,7 +93,7 @@ const students = computed<IStudentCard[]>(() => [
     </Row>
     <Row justify="center" :style="{ marginTop: '20px' }">
       <Col>
-        <router-link to="/">
+        <router-link to="/student/notable">
           <Button wrapClass="student-action" variant="primary" size="lg">{{
             langs?.common.actions.seeMore
           }}</Button>

@@ -1,0 +1,137 @@
+.detail-method {
+  .method-content {
+    margin-bottom: $m-10 * 2;
+  }
+  .method-wrap {
+    width: $w-100;
+    padding: $p-10 * 2;
+    background: $dark-1;
+    border-radius: $rounded;
+    overflow: hidden;
+    .wrap-item {
+      width: $w-10 * 28;
+      height: $h-10 * 28;
+      position: relative;
+      margin: auto;
+      .item-outter {
+        width: $w-100;
+        height: $h-100;
+        position: relative;
+        transition: all $durationMd $func;
+        &::before {
+          content: "";
+          width: $w-10 * 26;
+          height: $h-10 * 26;
+          border: 1px solid transparent;
+          border-radius: $circle;
+          background: $dark-1;
+          position: absolute;
+          top: 10px;
+          left: 50%;
+          z-index: -1;
+          transform: translateX(-50%);
+          @include respond(mdPhone) {
+            width: $w-10 * 22;
+            height: $h-10 * 22;
+          }
+        }
+        &::after {
+          content: "";
+          width: $w-10 * 28;
+          height: $h-10 * 14;
+          border-bottom-left-radius: 314px;
+          border-bottom-right-radius: 314px;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          z-index: -2;
+          @include respond(mdPhone) {
+            width: $w-10 * 24;
+            height: $h-10 * 12;
+          }
+        }
+      }
+      .item-inner {
+        width: $w-10 * 24;
+        height: $h-10 * 24;
+        padding: $p-10 * 2;
+        border-radius: $circle;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        & * {
+          color: $tSecondary;
+        }
+        .inner-icon {
+          @include respond(mdPhone) {
+            display: none;
+          }
+        }
+        @include respond(mdPhone) {
+          width: $w-10 * 20;
+          height: $h-10 * 20;
+        }
+      }
+      @include respond(mdPhone) {
+        width: $w-10 * 24;
+        height: $h-10 * 24;
+      }
+    }
+    .wrap-item-first {
+      &:hover .item-outter {
+        transform: rotate(-35deg);
+      }
+      .item-outter {
+        transform: rotate(0);
+        &::before {
+          border-color: $primary;
+        }
+        &::after {
+          background: $primary;
+        }
+      }
+      .item-inner {
+        background: $primary;
+      }
+    }
+    .wrap-item-second {
+      &:hover .item-outter {
+        transform: rotate(-65deg);
+      }
+      .item-outter {
+        transform: rotate(-35deg);
+        &::before {
+          border-color: $blue-1;
+        }
+        &::after {
+          background: $blue-1;
+        }
+      }
+      .item-inner {
+        background: $blue-1;
+      }
+    }
+    .wrap-item-third {
+      &:hover .item-outter {
+        transform: rotate(-90deg);
+      }
+      .item-outter {
+        transform: rotate(-65deg);
+        &::before {
+          border-color: $red-1;
+        }
+        &::after {
+          background: $red-1;
+        }
+      }
+      .item-inner {
+        background: $red-1;
+      }
+    }
+  }
+}

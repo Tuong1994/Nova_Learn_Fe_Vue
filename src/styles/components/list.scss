@@ -1,8 +1,14 @@
 .nvl-list {
-  padding-left: $p-10;
+  .list-title {
+    font-weight: $semiBold;
+    text-transform: uppercase;
+    & * {
+      color: $tPurple;
+    }
+  }
 }
 
 .nvl-list-item {
   list-style: none;
-  padding: $p-10;
+  padding: $p-10 0;
 }

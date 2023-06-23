@@ -1,5 +1,18 @@
 .course-list {
+  // Intro
+  .list-intro {
+    background: $deepPurple-1;
+    .intro-image {
+      width: $w-10 * 5;
+      height: $h-10 * 5;
+      background: $secondary;
+      border-radius: $circle;
+      overflow: hidden;
+    }
+  }
+  // Card item
   .list-card {
+    border-radius: $roundedLg;
     .list-card-header {
       padding: $p-10;
       background: $primary;
@@ -10,6 +23,9 @@
     }
     .list-card-body {
       position: relative;
+      &:hover .list-card-image .image-inner {
+        transform: scale(1.2);
+      }
       &:hover .list-card-action {
         top: 50%;
         opacity: 1;
@@ -54,10 +70,13 @@
       height: $h-10 * 15;
       border-radius: $rounded;
       overflow: hidden;
+      .image-inner {
+        background: transparent;
+        transition: all $durationMd $func;
+      }
     }
     .list-card-content {
       padding: 0;
-      color: $tGray;
       font-size: $body-1;
     }
     .list-card-action {

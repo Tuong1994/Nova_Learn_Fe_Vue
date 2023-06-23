@@ -7,7 +7,9 @@ const useLang = () => {
 
   const langs = computed<Langs>(() => store.getters.getLangs);
 
-  return langs;
+  const type = computed<number>(() => store.getters.getType);
+
+  return { langs, type };
 };
 
 export default useLang;

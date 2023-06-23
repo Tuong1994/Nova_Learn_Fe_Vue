@@ -1,0 +1,47 @@
+.business-banner {
+  .banner-action {
+    width: $w-10 * 20;
+    margin-top: $m-10 * 2;
+    @include respond(smPhone) {
+      width: $w-100;
+    }
+  }
+  .banner-image {
+    width: $w-10 * 35;
+    margin: auto;
+    position: relative;
+    .image-content {
+      width: $w-10 * 15;
+      padding: $p-10;
+      border-radius: $rounded;
+      background: $primary;
+      position: absolute;
+      bottom: 75px;
+      left: -75px;
+      z-index: 1;
+      .content-text {
+        padding: 0;
+      }
+    }
+    .image-view {
+      border-radius: $roundedLg;
+      overflow: hidden;
+    }
+    .image-dots {
+      width: $w-10 * 15;
+      height: $h-10 * 15;
+      position: absolute;
+      bottom: -20px;
+      right: -75px;
+      z-index: 1;
+      .dots-item {
+        width: $w-10 - 5;
+        height: $h-10 - 5;
+        background: $primary;
+      }
+    }
+    @include respond(laptop) {
+      width: $w-10 * 30;
+    }
+  }
+}

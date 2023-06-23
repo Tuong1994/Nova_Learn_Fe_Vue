@@ -1,0 +1,77 @@
+.detail-degrees {
+  .degrees-image {
+    width: $w-10 * 40;
+    height: $h-10 * 30;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+    &::before {
+      content: "";
+      width: $w-10 * 30;
+      height: $h-10 * 20;
+      background: $primary;
+      border-radius: $rounded;
+      position: absolute;
+      bottom: -10px;
+      right: -20px;
+      z-index: -1;
+      @include respond(mdPhone) {
+        width: $w-10 * 20;
+        height: $h-10 * 10;
+        right: 10px;
+      }
+    }
+    &::after {
+      content: "";
+      width: $w-10 * 20;
+      height: $h-10 * 10;
+      background: $blue-1;
+      border-radius: $rounded;
+      position: absolute;
+      bottom: -20px;
+      right: -10px;
+      z-index: -1;
+      @include respond(mdPhone) {
+        width: $w-10 * 10;
+        height: $h-10 * 10;
+        right: 20px;
+      }
+    }
+    .image-view {
+      border-radius: $roundedLg;
+      overflow: hidden;
+    }
+    @include respond(lgTablet) {
+      width: $w-10 * 35;
+      height: $h-10 * 25;
+    }
+    @include respond(mdPhone) {
+      width: $w-100;
+      height: $h-10 * 20;
+    }
+  }
+  .degrees-sub-content {
+    & * {
+      font-size: $h6;
+      color: $tPurple;
+    }
+  }
+  .degrees-list {
+    padding: $p-10 * 2;
+    background: $dark-1;
+    border-radius: $rounded;
+    .list-item {
+      height: $h-10 * 25;
+      background: $gray-1;
+      @include respond(laptop) {
+        height: $h-10 * 28;
+      }
+      @include respond(mdTablet) {
+        height: auto;
+      }
+    }
+    @include respond(mdPhone) {
+      padding: $p-10;
+    }
+  }
+}

@@ -33,7 +33,7 @@ const props = withDefaults(defineProps<NVLPaginationProps>(), {
   siblingCount: 1,
 });
 
-const langs = useLang();
+const { langs } = useLang();
 
 const pageValue = ref<number>(props.page);
 
