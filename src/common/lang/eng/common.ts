@@ -58,6 +58,16 @@ const commonEng = {
       of: "of",
       result: "results",
     },
+    rate: {
+      modal: {
+        headerTitle: "Rate",
+        point_1: "Terrible",
+        point_2: "Bad",
+        point_3: "Normal",
+        point_4: "Good",
+        point_5: "Wonderful",
+      },
+    },
   },
   form: {
     optionEmtpy: "No options",

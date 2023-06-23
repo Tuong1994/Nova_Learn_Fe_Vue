@@ -27,8 +27,7 @@
     top: 50%;
     right: calc(100% + 10px);
     transform: translateY(-50%);
-    &::after {
-      content: "";
+    .content-arrow--left {
       border: 8px solid transparent;
       border-left-color: $RGBA-dark-4;
       position: absolute;
@@ -42,8 +41,7 @@
     top: 50%;
     left: calc(100% + 10px);
     transform: translateY(-50%);
-    &::after {
-      content: "";
+    .content-arrow--right {
       border: 8px solid transparent;
       border-right-color: $RGBA-dark-4;
       position: absolute;
@@ -56,8 +54,7 @@
   .tooltip-content--top {
     bottom: calc(100% + 5px);
     left: 0;
-    &::after {
-      content: "";
+    .content-arrow--top {
       border: 8px solid transparent;
       border-top-color: $RGBA-dark-4;
       position: absolute;
@@ -69,8 +66,7 @@
   .tooltip-content--bottom {
     top: calc(100% + 5px);
     left: 0;
-    &::after {
-      content: "";
+    .content-arrow--bottom {
       border: 8px solid transparent;
       border-bottom-color: $RGBA-dark-4;
       position: absolute;

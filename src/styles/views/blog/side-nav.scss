@@ -66,12 +66,12 @@
       }
     }
     .dropdown-list {
-      background: $gray-1;
+      background: $primary;
       max-height: 0;
       transition: all $durationMd $func;
       .list-item {
         display: block;
-        color: $tPrimary;
+        color: $tSecondary;
         padding: $p-10 $p-10 * 2;
       }
     }

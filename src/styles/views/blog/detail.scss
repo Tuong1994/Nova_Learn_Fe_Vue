@@ -1,4 +1,9 @@
 .blog-detail {
+  .detail-body {
+    @include respond(mdPhone) {
+      padding: $p-10;
+    }
+  }
   .detail-relative-item {
     .item-image {
       margin-bottom: $m-10;

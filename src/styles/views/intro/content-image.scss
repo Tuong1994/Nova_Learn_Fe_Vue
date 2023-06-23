@@ -1,4 +1,5 @@
 .content-image {
+  height: $h-10 * 25;
   display: flex;
   justify-content: center;
   position: relative;
@@ -19,6 +20,9 @@
     right: -20px;
     z-index: -1;
     transition: all $durationMd $func;
+    @include respond(laptop) {
+      top: -15px;
+    }
     @include respond(mdTablet) {
       width: $w-10 * 30;
       top: -10px;
@@ -45,6 +49,9 @@
       bottom: -20px;
       right: 20px;
     }
+    @include respond(mdTablet) {
+      display: none;
+    }
   }
   .image-inner {
     width: $w-10 * 30;
@@ -55,5 +62,11 @@
     @include respond(mdTablet) {
       width: $w-100;
     }
+  }
+  @include respond(mdTablet) {
+    height: $h-10 * 35;
+  }
+  @include respond(mdPhone) {
+    height: $h-10 * 30;
   }
 }

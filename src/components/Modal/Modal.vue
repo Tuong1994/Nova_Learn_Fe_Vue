@@ -54,7 +54,7 @@ const props = withDefaults(defineProps<NVLModalProps>(), {
   }),
 });
 
-const langs = useLang();
+const { langs } = useLang();
 
 const render = ref<boolean>(false);
 
@@ -99,16 +99,19 @@ onUnmounted(() => clearTimeout(time));
     v-if="render"
     :class="['nvl-modal', open ? 'nvl-modal--active' : '', sizeClass]"
   >
+    <!-- Modal header -->
     <div v-if="hasHeader" :class="['modal-header', headerClass]">
       <slot name="header"></slot>
     </div>
+    <!-- Modal body -->
     <div :class="['modal-body', bodyClass]">
       <slot name="body"></slot>
     </div>
+    <!-- Modal footer -->
     <div v-if="hasFooter" :class="['modal-footer', footerClass]">
       <Button
         v-if="hasCancelBtn"
-        :className="`footer-action ${cancelButtonProps?.className}`"
+        :wrapClass="`footer-action ${cancelButtonProps?.className}`"
         :variant="cancelButtonProps?.variant"
         :disabled="cancelButtonProps?.disabled"
         @onClick="onCancel"
@@ -117,7 +120,7 @@ onUnmounted(() => clearTimeout(time));
       </Button>
       <Button
         v-if="hasOkBtn"
-        :className="`footer-action ${okButtonProps?.className}`"
+        :wrapClass="`footer-action ${okButtonProps?.className}`"
         :variant="okButtonProps?.variant"
         :disabled="okButtonProps?.disabled"
         @onClick="onOk"

@@ -4,7 +4,6 @@ import Row from "../Grid/Row.vue";
 import Col from "../Grid/Col.vue";
 import IconStar from "../Icons/IconStar.vue";
 import Paragraph from "../Typography/Paragraph.vue";
-import Button from "../Button/Button.vue";
 
 defineComponent({ name: "NVLRateStar" });
 
@@ -23,7 +22,7 @@ const getActiveClass = (idx: number) => {
 </script>
 
 <template>
-  <Row wrapClass="rate-star">
+  <Row wrapClass="nvl-rate-star">
     <Col>
       <Paragraph wrapClass="star-point">
         <span>{{ point }}</span>

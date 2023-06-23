@@ -1,15 +1,18 @@
 <script lang="ts" setup>
-import Header from "./components/Header/Header.vue";
-import Footer from "./components/Footer/Footer.vue";
-import Layout from "./components/Layout/Layout.vue";
+import { useRouter } from "vue-router";
+import { computed } from "vue";
+import MainView from "@/views/Main/MainView.vue";
+import AdminView from "@/views/Admin/AdminView.vue";
+
+const router = useRouter();
+
+const isAdmin = computed<boolean>(() =>
+  router.currentRoute.value.path.includes("admin")
+);
 </script>
 
 <template>
-  <Header />
+  <MainView v-if="!isAdmin" />
 
-  <Layout>
-    <router-view />
-  </Layout>
-
-  <Footer />
+  <AdminView v-if="isAdmin" />
 </template>

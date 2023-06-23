@@ -1,4 +1,5 @@
-.rate-star {
+// Rate star
+.nvl-rate-star {
   .star-point {
     span {
       &:nth-child(1) {
@@ -21,5 +22,28 @@
   .star-rater {
     color: $tGray;
     font-size: $body-1;
+  }
+}
+
+// Rate modal
+.nvl-rate-modal {
+  .modal-card {
+    overflow: unset;
+    .card-control {
+      display: none;
+    }
+    .card-icon {
+      cursor: pointer;
+      .icon--active {
+        path {
+          color: $tYellow;
+        }
+      }
+      .icon--unactive {
+        path {
+          color: $tGray;
+        }
+      }
+    }
   }
 }

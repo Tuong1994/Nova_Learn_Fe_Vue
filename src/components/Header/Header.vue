@@ -12,7 +12,7 @@ const { langs } = useLang();
 
 const isShowMenu = ref<boolean>(false);
 
-const isLogin = ref<boolean>(false);
+const isLogin = ref<boolean>(true);
 
 useOverflow(isShowMenu);
 

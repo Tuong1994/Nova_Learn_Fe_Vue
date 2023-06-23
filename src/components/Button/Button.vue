@@ -7,7 +7,6 @@ import {
   computed,
   ref,
   watch,
-  watchEffect,
   StyleValue,
 } from "vue";
 

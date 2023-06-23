@@ -57,6 +57,16 @@ const commonVn = {
       of: "của",
       result: "kết quả",
     },
+    rate: {
+      modal: {
+        headerTitle: "Đánh giá",
+        point_1: "Quá tệ",
+        point_2: "Tệ",
+        point_3: "Bình thường",
+        point_4: "Tốt",
+        point_5: "Quá tuyệt",
+      },
+    },
   },
   form: {
     optionEmtpy: "Không có lựa chọn",

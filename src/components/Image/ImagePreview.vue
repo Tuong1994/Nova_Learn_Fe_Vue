@@ -25,7 +25,7 @@ interface NVLImagePreviewProps {
   hasRemove?: boolean;
 }
 
-const langs = useLang();
+const { langs } = useLang();
 
 const props = withDefaults(defineProps<NVLImagePreviewProps>(), {
   src: require("../../assets/images/logo.png"),
