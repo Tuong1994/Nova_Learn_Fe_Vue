@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { defineComponent, defineProps } from "vue";
+import { defineComponent } from "vue";
 
 defineComponent({ name: "NVLLayout" });
 </script>

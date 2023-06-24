@@ -88,7 +88,7 @@ const routes: Array<RouteRecordRaw> = [
     ],
   },
   {
-    path: "/admin",
+    path: "/admin/course/list",
     name: "admin",
     component: AdminView,
   },

@@ -62,7 +62,7 @@ const onClick = (item: IDropdownItem) => {
   >
     <!-- Title -->
     <div
-      class="dropdown-title"
+      :class="['dropdown-title', isDropdown ? 'dropdown-title--active' : '']"
       @click="() => trigger === 'click' && onDropdown()"
     >
       <slot></slot>

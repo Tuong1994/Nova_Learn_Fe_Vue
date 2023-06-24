@@ -171,131 +171,91 @@
   }
   // Header responsive slide menu
   .header-slide-menu {
-    width: $w-100;
-    height: 0;
-    background: $dark-1;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 10;
-    display: none;
-    transition: all $durationMd $func;
-    .menu-inner {
-      width: $w-100;
-      height: 0;
-      opacity: 0;
-      overflow-y: auto;
-      transition: all $durationMd $func;
-      .inner-action {
-        padding: $p-10 * 2;
-        .action-icon {
-          font-size: $subtitle;
-          path {
+    .menu-list {
+      .list-item {
+        border-bottom: 1px solid $primary;
+        .item-title {
+          padding: $p-10 $p-10 * 2;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          .title-text {
             color: $tSecondary;
           }
-        }
-        .action-icon--rotate {
-          animation: iconXSpin 0.5s linear 1;
-        }
-      }
-      // Menu list
-      .inner-list {
-        .list-item {
-          border-bottom: 1px solid $primary;
-          .item-title {
-            padding: $p-10 $p-10 * 2;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            .title-text {
-              color: $tSecondary;
+          .title-icon {
+            transition: all $durationMd $func;
+            path {
+              color: $tPurple;
             }
-            .title-icon {
+          }
+          .title-icon--rotate {
+            transform: rotate(-90deg);
+          }
+        }
+        // Submenu
+        .item-sub {
+          padding: 0 $p-10;
+          max-height: 0;
+          overflow-x: hidden;
+          overflow-y: auto;
+          transition: all $durationMd $func;
+          .sub-group {
+            .group-category {
+              padding: $p-10 $p-10 * 2;
+              display: flex;
+              align-content: center;
+              justify-content: space-between;
+              .category-name {
+                color: $tSecondary;
+              }
+              .category-icon {
+                transition: all $durationMd $func;
+                path {
+                  color: $tPurple;
+                }
+              }
+              .category-icon--rotate {
+                transform: rotate(-90deg);
+              }
+            }
+            .group-nested-sub {
+              padding: 0 $p-10;
+              max-height: 0;
+              overflow-x: hidden;
+              overflow-y: auto;
               transition: all $durationMd $func;
-              path {
-                color: $tPurple;
-              }
             }
-            .title-icon--rotate {
-              transform: rotate(-90deg);
+            .group-nested-sub--active {
+              max-height: $h-10 * 30;
+              transition: all $durationMd $func;
             }
-          }
-          // Submenu
-          .item-sub {
-            padding: 0 $p-10;
-            max-height: 0;
-            overflow-x: hidden;
-            overflow-y: auto;
-            transition: all $durationMd $func;
-            .sub-group {
-              .group-category {
-                padding: $p-10 $p-10 * 2;
-                display: flex;
-                align-content: center;
-                justify-content: space-between;
-                .category-name {
-                  color: $tSecondary;
-                }
-                .category-icon {
-                  transition: all $durationMd $func;
-                  path {
-                    color: $tPurple;
-                  }
-                }
-                .category-icon--rotate {
-                  transform: rotate(-90deg);
-                }
-              }
-              .group-nested-sub {
-                padding: 0 $p-10;
-                max-height: 0;
-                overflow-x: hidden;
-                overflow-y: auto;
-                transition: all $durationMd $func;
-              }
-              .group-nested-sub--active {
-                max-height: $h-10 * 30;
-                transition: all $durationMd $func;
-              }
-            }
-          }
-          .item-sub--active {
-            max-height: $h-10 * 30;
-            transition: all $durationMd $func;
-          }
-          // Submenu item
-          .sub-item-link {
-            display: block;
-            padding: $p-10 $p-10 * 2;
-            color: $tSecondary;
-          }
-          .sub-item-link--padding {
-            padding-left: $p-10 * 3;
           }
         }
-      }
-      .inner-actions {
-        padding: $p-10;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        .actions-btn {
-          width: $w-10 * 25;
-          margin: 0 $m-10;
+        .item-sub--active {
+          max-height: $h-10 * 30;
+          transition: all $durationMd $func;
+        }
+        // Submenu item
+        .sub-item-link {
+          display: block;
+          padding: $p-10 $p-10 * 2;
+          color: $tSecondary;
+        }
+        .sub-item-link--padding {
+          padding-left: $p-10 * 3;
         }
       }
     }
-    .menu-inner--active {
-      height: $h-100;
-      opacity: 1;
-      transition-delay: $durationSm;
+    .menu-actions {
+      padding: $p-10;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .actions-btn {
+        width: $w-10 * 25;
+        margin: 0 $m-10;
+      }
     }
-    @include respond(laptop) {
-      display: block;
-    }
-  }
-  .header-slide-menu--active {
-    height: $h-100-vh;
   }
 }
 

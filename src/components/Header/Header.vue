@@ -1,20 +1,21 @@
 <script lang="ts" setup>
-import { defineComponent, ref, watchEffect, onUnmounted } from "vue";
+import { defineComponent, defineProps, ref, watchEffect, onUnmounted } from "vue";
 import HeaderTop from "./HeaderTop.vue";
 import HeaderBottom from "./HeaderBottom.vue";
 import SlideMenu from "./SlideMenu.vue";
 import useLang from "@/common/hooks/useLang";
-import useOverflow from "@/common/hooks/useOverflow";
 
 defineComponent({ name: "NVLHeader" });
+
+interface NVLHeaderProps {
+  isLogin: boolean;
+}
+
+defineProps<NVLHeaderProps>()
 
 const { langs } = useLang();
 
 const isShowMenu = ref<boolean>(false);
-
-const isLogin = ref<boolean>(true);
-
-useOverflow(isShowMenu);
 
 const onShowMenu = () => (isShowMenu.value = true);
 
@@ -40,8 +41,10 @@ onUnmounted(() => window.removeEventListener("scroll", handleScroll));
   <header class="nvl-header">
     <!-- Header top -->
     <HeaderTop :langs="langs" />
+
     <!-- Header bottom -->
     <HeaderBottom :isLogin="isLogin" :langs="langs" @onShowMenu="onShowMenu" />
+    
     <!-- Slide menu -->
     <SlideMenu
       :isLogin="isLogin"

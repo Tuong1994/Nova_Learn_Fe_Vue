@@ -52,6 +52,10 @@ const menuEng = {
       disclaimer: "Disclaimer Notice",
     },
   },
+  admin: {
+    course: "Courses",
+    student: "Students"
+  }
 };
 
 export default menuEng;

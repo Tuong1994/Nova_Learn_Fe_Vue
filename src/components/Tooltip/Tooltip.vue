@@ -8,12 +8,14 @@ interface NVLTooltipProps {
   wrapClass?: string;
   content?: string;
   contentClass?: string;
+  showContent?: boolean;
   showArrow?: boolean;
 }
 
 const props = withDefaults(defineProps<NVLTooltipProps>(), {
   placement: "bottom",
   showArrow: true,
+  showContent: true,
 });
 
 const placementClass = computed(() => {
@@ -30,7 +32,10 @@ const placementClass = computed(() => {
 <template>
   <div :class="['nvl-tooltip', wrapClass]">
     <slot></slot>
-    <div :class="['tooltip-content', placementClass, contentClass]">
+    <div
+      :class="['tooltip-content', placementClass, contentClass]"
+      v-if="showContent"
+    >
       <span v-if="showArrow" class="content-arrow--left"></span>
       <span v-if="showArrow" class="content-arrow--right"></span>
       <span v-if="showArrow" class="content-arrow--bottom"></span>

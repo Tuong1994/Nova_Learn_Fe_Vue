@@ -80,8 +80,12 @@ const onCancel = () => emits("onCancel");
 </script>
 
 <template>
-  <Form :wrapClass="`nvl-rate-modal ${wrapClass}`">
-    <Modal :open="open" @onCancel="onCancel">
+  <Form>
+    <Modal
+      :open="open"
+      :wrapClass="`nvl-rate-modal ${wrapClass}`"
+      @onCancel="onCancel"
+    >
       <template #header>
         {{ headerTitle ?? langs?.common.components.rate.modal.headerTitle }}
       </template>

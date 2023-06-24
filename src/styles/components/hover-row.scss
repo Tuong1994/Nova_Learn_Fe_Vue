@@ -27,6 +27,18 @@
   }
 }
 
+.nvl-hover-row--light {
+  & * {
+    color: $tSecondary;
+  }
+}
+
+.nvl-hover-row--dark {
+  & * {
+    color: $tPrimary;
+  }
+}
+
 .nvl-hover-row--active {
   &::after {
     width: $w-100;

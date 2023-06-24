@@ -72,14 +72,12 @@ const onRemove = () => {
   </div>
 
   <!-- Modal preview -->
-  <Teleport to="#modal-root">
-    <Modal :hasOkBtn="false" :open="isPreview.active" @onCancel="onCancel">
-      <template #header>
-        {{ langs?.common.modal.previewHeader }}
-      </template>
-      <template #body>
-        <img :src="isPreview.url" />
-      </template>
-    </Modal>
-  </Teleport>
+  <Modal :hasOkBtn="false" :open="isPreview.active" @onCancel="onCancel">
+    <template #header>
+      {{ langs?.common.modal.previewHeader }}
+    </template>
+    <template #body>
+      <img :src="isPreview.url" />
+    </template>
+  </Modal>
 </template>

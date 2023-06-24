@@ -1,0 +1,96 @@
+// Layout
+.admin-layout {
+  display: flex;
+  .admin-layout-col-left {
+    width: calc(($w-100 / 24) * 4);
+    transition: all $durationMd $func;
+    @include respond(lgTablet) {
+      width: calc(($w-100 / 24) * 5);
+    }
+    @include respond(mdTablet) {
+      display: none;
+    }
+  }
+  .admin-layout-col-left--width {
+    width: calc(($w-100 / 24) * 1);
+    @include respond(lgTablet) {
+      width: calc(($w-100 / 24) * 2);
+    }
+  }
+  .admin-layout-col-right {
+    width: calc(($w-100 / 24) * 20);
+    transition: all $durationMd $func;
+    @include respond(lgTablet) {
+      width: calc(($w-100 / 24) * 19);
+    }
+    @include respond(mdTablet) {
+      width: $w-100;
+    }
+  }
+  .admin-layout-col-right--width {
+    width: calc(($w-100 / 24) * 23);
+    @include respond(lgTablet) {
+      width: calc(($w-100 / 24) * 22);
+    }
+  }
+}
+
+// Side nav
+.admin-side-nav {
+  height: $h-100-vh;
+  background: $deepPurple-1;
+  position: sticky;
+  top: 0;
+  .side-nav-logo {
+    height: $h-10 * 10;
+    padding: $p-10 * 2;
+    padding-bottom: 0;
+  }
+  .side-nav-menu {
+    height: calc($h-100-vh - ($h-10 * 10 + $h-10 * 5));
+    padding: 0 $p-10 * 2;
+    .menu-item {
+      overflow: hidden;
+      .item-title {
+        opacity: 1;
+        visibility: visible;
+        position: absolute;
+        left: 20%;
+        transition: all $durationMd $func;
+      }
+      .item-title--hide {
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        left: 20%;
+      }
+    }
+  }
+  .side-nav-action {
+    height: $h-10 * 5;
+    .action-btn {
+      width: $w-100;
+      height: $h-100;
+      border-radius: 0;
+      &:hover path {
+        color: $tPrimary;
+      }
+      path {
+        color: $tSecondary;
+      }
+      .action-icon {
+        transition: all $durationMd $func;
+      }
+      .action-icon--transform {
+        transform: scaleX(-1);
+      }
+    }
+  }
+}
+
+// Header
+.admin-header {
+  width: $w-100;
+  padding: $p-10 $p-10 * 2;
+  box-shadow: 0 5px 10px $gray-1;
+}

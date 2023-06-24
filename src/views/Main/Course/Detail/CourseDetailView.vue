@@ -135,8 +135,6 @@ const onCancel = () => (isRate.value = false);
       </Row>
     </Section>
 
-    <Teleport to="#modal-root">
-      <RateModal :open="isRate" @onCancel="onCancel" />
-    </Teleport>
+    <RateModal :open="isRate" @onCancel="onCancel" />
   </div>
 </template>

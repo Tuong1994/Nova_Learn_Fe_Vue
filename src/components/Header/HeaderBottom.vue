@@ -6,8 +6,8 @@ import Col from "../Grid/Col.vue";
 import Logo from "../Logo/Logo.vue";
 import Menu from "./Menu.vue";
 import Search from "./Search.vue";
-import Profile from "./Profile.vue";
-import Translate from "./Translate.vue";
+import Profile from "../Profile/Profile.vue";
+import Translate from "../Translate/Translate.vue";
 import IconBars from "../Icons/IconBars.vue";
 
 defineComponent({ name: "NVLHeaderBottom" });

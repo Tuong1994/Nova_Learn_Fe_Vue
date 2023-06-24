@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import {
   faEye,
   faGear,
+  faBook,
   faStar,
   faList,
   faFlag,
@@ -69,6 +70,7 @@ import "./styles/main.scss";
 library.add(
   faEye,
   faGear,
+  faBook,
   faList,
   faStar,
   faUser,

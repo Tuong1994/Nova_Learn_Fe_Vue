@@ -4,7 +4,7 @@ import {
   defineProps,
   withDefaults,
   computed,
-  StyleValue,
+  StyleValue
 } from "vue";
 
 defineComponent({ name: "NVLGridCol" });

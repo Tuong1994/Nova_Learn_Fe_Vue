@@ -110,11 +110,6 @@ const useMenu = () => {
       type: "main",
       typeSubs: "default",
       subs: [
-        // {
-        //   id: "stories",
-        //   title: langs.value?.menu.student.subs.stories,
-        //   link: "/student/stories",
-        // },
         {
           id: "photo",
           title: langs.value?.menu.student.subs.photo,
@@ -175,7 +170,22 @@ const useMenu = () => {
     },
   ]);
 
-  return { mainMenu };
+  const adminMenu = computed<IMenuItem[]>(() => [
+    {
+      id: "course",
+      title: langs.value?.menu.admin.course,
+      link: "/admin/course/list",
+      icon: "book"
+    },
+    {
+      id: "student",
+      title: langs.value?.menu.admin.student,
+      link: "/admin/student/list",
+      icon: "graduation-cap"
+    },
+  ]);
+
+  return { mainMenu, adminMenu };
 };
 
 export default useMenu;

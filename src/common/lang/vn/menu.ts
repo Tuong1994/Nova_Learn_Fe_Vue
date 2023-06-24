@@ -52,6 +52,10 @@ const menuVn = {
       disclaimer: "Thông báo mạo danh",
     },
   },
+  admin: {
+    course: "Khóa học",
+    student: "Học viên"
+  }
 };
 
 export default menuVn;

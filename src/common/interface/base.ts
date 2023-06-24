@@ -57,6 +57,7 @@ export interface IMenuItem {
   id: string;
   title?: string;
   link?: string;
+  icon?: string;
   subs?: IMenuItem[];
   type?: "main" | "support";
   typeSubs?: "default" | "mega" | "none";
