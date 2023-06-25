@@ -53,7 +53,9 @@ const menuVn = {
     },
   },
   admin: {
+    category: "Danh mục",
     course: "Khóa học",
+    topic: "Chủ đề",
     student: "Học viên"
   }
 };

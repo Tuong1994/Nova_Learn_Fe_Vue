@@ -88,6 +88,18 @@
   }
 }
 
+// Slide menu
+.admin-slide-menu {
+  .menu-item {
+    padding: $p-10 $p-10 * 2;
+    display: block;
+    border-bottom: 1px solid $secondary;
+    & * {
+      color: $tSecondary;
+    }
+  }
+}
+
 // Header
 .admin-header {
   width: $w-100;

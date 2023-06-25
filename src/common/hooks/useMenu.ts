@@ -172,16 +172,28 @@ const useMenu = () => {
 
   const adminMenu = computed<IMenuItem[]>(() => [
     {
+      id: "category",
+      title: langs.value?.menu.admin.category,
+      link: "/admin/category/list",
+      icon: "list",
+    },
+    {
       id: "course",
       title: langs.value?.menu.admin.course,
       link: "/admin/course/list",
-      icon: "book"
+      icon: "book",
+    },
+    {
+      id: "topic",
+      title: langs.value?.menu.admin.topic,
+      link: "/admin/topic/list",
+      icon: "bookmark",
     },
     {
       id: "student",
       title: langs.value?.menu.admin.student,
       link: "/admin/student/list",
-      icon: "graduation-cap"
+      icon: "graduation-cap",
     },
   ]);
 

@@ -100,7 +100,8 @@ const handleSelected = (name: string) => {
             </router-link>
           </div>
         </div>
-        <router-view></router-view>
+        
+        <router-view />
       </Col>
     </Row>
   </Section>

@@ -53,8 +53,10 @@ const menuEng = {
     },
   },
   admin: {
+    category: "Category",
     course: "Courses",
-    student: "Students"
+    topic: "Topic",
+    student: "Students",
   }
 };
 

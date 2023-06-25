@@ -26,6 +26,8 @@ const emits = defineEmits(["onShrink"]);
 const router = useRouter();
 
 const isActive = computed<boolean>(() => {
+  let active = false;
+
   props.adminMenu.forEach((menu) => {
     const currentPath = router.currentRoute.value.fullPath;
 
@@ -35,9 +37,10 @@ const isActive = computed<boolean>(() => {
 
     const path = `/${firstPart}/${secondPart}`;
 
-    console.log(path);
+    console.log(router.currentRoute)
   });
-  return false;
+
+  return active;
 });
 
 const onShrink = () => emits("onShrink");

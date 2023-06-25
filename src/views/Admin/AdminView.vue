@@ -1,12 +1,9 @@
 <script lang="ts" setup>
 import { defineComponent, defineProps, ref } from "vue";
-import Row from "@/components/Grid/Row.vue";
-import Col from "@/components/Grid/Col.vue";
 import AdminSideNav from "./Layout/AdminSideNav.vue";
 import AdminHeader from "./Layout/AdminHeader.vue";
-import useMenu from "@/common/hooks/useMenu";
-import SingleUpload from "@/components/Fields/SingleUpload.vue";
 import AdminSlideMenu from "./Layout/AdminSlideMenu.vue";
+import useMenu from "@/common/hooks/useMenu";
 
 defineComponent({ name: "AdminView" });
 
@@ -42,8 +39,6 @@ const onCloseMenu = () => (isShowMenu.value = false);
         :isShrink="isShrink"
         @onShrink="onShrink"
       />
-
-      <AdminSlideMenu :isShowMenu="isShowMenu" @onCloseMenu="onCloseMenu" />
     </div>
 
     <div
@@ -52,7 +47,16 @@ const onCloseMenu = () => (isShowMenu.value = false);
         isShrink ? 'admin-layout-col-right--width' : '',
       ]"
     >
+      <!-- Responsive menu -->
+      <AdminSlideMenu
+        :adminMenu="adminMenu"
+        :isShowMenu="isShowMenu"
+        @onCloseMenu="onCloseMenu"
+      />
+
       <AdminHeader :isLogin="isLogin" @onShowMenu="onShowMenu" />
-    </div>
+
+      <router-view />
+    </div>   
   </div>
 </template>
