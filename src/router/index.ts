@@ -14,6 +14,7 @@ import SignInView from "../views/Main/Auth/SignInView.vue";
 import SignUpView from "../views/Main/Auth/SignUpView.vue";
 import CourseListView from "../views/Main/Course/List/CourseListView.vue";
 import CourseDetailView from "../views/Main/Course/Detail/CourseDetailView.vue";
+import AdminCourseFormView from "../views/Admin/Course/Form/AdminCourseFormView.vue";
 import AdminCourseListView from "../views/Admin/Course/List/AdminCourseListView.vue";
 import AdminStudentListView from "../views/Admin/Student/List/AdminStudentListView.vue";
 
@@ -94,6 +95,7 @@ const routes: Array<RouteRecordRaw> = [
     children: [
       { path: "", component: AdminCourseListView },
       { path: "course/list", component: AdminCourseListView },
+      { path: "course/form", component: AdminCourseFormView },
       { path: "student/list", component: AdminStudentListView },
     ],
   },

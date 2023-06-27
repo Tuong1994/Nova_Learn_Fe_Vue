@@ -1,33 +1,31 @@
 <script lang="ts" setup>
 import { computed, defineComponent } from "vue";
+import { Columns } from "@/common/interface/table";
 import Section from "@/components/Section/Section.vue";
-import Title from "@/components/Typography/Title.vue";
-import Paragraph from "@/components/Typography/Paragraph.vue";
-import Table from "@/components/Table/Table.vue";
-import TableRow from "@/components/Table/TableRow.vue";
-import TableCell from "@/components/Table/TableCell.vue";
-import List from "@/components/List/List.vue";
-import ListItem from "@/components/List/ListItem.vue";
 import Row from "@/components/Grid/Row.vue";
 import Col from "@/components/Grid/Col.vue";
+import Title from "@/components/Typography/Title.vue";
+import Paragraph from "@/components/Typography/Paragraph.vue";
+import List from "@/components/List/List.vue";
+import ListItem from "@/components/List/ListItem.vue";
 import NoteMessage from "@/components/NoteMessage/NoteMessage.vue";
+import Table from "@/components/Table/Table.vue";
 import useLang from "@/common/hooks/useLang";
+
+interface TableData {
+  id: string;
+  host: string;
+  branch: string;
+  accNumber: string;
+}
 
 defineComponent({ name: "DisclaimerView" });
 
 const { langs } = useLang();
 
-const tabletHeaders = computed(() => [
-  langs.value?.common.table.header.number ?? "",
-  langs.value?.common.table.header.host ?? "",
-  langs.value?.common.table.header.accNumber ?? "",
-  langs.value?.common.table.header.bank ?? "",
-]);
-
-const tableRows = computed(() => [
+const data = computed<TableData[]>(() => [
   {
     id: "vib",
-
     host: "Học viện đào tạo lập trình Nova Learn",
     branch: "VIB - Quận Phú Nhuận",
     accNumber: "0157.244.47",
@@ -37,6 +35,30 @@ const tableRows = computed(() => [
     host: "Học viện đào tạo lập trình Nova Learn",
     branch: "VIETCOMBANK - Quận 11",
     accNumber: "111.112.86.86.666",
+  },
+]);
+
+const columns = computed<Columns<TableData>>(() => [
+  {
+    id: "id",
+    title: langs.value?.common.table.header.number ?? "",
+    dataIndex: "id",
+    render: (_, idx) => `<div>${(idx ?? 0) + 1}</div>`,
+  },
+  {
+    id: "host",
+    title: langs.value?.common.table.header.host ?? "",
+    dataIndex: "host",
+  },
+  {
+    id: "accNumber",
+    title: langs.value?.common.table.header.accNumber ?? "",
+    dataIndex: "accNumber",
+  },
+  {
+    id: "branch",
+    title: langs.value?.common.table.header.bank ?? "",
+    dataIndex: "branch",
   },
 ]);
 </script>
@@ -81,25 +103,6 @@ const tableRows = computed(() => [
       </Col>
     </Row>
 
-    <Table :header="tabletHeaders">
-      <template #row>
-        <TableRow v-for="(row, idx) in tableRows" :key="row.id">
-          <template #cell>
-            <TableCell>
-              {{ idx + 1 }}
-            </TableCell>
-            <TableCell>
-              {{ row.host }}
-            </TableCell>
-            <TableCell>
-              {{ row.accNumber }}
-            </TableCell>
-            <TableCell>
-              {{ row.branch }}
-            </TableCell>
-          </template>
-        </TableRow>
-      </template>
-    </Table>
+    <Table :dataSource="data" :columns="columns" />
   </Section>
 </template>

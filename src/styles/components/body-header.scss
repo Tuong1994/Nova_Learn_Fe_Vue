@@ -6,6 +6,10 @@
     & * {
       margin: 0;
     }
+    .title-total {
+      font-weight: $semiBold;
+      color: $tGray;
+    }
   }
   .header-right {
     width: $w-100;

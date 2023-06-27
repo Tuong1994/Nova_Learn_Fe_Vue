@@ -17,6 +17,7 @@ interface NVLButtonProps {
   variant?: "primary" | "secondary" | "success" | "danger";
   type?: "button" | "submit" | "reset";
   size?: "sm" | "md" | "lg";
+  loading?: boolean;
   ghost?: boolean;
   wrapClass?: string;
   style?: StyleValue;
@@ -94,6 +95,7 @@ const onClick = (e: any) => {
       sizeClass,
       wrapClass,
       disabled ? 'nvl-button--disabled' : '',
+      loading ? 'nvl-button--loading' : '',
     ]"
     :style="style"
     :type="type"
@@ -104,6 +106,9 @@ const onClick = (e: any) => {
       class="button-ripple"
       :style="{ left: `${coords.x}px`, top: `${coords.y}px` }"
     ></div>
+
+    <div v-if="loading" class="button-spinner"></div>
+
     <slot></slot>
   </button>
 </template>

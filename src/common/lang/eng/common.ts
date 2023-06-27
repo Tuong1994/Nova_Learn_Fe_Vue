@@ -37,6 +37,9 @@ const commonEng = {
         logout: "Logout",
       },
     },
+    bodyHeader: {
+      subTitle: "Total",
+    },
     footer: {
       top: {
         formTitle: "Sign up for notification about new courses",

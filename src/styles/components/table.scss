@@ -4,14 +4,30 @@
   border-radius: $rounded;
   .table-filter {
     padding: $p-10;
-    .filter-select {
+    & * {
       margin: 0;
+    }
+    .filter-action {
+      width: $w-100;
     }
   }
   .table-inner {
     min-width: $w-100;
     overflow-y: hidden;
     overflow-x: auto;
+    position: relative;
+    .inner-loading {
+      width: $w-100;
+      height: $h-100;
+      background: $RGBA-white-2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 5;
+    }
     table {
       min-width: $w-100;
       border-color: $gray-1;
@@ -20,7 +36,7 @@
         tr {
           background: $gray-1;
           th {
-            padding: $p-2 * 2 $p-2 * 6;
+            padding: $p-5 $p-2 * 6;
             position: relative;
             &:last-child {
               &::after {
@@ -40,6 +56,33 @@
             .table-head {
               font-size: $body-1;
               font-weight: $semiBold;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              .head-checkbox-mixed {
+                width: $w-10 + 6;
+                height: $h-10 + 6;
+                border: 1px solid $gray-2;
+                border-radius: $rounded;
+                position: relative;
+                top: 5px;
+                left: -2px;
+                cursor: pointer;
+                &::after {
+                  content: "";
+                  width: $w-10 - 2;
+                  height: $h-10 - 2;
+                  background: $primary;
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
+                }
+              }
+            }
+            .table-head-action {
+              padding: $p-2 $p-10;
+              font-size: $body-2;
             }
           }
         }
@@ -60,14 +103,30 @@
               min-width: max-content;
               text-align: center;
               font-size: $body-2;
+              display: flex;
+              align-items: center;
+              justify-content: center;
             }
           }
         }
       }
     }
+    .table-first-col {
+      padding: $p-2 * 2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .cell-checkbox {
+      margin: 0;
+      margin-top: $m-5;
+    }
     .cell-icon {
       font-size: $body-2;
       cursor: pointer;
+    }
+    .row-active {
+      background: $RGBA-purple;
     }
   }
 }

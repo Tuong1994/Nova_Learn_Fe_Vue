@@ -256,6 +256,7 @@
     .slides-actions {
       padding: $p-10;
       align-self: flex-end;
+      display: flex;
       .actions-btn {
         width: $w-10 * 8;
         &:first-child {

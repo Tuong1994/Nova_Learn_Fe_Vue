@@ -201,3 +201,15 @@
     margin-top: $m-5 - 2;
   }
 }
+
+// Checkbox
+.nvl-checkbox-group {
+  margin: $m-10 0;
+  position: relative;
+  .group-control {
+    width: $w-10 + 6;
+    height: $h-10 + 6;
+    accent-color: $primary;
+    margin-top: $m-5 - 2;
+  }
+}

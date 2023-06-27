@@ -1,9 +1,9 @@
 export interface TableColumns<T> {
   id: string;
   title: string;
-  dataIndex: keyof T;
+  dataIndex: string;
   component?: any;
-  render?: (r?: T) => string;
+  render?: (r?: T, idx?: number) => string;
 }
 
 export type Columns<Record = unknown> = TableColumns<Record>[];

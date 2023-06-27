@@ -36,8 +36,6 @@ const isActive = computed<boolean>(() => {
       .filter((item) => item);
 
     const path = `/${firstPart}/${secondPart}`;
-
-    console.log(router.currentRoute)
   });
 
   return active;

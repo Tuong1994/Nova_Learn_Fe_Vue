@@ -1,0 +1,76 @@
+// Spinner
+.nvl-loading-spinner {
+  width: $w-10 * 2.2;
+  height: $h-10 * 2.2;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  animation: spin 1s linear infinite;
+  .spinner-item {
+    width: $w-10;
+    height: $h-10;
+    display: block;
+    border-radius: $circle;
+  }
+  .spinner-item--dark {
+    background: $dark-1;
+  }
+  .spinner-item--light {
+    background: $secondary;
+  }
+}
+
+// Line
+.nvl-loading-line {
+  display: flex;
+  align-items: center;
+  .line-item {
+    width: 4px;
+    height: $h-10 * 3;
+    border-radius: $roundedLg;
+    margin: 0 $m-5 - 2;
+    animation: shrink 1s linear infinite;
+    &:nth-child(1) {
+      animation-delay: .1s;
+    }
+    &:nth-child(2) {
+      animation-delay: .2s;
+    }
+    &:nth-child(3) {
+      animation-delay: .3s;
+    }
+    &:nth-child(4) {
+      animation-delay: .4s;
+    }
+    &:nth-child(5) {
+      animation-delay: .5s;
+    }
+    &:nth-child(6) {
+      animation-delay: .6s;
+    }
+    &:nth-child(7) {
+      animation-delay: .7s;
+    }
+    &:nth-child(8) {
+      animation-delay: .8s;
+    }
+  }
+  .line-item--dark {
+    background: $dark-1;
+  }
+  .line-item--light {
+    background: $dark-1;
+  }
+}
+
+@keyframes shrink {
+    0% {
+      height: 0;
+    }
+    50% {
+      height: $h-10 * 3;
+    }
+    100% {
+      height: 0;
+    }
+  }

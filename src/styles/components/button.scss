@@ -5,6 +5,9 @@
   transition: all $durationSm $func;
   cursor: pointer;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
   z-index: 1;
   &:hover {
@@ -39,6 +42,21 @@
     animation: ripple 1s ease 1 forwards;
     z-index: 2;
   }
+  .button-spinner {
+    min-width: $w-10;
+    min-height: $h-10;
+    margin-right: $m-5;
+    border: 1px solid $gray-2;
+    border-top-color: transparent;
+    border-radius: $circle;
+    animation: spin 1s linear infinite;
+  }
+}
+
+.nvl-button--loading {
+  opacity: 0.7;
+  user-select: none;
+  pointer-events: none;
 }
 
 // Variant

@@ -54,9 +54,9 @@ const menuEng = {
   },
   admin: {
     category: "Category",
-    course: "Courses",
+    course: "Course",
     topic: "Topic",
-    student: "Students",
+    student: "Student",
   }
 };
 

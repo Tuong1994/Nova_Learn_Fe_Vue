@@ -10,6 +10,7 @@ import authEng from "./auth";
 import courseEng from "./course";
 import businessEng from "./business";
 import blogEng from "./blog";
+import adminEng from "./admin";
 
 const eng = {
   common: commonEng,
@@ -24,6 +25,7 @@ const eng = {
   course: courseEng,
   business: businessEng,
   blog: blogEng,
+  admin: adminEng,
 };
 
 export type ENG = typeof eng;

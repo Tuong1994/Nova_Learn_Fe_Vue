@@ -36,6 +36,9 @@ const commonVn = {
         logout: "Đăng xuất",
       },
     },
+    bodyHeader: {
+      subTitle: "Tất cả",
+    },
     footer: {
       top: {
         formTitle: "Đăng ký nhận thông báo khóa học mới",

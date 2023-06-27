@@ -275,7 +275,7 @@ onUnmounted(() => clearInterval(interval));
         <Button
           wrapClass="actions-btn"
           variant="primary"
-          size="sm"
+          size="lg"
           :disabled="prevBtnDisabled"
           @click="onPrev"
         >
@@ -289,7 +289,7 @@ onUnmounted(() => clearInterval(interval));
         <Button
           wrapClass="actions-btn"
           variant="primary"
-          size="sm"
+          size="lg"
           :disabled="nextBtnDisabled"
           @click="onNext"
         >

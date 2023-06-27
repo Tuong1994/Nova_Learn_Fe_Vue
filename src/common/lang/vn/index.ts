@@ -10,6 +10,7 @@ import authVn from "./auth";
 import courseVn from "./course";
 import businessVn from "./business";
 import blogVn from "./blog";
+import adminVn from "./admin";
 
 const vn = {
   common: commonVn,
@@ -24,6 +25,7 @@ const vn = {
   course: courseVn,
   business: businessVn,
   blog: blogVn,
+  admin: adminVn,
 };
 
 export type VN = typeof vn;
