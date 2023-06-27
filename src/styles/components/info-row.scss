@@ -4,25 +4,18 @@
   display: flex;
   justify-content: space-between;
   .row-title {
-    width: $w-100 - 60;
-    margin-right: $m-5;
     font-weight: $semiBold;
-  }
-  .row-content {
-    width: $w-100 - 40;
   }
 }
 
 .nvl-info-row--dark {
-  .row-title,
-  .row-content {
+  & * {
     color: $tPrimary;
   }
 }
 
 .nvl-info-row--light {
-  .row-title,
-  .row-content {
+  & * {
     color: $tSecondary;
   }
 }

@@ -1,0 +1,22 @@
+.student {
+  .student-info {
+    background: $deepPurple-1;
+    .info-edit-icon {
+      & * {
+        color: $tBlue;
+      }
+      svg {
+        cursor: pointer;
+      }
+    }
+  }
+  .student-table-cell {
+    width: $w-10 * 50;
+    height: $h-10 * 8;
+    padding: $p-5;
+    font-size: $body-2;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align: justify;
+  }
+}

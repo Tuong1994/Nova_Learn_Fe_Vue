@@ -3,6 +3,7 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import {
   faEye,
+  faPen,
   faGear,
   faBook,
   faStar,
@@ -35,6 +36,7 @@ import {
   faCalendar,
   faEnvelope,
   faFaceSmile,
+  faVenusMars,
   faLightbulb,
   faChartLine,
   faHandshake,
@@ -51,6 +53,7 @@ import {
   faTimesCircle,
   faPeopleGroup,
   faCheckDouble,
+  faLocationDot,
   faUserGraduate,
   faCloudArrowUp,
   faGraduationCap,
@@ -69,6 +72,7 @@ import "./styles/main.scss";
 
 library.add(
   faEye,
+  faPen,
   faGear,
   faBook,
   faList,
@@ -104,6 +108,7 @@ library.add(
   faHardDrive,
   faHandshake,
   faFaceSmile,
+  faVenusMars,
   faAngleDown,
   faAngleLeft,
   faChartLine,
@@ -117,6 +122,7 @@ library.add(
   faCheckDouble,
   faPeopleGroup,
   faTimesCircle,
+  faLocationDot,
   faCloudArrowUp,
   faUserGraduate,
   faGraduationCap,

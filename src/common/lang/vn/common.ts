@@ -32,7 +32,7 @@ const commonVn = {
         signIn: "Đăng nhập",
         signUp: "Đăng ký",
         admin: "Quản trị",
-        info: "Thông tin cá nhân",
+        info: "Học viên",
         logout: "Đăng xuất",
       },
     },

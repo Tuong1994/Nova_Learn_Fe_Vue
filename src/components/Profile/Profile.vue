@@ -23,13 +23,13 @@ const items = computed<IDropdownItem[]>(() => [
   {
     id: "admin",
     title: props.langs?.common.components.header.profile.admin ?? "",
-    link: "/admin/course/list",
+    link: "/admin/category/list",
     icon: "gear",
   },
   {
     id: "info",
     title: props.langs?.common.components.header.profile.info ?? "",
-    link: "/info",
+    link: "/student",
     icon: "user",
   },
   {

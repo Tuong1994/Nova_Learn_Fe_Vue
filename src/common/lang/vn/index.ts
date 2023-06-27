@@ -11,6 +11,7 @@ import courseVn from "./course";
 import businessVn from "./business";
 import blogVn from "./blog";
 import adminVn from "./admin";
+import studentVn from "./student";
 
 const vn = {
   common: commonVn,
@@ -25,6 +26,7 @@ const vn = {
   course: courseVn,
   business: businessVn,
   blog: blogVn,
+  student: studentVn,
   admin: adminVn,
 };
 

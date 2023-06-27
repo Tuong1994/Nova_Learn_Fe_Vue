@@ -38,7 +38,7 @@ type ColSpan =
   | 24
   | 25;
 
-interface NVLGridColProps {
+export interface NVLGridColProps {
   span?: ColSpan;
   xs?: ColSpan;
   md?: ColSpan;

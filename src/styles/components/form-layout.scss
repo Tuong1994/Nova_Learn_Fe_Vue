@@ -1,6 +1,9 @@
 .form-layout {
   .layout-header {
     padding: $p-10 * 2 0;
+    .header-action {
+      width: $w-100;
+    }
   }
   .layout-breadcrumb {
     padding: 0;

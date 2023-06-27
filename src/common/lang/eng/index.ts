@@ -11,6 +11,7 @@ import courseEng from "./course";
 import businessEng from "./business";
 import blogEng from "./blog";
 import adminEng from "./admin";
+import studentEng from "./student";
 
 const eng = {
   common: commonEng,
@@ -25,6 +26,7 @@ const eng = {
   course: courseEng,
   business: businessEng,
   blog: blogEng,
+  student: studentEng,
   admin: adminEng,
 };
 

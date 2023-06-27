@@ -12,11 +12,17 @@ import ContactView from "../views/Main/Contact/ContactView.vue";
 import DisclaimerView from "../views/Main/Disclaimer/DisclaimerView.vue";
 import SignInView from "../views/Main/Auth/SignInView.vue";
 import SignUpView from "../views/Main/Auth/SignUpView.vue";
+import StudentView from "../views/Main/Student/StudentView.vue";
 import CourseListView from "../views/Main/Course/List/CourseListView.vue";
 import CourseDetailView from "../views/Main/Course/Detail/CourseDetailView.vue";
+import AdminCategoryListView from "../views/Admin/Category/List/AdminCategoryListView.vue";
+import AdminCategoryFormView from "../views/Admin/Category/Form/AdminCategoryFormView.vue";
 import AdminCourseFormView from "../views/Admin/Course/Form/AdminCourseFormView.vue";
 import AdminCourseListView from "../views/Admin/Course/List/AdminCourseListView.vue";
+import AdminTopicListView from "../views/Admin/Topic/List/AdminTopicListView.vue";
+import AdminTopicFormView from "../views/Admin/Topic/Form/AdminTopicFomView.vue";
 import AdminStudentListView from "../views/Admin/Student/List/AdminStudentListView.vue";
+import AdminStudentFormView from "../views/Admin/Student/Form/AdminStudentFormView.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -70,6 +76,11 @@ const routes: Array<RouteRecordRaw> = [
     component: SignUpView,
   },
   {
+    path: "/student",
+    name: "student",
+    component: StudentView,
+  },
+  {
     path: "/course/list",
     name: "courseList",
     component: CourseListView,
@@ -93,10 +104,15 @@ const routes: Array<RouteRecordRaw> = [
     path: "/admin",
     name: "admin",
     children: [
-      { path: "", component: AdminCourseListView },
+      { path: "", component: AdminCategoryListView },
+      { path: "category/list", component: AdminCategoryListView },
+      { path: "category/form", component: AdminCategoryFormView },
       { path: "course/list", component: AdminCourseListView },
       { path: "course/form", component: AdminCourseFormView },
+      { path: "topic/list", component: AdminTopicListView },
+      { path: "topic/form", component: AdminTopicFormView },
       { path: "student/list", component: AdminStudentListView },
+      { path: "student/form", component: AdminStudentFormView },
     ],
   },
 ];

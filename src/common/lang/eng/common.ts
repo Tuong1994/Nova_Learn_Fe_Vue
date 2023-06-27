@@ -33,7 +33,7 @@ const commonEng = {
         signIn: "Sign in",
         signUp: "Sign up",
         admin: "Administrator",
-        info: "Personal infomation",
+        info: "Student",
         logout: "Logout",
       },
     },

@@ -5,6 +5,7 @@ import CheckBox from "../Fields/CheckBox.vue";
 import IconPlus from "../Icons/IconPlus.vue";
 import IconMinus from "../Icons/IconMinus.vue";
 import TableExpand from "./TableExpand.vue";
+import TableRowCell from "./TableRowCell.vue";
 
 defineComponent({ name: "NVLTableRow" });
 
@@ -58,21 +59,13 @@ const onExpand = () => (isExpand.value = !isExpand.value);
     </td>
 
     <!-- Table cell -->
-    <td v-for="column in columns" :key="column.id">
-      <div v-if="column.component" class="table-cell">
-        <component :is="column.component" />
-      </div>
-
-      <div
-        v-else-if="column.render"
-        v-html="column.render(item, idx)"
-        class="table-cell"
-      ></div>
-
-      <div v-else class="table-cell">
-        {{ item[column.dataIndex] }}
-      </div>
-    </td>
+    <TableRowCell
+      v-for="column in columns"
+      :key="column.id"
+      :column="column"
+      :item="item"
+      :idx="idx"
+    />
   </tr>
 
   <tr v-if="isExpand">

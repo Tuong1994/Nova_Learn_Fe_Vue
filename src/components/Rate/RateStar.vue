@@ -9,10 +9,16 @@ defineComponent({ name: "NVLRateStar" });
 
 interface NVLRateStarProps {
   point?: number;
+  showPoint?: boolean;
+  showRater?: boolean;
+  justify?: "start" | "center" | "end";
 }
 
 const props = withDefaults(defineProps<NVLRateStarProps>(), {
   point: 4,
+  showPoint: true,
+  showRate: true,
+  justify: "start",
 });
 
 const getActiveClass = (idx: number) => {
@@ -22,22 +28,24 @@ const getActiveClass = (idx: number) => {
 </script>
 
 <template>
-  <Row wrapClass="nvl-rate-star">
-    <Col>
+  <Row wrapClass="nvl-rate-star" :justify="justify">
+    <Col v-if="showPoint">
       <Paragraph wrapClass="star-point">
         <span>{{ point }}</span>
         <span>/</span>
         <span>5</span>
       </Paragraph>
     </Col>
+
     <Col>
       <Row :gutters="[5]">
-        <Col v-for="(item, idx) in 5" :key="idx">
+        <Col v-for="(_, idx) in 5" :key="idx">
           <IconStar :class="['star-icon', getActiveClass(idx + 1)]" />
         </Col>
       </Row>
     </Col>
-    <Col>
+
+    <Col v-if="showRater">
       <Paragraph wrapClass="star-rater"> (100) </Paragraph>
     </Col>
   </Row>

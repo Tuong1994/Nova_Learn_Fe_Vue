@@ -4,20 +4,20 @@ import { IBreadCrumbItem } from "@/common/interface/base";
 import FormLayout from "@/components/FormLayout/FormLayout.vue";
 import useLang from "@/common/hooks/useLang";
 
-defineComponent({ name: "AdminCourseFormView" });
+defineComponent({ name: "AdminTopFormView" });
 
 const { langs } = useLang();
 
 const breadcrumbs = computed<IBreadCrumbItem[]>(() => [
   {
     id: "1",
-    title: langs.value?.admin.course.list.title ?? "",
-    link: "/admin/course/list",
+    title: langs.value?.admin.topic.list.title ?? "",
+    link: "/admin/topic/list",
   },
   {
-    id: "1",
-    title: langs.value?.admin.course.form.addTitle ?? "",
-    link: "/admin/course/form",
+    id: "2",
+    title: langs.value?.admin.topic.form.addTitle ?? "",
+    link: "/admin/topic/form",
   },
 ]);
 </script>
@@ -25,7 +25,6 @@ const breadcrumbs = computed<IBreadCrumbItem[]>(() => [
 <template>
   <FormLayout
     :breadcrumbs="breadcrumbs"
-    :title="langs?.admin.course.form.addTitle"
-  >
-  </FormLayout>
+    :title="langs?.admin.topic.form.addTitle"
+  ></FormLayout>
 </template>

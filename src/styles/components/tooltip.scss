@@ -14,7 +14,7 @@
     opacity: 0;
     visibility: hidden;
     transition: all $durationSm $func;
-    z-index: 8;
+    z-index: 20;
     .content-inner {
       padding: $p-5 $p-10;
       position: relative;
