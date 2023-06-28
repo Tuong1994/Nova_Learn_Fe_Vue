@@ -9,27 +9,20 @@ import {
   onUpdated,
   onUnmounted,
 } from "vue";
-import Button from "../Button/Button.vue";
+import Button, { NVLButtonProps } from "../Button/Button.vue";
 import useLang from "@/common/hooks/useLang";
 
 defineComponent({ name: "NVLModal" });
 
-interface ButtonProps {
-  disabled?: boolean;
-  variant?: "primary" | "secondary" | "success" | "danger";
-  type?: "button" | "submit" | "reset";
-  size?: "sm" | "md" | "lg";
-  ghost?: boolean;
-  className?: string;
-}
-
 interface NVLModalProps {
   open?: boolean;
-  wrapClass?: string;
+  backdropClass?: string;
+  modalClass?: string;
   headerClass?: string;
   bodyClass?: string;
   footerClass?: string;
-  size?: "sm" | "md" | "lg";
+  size?: "sm" | "md" | "lg" | "xl";
+  width?: number;
   hasHeader?: boolean;
   hasFooter?: boolean;
   maskClose?: boolean;
@@ -37,8 +30,8 @@ interface NVLModalProps {
   hasCancelBtn?: boolean;
   okText?: string;
   cancelText?: string;
-  okButtonProps?: ButtonProps;
-  cancelButtonProps?: ButtonProps;
+  okButtonProps?: NVLButtonProps;
+  cancelButtonProps?: NVLButtonProps;
 }
 
 let time: any;
@@ -64,6 +57,7 @@ const sizeClass = computed(() => {
     sm: "nvl-modal--sm",
     md: "nvl-modal--md",
     lg: "nvl-modal--lg",
+    xl: "nvl-modal--xl",
   };
   return sizes[props.size ?? ""];
 });
@@ -93,7 +87,11 @@ onUnmounted(() => clearTimeout(time));
   <Teleport to="#modal-root">
     <div
       v-if="render"
-      :class="['nvl-modal-backdrop', open ? 'nvl-modal-backdrop--active' : '']"
+      :class="[
+        'nvl-modal-backdrop',
+        open ? 'nvl-modal-backdrop--active' : '',
+        backdropClass,
+      ]"
       @click="onCancel"
     ></div>
 
@@ -103,7 +101,7 @@ onUnmounted(() => clearTimeout(time));
         'nvl-modal',
         open ? 'nvl-modal--active' : '',
         sizeClass,
-        wrapClass,
+        modalClass,
       ]"
     >
       <!-- Modal header -->
@@ -118,7 +116,7 @@ onUnmounted(() => clearTimeout(time));
       <div v-if="hasFooter" :class="['modal-footer', footerClass]">
         <Button
           v-if="hasCancelBtn"
-          :wrapClass="`footer-action ${cancelButtonProps?.className}`"
+          :wrapClass="`footer-action ${cancelButtonProps?.wrapClass}`"
           :variant="cancelButtonProps?.variant"
           :disabled="cancelButtonProps?.disabled"
           @onClick="onCancel"
@@ -127,7 +125,7 @@ onUnmounted(() => clearTimeout(time));
         </Button>
         <Button
           v-if="hasOkBtn"
-          :wrapClass="`footer-action ${okButtonProps?.className}`"
+          :wrapClass="`footer-action ${okButtonProps?.wrapClass}`"
           :variant="okButtonProps?.variant"
           :disabled="okButtonProps?.disabled"
           @onClick="onOk"

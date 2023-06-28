@@ -3,7 +3,7 @@ import { Langs } from "@/common/lang";
 import { defineComponent, defineProps } from "vue";
 import Form from "../Form/Form.vue";
 import FormFooter from "../Form/FormFooter.vue";
-import Input from "../Fields/Input.vue";
+import Input from "../Fields/Input/Input.vue";
 import Button from "../Button/Button.vue";
 import Section from "../Section/Section.vue";
 import Row from "../Grid/Row.vue";

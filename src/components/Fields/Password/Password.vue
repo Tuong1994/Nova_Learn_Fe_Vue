@@ -4,26 +4,23 @@ import {
   withDefaults,
   defineProps,
   defineEmits,
-  ref,
   computed,
-  StyleValue,
-  watchEffect,
+  ref,
   useSlots,
+  StyleValue,
 } from "vue";
-import { IRule, FieldValue } from "@/common/interface/base";
-import { useStore } from "@/store";
-import IconXCircle from "../Icons/IconXCircle.vue";
-import NoteMessage from "../NoteMessage/NoteMessage.vue";
+import { FieldValue, IRule } from "@/common/interface/base";
+import IconEye from "@/components/Icons/IconEye.vue";
+import IconEyeSlash from "@/components/Icons/IconEyeSlash.vue";
+import NoteMessage from "@/components/NoteMessage/NoteMessage.vue";
 import useLang from "@/common/hooks/useLang";
 import useValidate from "@/common/hooks/useValidate";
 
-defineComponent({ name: "NVLTextArea" });
+defineComponent({ name: "NVLInputPassword" });
 
-interface NVLTextAreaProps {
+interface NVLInputPasswordProps {
   label?: string;
   name?: string;
-  rows?: number;
-  cols?: number;
   placeholder?: string;
   modelValue?: string;
   wrapClass?: string;
@@ -35,24 +32,21 @@ interface NVLTextAreaProps {
   style?: StyleValue;
 }
 
-const props = withDefaults(defineProps<NVLTextAreaProps>(), {
+const props = withDefaults(defineProps<NVLInputPasswordProps>(), {
   rules: () => [],
-  rows: 8,
 });
 
 const { langs } = useLang();
 
 const slots = useSlots();
 
-const store = useStore();
+const isShow = ref<boolean>(false);
 
 const isTouched = ref<boolean>(false);
 
 const isError = ref<FieldValue>({});
 
 const showPrefix = computed(() => !!slots.prefix);
-
-const showSuffix = computed(() => !!slots.suffix);
 
 const getSizeClass = computed(() => {
   const sizes: any = {
@@ -63,17 +57,13 @@ const getSizeClass = computed(() => {
   return sizes[props.size ?? "md"];
 });
 
-watchEffect(() => {
-  if (store.getters.getError) isError.value = store.getters.getError;
-});
-
 const emits = defineEmits(["update:modelValue"]);
+
+const showPass = () => (isShow.value = !isShow.value);
 
 const updateValue = (text: string) => emits("update:modelValue", text);
 
 const onTouch = () => (isTouched.value = true);
-
-const clearInput = () => emits("update:modelValue", "");
 
 const onValidate = () => {
   if (!props.rules.length) return;
@@ -109,10 +99,9 @@ const onValidate = () => {
         <slot name="prefix"></slot>
       </div>
       <!-- Input control -->
-      <textarea
+      <input
+        :type="!isShow ? 'password' : 'text'"
         :class="['control-input', getSizeClass]"
-        :rows="rows"
-        :cols="cols"
         :id="label"
         :name="name"
         :value="modelValue"
@@ -123,13 +112,10 @@ const onValidate = () => {
         @focus="onTouch"
         @blur="onValidate"
       />
-      <!-- Input clear icon -->
-      <div v-if="modelValue" class="control-icon">
-        <IconXCircle class="icon-x" @onClick="clearInput" />
-      </div>
-      <!-- Input suffix -->
-      <div v-if="showSuffix" class="control-suffix">
-        <slot name="suffix"></slot>
+      <!-- Input show / hide password icon -->
+      <div class="control-icon">
+        <IconEye v-if="!isShow" @onClick="showPass" />
+        <IconEyeSlash v-if="isShow" @onClick="showPass" />
       </div>
     </div>
     <!-- Error message -->

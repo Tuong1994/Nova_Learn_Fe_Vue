@@ -12,16 +12,18 @@ import {
 } from "vue";
 import { IRule, FieldValue } from "@/common/interface/base";
 import { useStore } from "@/store";
-import IconXCircle from "../Icons/IconXCircle.vue";
-import NoteMessage from "../NoteMessage/NoteMessage.vue";
+import IconXCircle from "@/components/Icons/IconXCircle.vue";
+import NoteMessage from "@/components/NoteMessage/NoteMessage.vue";
 import useLang from "@/common/hooks/useLang";
 import useValidate from "@/common/hooks/useValidate";
 
-defineComponent({ name: "NVLInput" });
+defineComponent({ name: "NVLTextArea" });
 
-interface NVLInputProps {
+interface NVLTextAreaProps {
   label?: string;
   name?: string;
+  rows?: number;
+  cols?: number;
   placeholder?: string;
   modelValue?: string;
   wrapClass?: string;
@@ -33,8 +35,9 @@ interface NVLInputProps {
   style?: StyleValue;
 }
 
-const props = withDefaults(defineProps<NVLInputProps>(), {
+const props = withDefaults(defineProps<NVLTextAreaProps>(), {
   rules: () => [],
+  rows: 8,
 });
 
 const { langs } = useLang();
@@ -106,9 +109,10 @@ const onValidate = () => {
         <slot name="prefix"></slot>
       </div>
       <!-- Input control -->
-      <input
-        type="text"
+      <textarea
         :class="['control-input', getSizeClass]"
+        :rows="rows"
+        :cols="cols"
         :id="label"
         :name="name"
         :value="modelValue"

@@ -3,7 +3,7 @@ import { defineComponent } from "vue";
 import Section from "@/components/Section/Section.vue";
 import BodyHeader from "@/components/BodyHeader/BodyHeader.vue";
 import Title from "@/components/Typography/Title.vue";
-import Select from "@/components/Fields/Select.vue";
+import Select from "@/components/Fields/Select/Select.vue";
 import Row from "@/components/Grid/Row.vue";
 import Col from "@/components/Grid/Col.vue";
 import Pagination from "@/components/Pagination/Pagination.vue";

@@ -55,12 +55,17 @@
 }
 
 .nvl-modal--lg {
+  width: $w-10 * 65;
+}
+
+.nvl-modal--xl {
   width: $w-10 * 80;
 }
 
 .nvl-modal--sm,
 .nvl-modal--md,
-.nvl-modal--lg {
+.nvl-modal--lg,
+.nvl-modal--xl {
   @include respond(mdTablet) {
     width: $w-10 * 50;
   }

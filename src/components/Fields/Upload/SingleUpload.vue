@@ -1,11 +1,10 @@
 <script lang="ts" setup>
 import { defineComponent, defineProps, defineEmits, ref, watch } from "vue";
 import { ACCEPT_IMAGE_TYPE } from "@/common/constant/base";
-import IconPlus from "../Icons/IconPlus.vue";
-import Image from "../Image/Image.vue";
-import NoteMessage from "../NoteMessage/NoteMessage.vue";
+import IconPlus from "@/components/Icons/IconPlus.vue";
+import NoteMessage from "@/components/NoteMessage/NoteMessage.vue";
+import ImagePreview from "@/components/Image/ImagePreview.vue";
 import useLang from "@/common/hooks/useLang";
-import ImagePreview from "../Image/ImagePreview.vue";
 
 defineComponent({ name: "NVLSingleUpload" });
 

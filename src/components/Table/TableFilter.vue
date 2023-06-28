@@ -2,7 +2,7 @@
 import { defineComponent, defineProps } from "vue";
 import Row from "../Grid/Row.vue";
 import Col from "../Grid/Col.vue";
-import Select from "../Fields/Select.vue";
+import Select from "../Fields/Select/Select.vue";
 import Button from "../Button/Button.vue";
 import useLang from "@/common/hooks/useLang";
 

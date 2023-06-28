@@ -9,16 +9,16 @@ import Col from "@/components/Grid/Col.vue";
 import Card from "@/components/Card/Card.vue";
 import Form from "@/components/Form/Form.vue";
 import FormFooter from "@/components/Form/FormFooter.vue";
-import Input from "@/components/Fields/Input.vue";
+import Input from "@/components/Fields/Input/Input.vue";
 import Button from "@/components/Button/Button.vue";
+import Radio from "@/components/Fields/Radio/Radio.vue";
 import Divider from "@/components/Divider/Divider.vue";
-import helper from "@/utils/helper";
 import IconUser from "@/components/Icons/IconUser.vue";
 import IconPhone from "@/components/Icons/IconPhone.vue";
 import IconEnvelope from "@/components/Icons/IconEnvelope.vue";
-import Radio from "@/components/Fields/Radio.vue";
 import InfoRow from "@/components/InfoRow/InfoRow.vue";
 import useReveal from "@/common/hooks/useReveal";
+import helper from "@/utils/helper";
 
 defineComponent({ name: "CourseDetailSchedule" });
 

@@ -1,6 +1,6 @@
 // Default
 .nvl-input-group {
-  margin: $m-10 0;
+  margin-bottom: $m-10 * 1.5;
   position: relative;
   .group-label {
     display: flex;
@@ -153,6 +153,7 @@
   .group-select-active {
     opacity: 1;
     visibility: visible;
+    animation: fadeIn $durationMd $func 1;
   }
   .group-error-message {
     padding-top: $p-5;
@@ -194,7 +195,7 @@
 
 // Radio
 .nvl-radio-group {
-  margin: $m-10 0;
+  margin-bottom: $m-10 * 1.5;
   .group-control {
     width: $w-10 * 1.8;
     height: $h-10 * 1.8;
@@ -204,7 +205,7 @@
 
 // Checkbox
 .nvl-checkbox-group {
-  margin: $m-10 0;
+  margin-bottom: $m-10 * 1.5;
   position: relative;
   .group-control {
     width: $w-10 + 6;

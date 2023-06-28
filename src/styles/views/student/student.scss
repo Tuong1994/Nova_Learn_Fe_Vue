@@ -20,3 +20,10 @@
     text-align: justify;
   }
 }
+
+.student-form-modal-backdrop {
+  z-index: 30;
+}
+.student-form-modal {
+  z-index: 39;
+}

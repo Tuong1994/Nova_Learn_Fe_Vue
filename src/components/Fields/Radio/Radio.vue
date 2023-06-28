@@ -1,11 +1,11 @@
 <script lang="ts" setup>
 import { defineComponent, defineProps, defineEmits } from "vue";
-import Row from "../Grid/Row.vue";
-import Col from "../Grid/Col.vue";
+import Row from "@/components/Grid/Row.vue";
+import Col from "@/components/Grid/Col.vue";
 
-defineComponent({ name: "NVLCheckBox" });
+defineComponent({ name: "NVLRadio" });
 
-interface NVLCheckBoxProps {
+interface NVLRadioProps {
   label?: string;
   name?: string;
   value?: string | number;
@@ -16,31 +16,25 @@ interface NVLCheckBoxProps {
   labelClass?: string;
 }
 
-const props = defineProps<NVLCheckBoxProps>();
+defineProps<NVLRadioProps>();
 
-const emits = defineEmits(["update:modelValue", "onChange"]);
+const emits = defineEmits(["update:modelValue"]);
 
-const updateValue = (e: Event) => {
-  const value = (e.target as HTMLInputElement).value;
-
-  if (props.modelValue) emits("update:modelValue", value);
-
-  else emits("onChange", e);
-};
+const updateValue = (value: string) => emits("update:modelValue", value);
 </script>
 
 <template>
-  <div :class="['nvl-checkbox-group', wrapClass]">
+  <div :class="['nvl-radio-group', wrapClass]">
     <label>
       <Row align="start" :gutters="[5]">
         <Col :span="2">
           <input
-            type="checkbox"
-            :class="['group-control', inputClass]"
+            type="radio"
             :name="name"
+            :class="['group-control', inputClass]"
             :checked="checked"
             :value="value"
-            @input="updateValue"
+            @input="$event => updateValue(($event.target as HTMLInputElement).value)"
           />
         </Col>
         <Col :span="22">

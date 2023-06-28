@@ -13,6 +13,11 @@ const studentEng = {
       title: "Comment",
     },
   },
+  modal: {
+    title: "Update infomation",
+    subTitle_1: "Personal infomation",
+    subTitle_2: "Contact infomation",
+  },
 };
 
 export default studentEng;

@@ -7,7 +7,7 @@ import Row from "@/components/Grid/Row.vue";
 import Col from "@/components/Grid/Col.vue";
 import Title from "@/components/Typography/Title.vue";
 import Table from "@/components/Table/Table.vue";
-import Input from "@/components/Fields/Input.vue";
+import Input from "@/components/Fields/Input/Input.vue";
 import Button from "@/components/Button/Button.vue";
 import Pagination from "@/components/Pagination/Pagination.vue";
 import useLang from "@/common/hooks/useLang";

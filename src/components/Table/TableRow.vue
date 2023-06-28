@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { defineComponent, defineProps, defineEmits, ref, computed } from "vue";
 import { Columns } from "@/common/interface/table";
-import CheckBox from "../Fields/CheckBox.vue";
+import CheckBox from "../Fields/CheckBox/CheckBox.vue";
 import IconPlus from "../Icons/IconPlus.vue";
 import IconMinus from "../Icons/IconMinus.vue";
 import TableExpand from "./TableExpand.vue";

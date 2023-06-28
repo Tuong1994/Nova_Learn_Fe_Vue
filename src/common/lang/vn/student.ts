@@ -4,7 +4,7 @@ const studentVn = {
   },
   tabs: {
     course: {
-      title: "Khóa học"
+      title: "Khóa học",
     },
     rate: {
       title: "Đánh giá",
@@ -12,7 +12,12 @@ const studentVn = {
     comment: {
       title: "Bình luận",
     },
-  }
+  },
+  modal: {
+    title: "Cập nhật thông tin",
+    subTitle_1: "Thông tin cá nhân",
+    subTitle_2: "Thông tin liên hệ",
+  },
 };
 
 export default studentVn;

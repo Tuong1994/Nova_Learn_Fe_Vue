@@ -125,6 +125,7 @@ const commonVn = {
     rely: "Trả lời",
     edit: "Sửa",
     remove: "Xóa",
+    password: "Đổi mật khẩu",
   },
   modal: {
     previewHeader: "Xem hình ảnh",

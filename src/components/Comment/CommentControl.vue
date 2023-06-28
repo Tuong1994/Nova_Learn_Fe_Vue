@@ -9,7 +9,7 @@ import {
 import { Langs } from "@/common/lang";
 import Row from "../Grid/Row.vue";
 import Col from "../Grid/Col.vue";
-import TextArea from "../Fields/TextArea.vue";
+import TextArea from "../Fields/TextArea/TextArea.vue";
 import Form from "../Form/Form.vue";
 import Button from "../Button/Button.vue";
 import FormFooter from "../Form/FormFooter.vue";

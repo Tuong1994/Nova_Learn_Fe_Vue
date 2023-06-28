@@ -126,6 +126,7 @@ const commonEng = {
     rely: "Reply",
     edit: "Edit",
     remove: "Remove",
+    password: "Change password",
   },
   modal: {
     previewHeader: "Preview image",

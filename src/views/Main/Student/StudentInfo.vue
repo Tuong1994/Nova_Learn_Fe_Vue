@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { defineComponent, defineProps } from "vue";
+import { defineComponent, defineProps, defineEmits } from "vue";
 import { Langs } from "@/common/lang";
 import Card from "@/components/Card/Card.vue";
 import Row from "@/components/Grid/Row.vue";
@@ -17,6 +17,10 @@ interface StudentInfoProps {
 }
 
 defineProps<StudentInfoProps>();
+
+const emits = defineEmits(["onEdit"]);
+
+const onEdit = () => emits("onEdit");
 </script>
 
 <template>
@@ -37,7 +41,7 @@ defineProps<StudentInfoProps>();
 
       <Row wrapClass="info-edit-icon" justify="end">
         <Col>
-          <IconPen />
+          <IconPen @onClick="onEdit" />
         </Col>
       </Row>
 

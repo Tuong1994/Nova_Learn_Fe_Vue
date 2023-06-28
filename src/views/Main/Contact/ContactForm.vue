@@ -9,8 +9,8 @@ import Paragraph from "@/components/Typography/Paragraph.vue";
 import Divider from "@/components/Divider/Divider.vue";
 import Form from "@/components/Form/Form.vue";
 import FormFooter from "@/components/Form/FormFooter.vue";
-import Input from "@/components/Fields/Input.vue";
-import TextArea from "@/components/Fields/TextArea.vue";
+import Input from "@/components/Fields/Input/Input.vue";
+import TextArea from "@/components/Fields/TextArea/TextArea.vue";
 import Button from "@/components/Button/Button.vue";
 
 defineComponent({ name: "ContactForm" });

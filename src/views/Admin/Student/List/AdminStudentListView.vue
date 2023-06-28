@@ -9,7 +9,7 @@ import Title from "@/components/Typography/Title.vue";
 import Button from "@/components/Button/Button.vue";
 import Table from "@/components/Table/Table.vue";
 import Pagination from "@/components/Pagination/Pagination.vue";
-import Input from "@/components/Fields/Input.vue";
+import Input from "@/components/Fields/Input/Input.vue";
 import useLang from "@/common/hooks/useLang";
 
 defineComponent({ name: "AdminStudentListView" });

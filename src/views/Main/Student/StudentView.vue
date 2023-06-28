@@ -1,19 +1,22 @@
 <script lang="ts" setup>
-import { computed, defineComponent } from "vue";
+import { computed, defineComponent, ref } from "vue";
+import { ITabs } from "@/common/interface/base";
 import Section from "@/components/Section/Section.vue";
 import Row from "@/components/Grid/Row.vue";
 import Col from "@/components/Grid/Col.vue";
 import Tabs from "@/components/Tabs/Tabs.vue";
 import StudentInfo from "./StudentInfo.vue";
-import useLang from "@/common/hooks/useLang";
-import { ITabs } from "@/common/interface/base";
 import StudentCourse from "./StudentCourse.vue";
 import StudentRate from "./StudentRate.vue";
 import StudentComment from "./StudentComment.vue";
+import StudentFormModal from "./StudentFormModal.vue";
+import useLang from "@/common/hooks/useLang";
 
 defineComponent({ name: "StudentView" });
 
 const { langs } = useLang();
+
+const isEdit = ref<boolean>(false);
 
 const tabs = computed<ITabs[]>(() => [
   {
@@ -32,13 +35,17 @@ const tabs = computed<ITabs[]>(() => [
     componentName: "comment",
   },
 ]);
+
+const onEdit = () => (isEdit.value = true);
+
+const onCancel = () => (isEdit.value = false);
 </script>
 
 <template>
   <Section wrapClass="student">
     <Row align="start">
       <Col :xs="24" :span="6">
-        <StudentInfo :langs="langs" />
+        <StudentInfo :langs="langs" @onEdit="onEdit" />
       </Col>
 
       <Col :xs="24" :span="18">
@@ -54,4 +61,6 @@ const tabs = computed<ITabs[]>(() => [
       </Col>
     </Row>
   </Section>
+
+  <StudentFormModal :langs="langs" :isEdit="isEdit" @onCancel="onCancel" />
 </template>

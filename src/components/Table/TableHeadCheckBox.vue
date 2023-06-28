@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { defineComponent, defineProps, defineEmits } from "vue";
-import CheckBox from "../Fields/CheckBox.vue";
+import CheckBox from "../Fields/CheckBox/CheckBox.vue";
 
 defineComponent({ name: "NVLTableHeadCheckBox" });
 

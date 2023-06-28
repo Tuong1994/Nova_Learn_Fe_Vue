@@ -12,7 +12,7 @@ import {
 
 defineComponent({ name: "NVLButton" });
 
-interface NVLButtonProps {
+export interface NVLButtonProps {
   disabled?: boolean;
   variant?: "primary" | "secondary" | "success" | "danger";
   type?: "button" | "submit" | "reset";
