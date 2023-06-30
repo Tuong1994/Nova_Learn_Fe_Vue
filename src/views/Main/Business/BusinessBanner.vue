@@ -8,6 +8,7 @@ import Title from "@/components/Typography/Title.vue";
 import Paragraph from "@/components/Typography/Paragraph.vue";
 import Image from "@/components/Image/Image.vue";
 import Button from "@/components/Button/Button.vue";
+import helper from "@/utils/helper";
 
 defineComponent({ name: "BusinessBanner" });
 
@@ -29,9 +30,16 @@ defineProps<BusinessBannerProps>();
           {{ langs?.business.banner.content }}
         </Paragraph>
         <Button variant="primary" size="lg" wrapClass="banner-action">
-          {{ langs?.business.banner.actions }}
+          <a
+            href="#contact"
+            class="action-link"
+            @click="(e) => helper.smoothScroll(e, true)"
+          >
+            {{ langs?.business.banner.actions }}
+          </a>
         </Button>
       </Col>
+
       <Col :xs="0" :md="0" :lg="13" :span="12">
         <div class="banner-image">
           <div class="image-content">

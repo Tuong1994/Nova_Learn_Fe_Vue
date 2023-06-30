@@ -23,6 +23,13 @@
     z-index: 1;
     .content-action {
       width: $w-10 * 30;
+      .action-link {
+        display: block;
+        width: $w-100;
+      }
+      &:hover * {
+        color: $tPrimary;
+      }
     }
     @include respond(smTablet) {
       width: $w-100;

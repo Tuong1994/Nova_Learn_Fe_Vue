@@ -90,6 +90,12 @@ export interface IStudentCard {
   position: string;
 }
 
+export interface AlertMessage {
+  active: boolean;
+  message: string;
+  type: "success" | "error";
+}
+
 export interface FieldValue {
   [key: string]: string | undefined;
 }

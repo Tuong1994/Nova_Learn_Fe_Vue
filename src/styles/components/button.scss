@@ -64,6 +64,9 @@
   border-color: $primary;
   background: $primary;
   color: $tSecondary;
+  & * {
+    color: $tSecondary;
+  }
   &:active {
     box-shadow: 0 0 10px $RGBA-purple;
     transition: all 0.1s $func;
@@ -77,6 +80,9 @@
   border-color: $blue-1;
   background: $blue-1;
   color: $tSecondary;
+  & * {
+    color: $tSecondary;
+  }
   &:active {
     box-shadow: 0 0 10px $RGBA-blue;
     transition: all 0.1s $func;
@@ -90,6 +96,9 @@
   border-color: $green-1;
   background: $green-1;
   color: $tSecondary;
+  & * {
+    color: $tSecondary;
+  }
   &:active {
     box-shadow: 0 0 10px $RGBA-green;
     transition: all 0.1s $func;
@@ -103,6 +112,9 @@
   border-color: $red-1;
   background: $red-1;
   color: $tSecondary;
+  & * {
+    color: $tSecondary;
+  }
   &:active {
     box-shadow: 0 0 10px $RGBA-red;
     transition: all 0.1s $func;

@@ -10,6 +10,7 @@
       margin-right: $m-5;
     }
   }
+  // Input
   .group-control {
     width: $w-100;
     border: 1px solid $gray-2;
@@ -73,6 +74,7 @@
       }
     }
   }
+  // Select
   .group-select {
     min-width: max-content;
     width: $w-100;
@@ -146,6 +148,116 @@
       }
     }
   }
+  // Date picker
+  .group-calendar {
+    width: $w-100;
+    border: 1px solid $gray-1;
+    border-radius: $rounded;
+    background: $secondary;
+    position: absolute;
+    top: 110%;
+    left: 0;
+    z-index: 5;
+    opacity: 0;
+    visibility: hidden;
+    transition: all $durationSm $func;
+    .calendar-header {
+      padding: $p-10 $p-10 * 2;
+      .header-icon {
+        cursor: pointer;
+      }
+      .header-select {
+        position: relative;
+        &:hover .select-title .title-icon {
+          opacity: 1;
+          visibility: visible;
+        }
+        .select-title {
+          min-width: max-content;
+          max-width: $w-10 * 10;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          .title-icon {
+            margin-left: $m-10;
+            opacity: 0;
+            visibility: hidden;
+            transition: all $durationSm $func;
+          }
+        }
+        .select-dropdown {
+          min-width: max-content;
+          max-width: $w-10 * 8;
+          height: $h-10 * 20;
+          background: $secondary;
+          border: 1px solid $gray-1;
+          border-radius: $rounded;
+          overflow-x: hidden;
+          overflow-y: auto;
+          position: absolute;
+          top: 110%;
+          left: 0;
+          z-index: 5;
+          opacity: 0;
+          visibility: hidden;
+          transition: all $durationSm $func;
+          .dropdown-item {
+            padding: $p-10;
+            font-size: $body-1;
+            cursor: pointer;
+            transition: all $durationSm $func;
+            &:hover {
+              background: $RGBA-purple;
+            }
+          }
+        }
+        .select-dropdown--active {
+          opacity: 1;
+          visibility: visible;
+          animation: fadeIn $durationSm $func 1;
+        }
+      }
+    }
+    .calendar-day {
+      padding: $p-10 $p-10 * 2;
+      .date-item {
+        width: $w-10 * 3;
+        font-size: $body-2;
+        font-weight: $semiBold;
+        text-align: center;
+        display: block;
+      }
+    }
+    .calendar-date {
+      padding: $p-10 $p-10 * 2;
+      .day-item {
+        width: $w-10 * 3;
+        height: $h-10 * 3;
+        line-height: $h-10 * 3;
+        border-radius: $rounded;
+        display: block;
+        text-align: center;
+        cursor: pointer;
+        transition: all $durationSm $func;
+        &:hover {
+          background: $RGBA-purple;
+        }
+      }
+      .day-item--unactive {
+        color: $tGray;
+      }
+      .day-item--active {
+        background: $primary;
+        color: $tSecondary;
+      }
+    }
+  }
+  .group-calendar--active {
+    opacity: 1;
+    visibility: visible;
+    animation: fadeIn $durationSm $func 1;
+  }
   .group-select--overflow {
     height: $h-10 * 25;
     overflow-y: auto;
@@ -153,7 +265,7 @@
   .group-select-active {
     opacity: 1;
     visibility: visible;
-    animation: fadeIn $durationMd $func 1;
+    animation: fadeIn $durationSm $func 1;
   }
   .group-error-message {
     padding-top: $p-5;

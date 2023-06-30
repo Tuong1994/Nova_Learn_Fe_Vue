@@ -2,8 +2,9 @@ const vLazyload = {
   mounted: (el: HTMLImageElement) => {
     const renderImage = () => {
       el.src = el.dataset.src ?? "";
+      el.style.background = "transparent"
       el.style.opacity = "1";
-      el.style.animation = "fadeIn 0.4s linear 1"
+      el.style.animation = "fadeIn 0.4s linear 1";
     };
 
     const createIntersectionObserver = () => {

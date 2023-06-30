@@ -16,7 +16,7 @@ defineProps<NVLCommentUserProps>();
 </script>
 
 <template>
-  <Row :wrapClass="wrapClass">
+  <Row :wrapClass="`nvl-comment-user ${wrapClass}`">
     <Col>
       <Avatar />
     </Col>

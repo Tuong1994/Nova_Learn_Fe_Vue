@@ -11,7 +11,6 @@ import Modal from "../Modal/Modal.vue";
 import Card from "../Card/Card.vue";
 import Row from "../Grid/Row.vue";
 import Col from "../Grid/Col.vue";
-import Form from "../Form/Form.vue";
 import InputCom from "../Fields/Input/Input.vue";
 import TextArea from "../Fields/TextArea/TextArea.vue";
 import IconStar from "../Icons/IconStar.vue";
@@ -80,50 +79,48 @@ const onCancel = () => emits("onCancel");
 </script>
 
 <template>
-  <Form>
-    <Modal
-      :open="open"
-      :wrapClass="`nvl-rate-modal ${wrapClass}`"
-      @onCancel="onCancel"
-    >
-      <template #header>
-        {{ headerTitle ?? langs?.common.components.rate.modal.headerTitle }}
-      </template>
-      <template #body>
-        <Card wrapClass="modal-card">
-          <template #body>
-            <Row justify="center">
-              <Col v-for="item in items" :key="item.id">
-                <Tooltip :showArrow="false" :content="item.title">
-                  <label>
-                    <input
-                      type="checkbox"
-                      class="card-control"
-                      @click="() => (point = item.point)"
-                      @input="handleChange"
-                    />
-                    <div
-                      class="card-icon"
-                      @mouseenter="() => (hoverIdx = item.point)"
-                      @mouseleave="() => (hoverIdx = 0)"
-                    >
-                      <IconStar :size="20" :class="activeClass(item.point)" />
-                    </div>
-                  </label>
-                </Tooltip>
-              </Col>
-            </Row>
-          </template>
-        </Card>
+  <Modal
+    :open="open"
+    :modalClass="`nvl-rate-modal ${wrapClass}`"
+    @onCancel="onCancel"
+  >
+    <template #header>
+      {{ headerTitle ?? langs?.common.components.rate.modal.headerTitle }}
+    </template>
+    <template #body>
+      <Card wrapClass="modal-card">
+        <template #body>
+          <Row justify="center">
+            <Col v-for="item in items" :key="item.id">
+              <Tooltip :showArrow="false" :content="item.title">
+                <label>
+                  <input
+                    type="checkbox"
+                    class="card-control"
+                    @click="() => (point = item.point)"
+                    @input="handleChange"
+                  />
+                  <div
+                    class="card-icon"
+                    @mouseenter="() => (hoverIdx = item.point)"
+                    @mouseleave="() => (hoverIdx = 0)"
+                  >
+                    <IconStar :size="20" :class="activeClass(item.point)" />
+                  </div>
+                </label>
+              </Tooltip>
+            </Col>
+          </Row>
+        </template>
+      </Card>
 
-        <InputCom :label="langs?.common.form.label.fullName" />
+      <InputCom :label="langs?.common.form.label.fullName" />
 
-        <InputCom :label="langs?.common.form.label.phone" />
+      <InputCom :label="langs?.common.form.label.phone" />
 
-        <InputCom :label="langs?.common.form.label.email" />
+      <InputCom :label="langs?.common.form.label.email" />
 
-        <TextArea :label="langs?.common.form.label.note" />
-      </template>
-    </Modal>
-  </Form>
+      <TextArea :label="langs?.common.form.label.note" />
+    </template>
+  </Modal>
 </template>

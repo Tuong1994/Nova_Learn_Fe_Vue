@@ -52,7 +52,8 @@ const getFitClass = computed(() => {
   <div :class="['nvl-image', getSizeClass, wrapClass]" :style="style">
     <img
       v-lazyload
-      :class="['image-view', getFitClass]"
+      id="image"
+      :class="['image-sight', getFitClass]"
       :data-src="src"
       :alt="alt"
     />

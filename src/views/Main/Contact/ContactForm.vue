@@ -12,6 +12,9 @@ import FormFooter from "@/components/Form/FormFooter.vue";
 import Input from "@/components/Fields/Input/Input.vue";
 import TextArea from "@/components/Fields/TextArea/TextArea.vue";
 import Button from "@/components/Button/Button.vue";
+import IconUser from "@/components/Icons/IconUser.vue";
+import IconPhone from "@/components/Icons/IconPhone.vue";
+import IconEnvelope from "@/components/Icons/IconEnvelope.vue";
 
 defineComponent({ name: "ContactForm" });
 
@@ -25,7 +28,7 @@ defineProps<ContactFormProps>();
 <template>
   <Section wrapClass="contact-form">
     <Row justify="spaceBetween">
-      <Col :span="11">
+      <Col :xs="24" :md="24" :span="11">
         <Title :level="3">
           {{ langs?.contact.form.title_2 }}
         </Title>
@@ -55,7 +58,7 @@ defineProps<ContactFormProps>();
         </div>
       </Col>
 
-      <Col :span="12">
+      <Col :xs="24" :md="24" :span="12">
         <Title :level="3">
           {{ langs?.contact.form.title_1 }}
         </Title>
@@ -63,11 +66,23 @@ defineProps<ContactFormProps>();
         <Divider />
 
         <Form>
-          <Input :label="langs?.common.form.label.fullName" />
+          <Input :label="langs?.common.form.label.fullName">
+            <template #prefix>
+              <IconUser />
+            </template>
+          </Input>
 
-          <Input :label="langs?.common.form.label.phone" />
+          <Input :label="langs?.common.form.label.phone">
+            <template #prefix>
+              <IconPhone />
+            </template>
+          </Input>
 
-          <Input :label="langs?.common.form.label.email" />
+          <Input :label="langs?.common.form.label.email">
+            <template #prefix>
+              <IconEnvelope />
+            </template>
+          </Input>
 
           <TextArea :label="langs?.common.form.label.note" />
 

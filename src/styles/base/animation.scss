@@ -73,3 +73,12 @@
     transform: translateY(2%);
   }
 }
+
+@keyframes shimmer {
+  0% {
+    background-position: -450px 0;
+  }
+  100% {
+    background-position: 450px 0;
+  }
+}

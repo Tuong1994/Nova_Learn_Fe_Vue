@@ -2,9 +2,9 @@
 .nvl-image {
   width: $w-100;
   height: $h-100;
-  background: $RGBA-white-4;
-  position: relative;
-  .image-view {
+  background: $gray-1;
+  .image-sight {
+    background: $gray-1;
     transition: all $durationMd $func;
   }
   .image--fit-none {

@@ -5,6 +5,7 @@ import Section from "@/components/Section/Section.vue";
 import Title from "@/components/Typography/Title.vue";
 import Paragraph from "@/components/Typography/Paragraph.vue";
 import Button from "@/components/Button/Button.vue";
+import helper from "@/utils/helper";
 
 defineComponent({ name: "CommitmentBanner" });
 
@@ -26,14 +27,16 @@ defineProps<CommitmentBannerProps>();
       <Title :level="2" theme="light">
         {{ langs?.commitment.banner.title }}
       </Title>
+
       <Paragraph :size="18" theme="light">
         {{ langs?.commitment.banner.content }}
       </Paragraph>
-      <a href="#">
-        <Button wrapClass="content-action" variant="primary" size="lg">
+
+      <Button wrapClass="content-action" variant="primary" size="lg">
+        <a href="#phase" class="action-link" @click="(e) => helper.smoothScroll(e, true)">
           {{ langs?.commitment.banner.action }}
-        </Button>
-      </a>
+        </a>
+      </Button>
     </div>
   </Section>
 </template>

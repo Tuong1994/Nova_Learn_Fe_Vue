@@ -1,6 +1,7 @@
 .contact-banner {
   width: $w-100;
   height: $h-100-vh;
+  background: $deepPurple-1;
   position: relative;
   .banner-inner {
     height: $h-100;
@@ -33,14 +34,18 @@
         animation: antiClockwise 4s linear infinite;
       }
       .image-view {
-        border-radius: $roundedLg;
-        box-shadow: 0 0 5px $gray-2;
-        overflow: hidden;
         transition: all $durationMd $func;
+        img {
+          border-radius: $roundedLg;
+        }
       }
       @include respond(mdTablet) {
-        display: flex;
-        justify-content: center;
+        width: $w-10 * 32;
+        margin: 0 auto;
+      }
+      @include respond(mdPhone) {
+        width: $w-10 * 28;
+        margin: 0 auto;
       }
     }
   }

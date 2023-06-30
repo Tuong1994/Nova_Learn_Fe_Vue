@@ -90,7 +90,7 @@ const phaseList = computed(() => [
 </script>
 
 <template>
-  <Section wrapClass="commitment-phase">
+  <Section id="phase" wrapClass="commitment-phase">
     <Title :level="3" align="center">
       {{ langs?.commitment.phase.title }}
     </Title>

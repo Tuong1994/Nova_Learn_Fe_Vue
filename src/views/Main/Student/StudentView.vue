@@ -44,11 +44,11 @@ const onCancel = () => (isEdit.value = false);
 <template>
   <Section wrapClass="student">
     <Row align="start">
-      <Col :xs="24" :span="6">
+      <Col :xs="24" :md="24" :lg="10" :span="6">
         <StudentInfo :langs="langs" @onEdit="onEdit" />
       </Col>
 
-      <Col :xs="24" :span="18">
+      <Col :xs="24" :md="24" :lg="14" :span="18">
         <Tabs :items="tabs">
           <template #tabs-content="com">
             <StudentCourse v-if="com.tab === 'course'" :langs="langs" />

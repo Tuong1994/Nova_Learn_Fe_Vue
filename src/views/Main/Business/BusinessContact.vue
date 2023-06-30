@@ -31,7 +31,7 @@ useReveal("contactInner");
 </script>
 
 <template>
-  <div class="business-contact">
+  <div id="contact" class="business-contact">
     <Section id="contactInner">
       <Row justify="spaceBetween">
         <Col :xs="24" :md="8" :span="10">
@@ -56,25 +56,25 @@ useReveal("contactInner");
             <template #body>
               <Form>
                 <Input :label="langs?.common.form.label.representative">
-                  <template #suffix>
+                  <template #prefix>
                     <IconUser />
                   </template>
                 </Input>
 
                 <Input :label="langs?.common.form.label.company">
-                  <template #suffix>
+                  <template #prefix>
                     <IconBuilding />
                   </template>
                 </Input>
 
                 <Input :label="langs?.common.form.label.email">
-                  <template #suffix>
+                  <template #prefix>
                     <IconEnvelope />
                   </template>
                 </Input>
 
                 <Input :label="langs?.common.form.label.phone">
-                  <template #suffix>
+                  <template #prefix>
                     <IconPhone />
                   </template>
                 </Input>

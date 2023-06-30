@@ -30,11 +30,20 @@ withDefaults(defineProps<NVLTableExpandProps>(), {
         </thead>
 
         <tbody>
-          <tr v-for="item in dataSource" :key="item[rowKey]">
+          <tr v-for="(item, idx) in dataSource" :key="item[rowKey]">
             <td v-for="column in columns" :key="column.id">
-              <component v-if="column.component" :is="column.component" />
+              <div v-if="column.component" class="table-cell">
+                <component
+                  :is="column.component(item, idx).node"
+                  v-bind="column.component(item, idx).props"
+                />
+              </div>
 
-              <div v-else-if="column.render" v-html="column.render(item)"></div>
+              <div
+                v-else-if="column.render"
+                v-html="column.render(item)"
+                class="table-cell"
+              ></div>
 
               <div v-else class="table-cell">
                 {{ item[column.dataIndex] }}

@@ -3,6 +3,7 @@ import { useRouter } from "vue-router";
 import { computed, ref } from "vue";
 import MainView from "@/views/Main/MainView.vue";
 import AdminView from "@/views/Admin/AdminView.vue";
+import AlertMessage from "./components/AlertMessage/AlertMessage.vue";
 
 const router = useRouter();
 
@@ -17,6 +18,8 @@ const isLogin = ref<boolean>(true);
   <main>
     <MainView v-if="!isAdmin" :isLogin="isLogin" />
 
-    <AdminView v-if="isAdmin" :isLogin="isLogin" />
+    <AdminView v-if="isAdmin" :isLogin="isLogin" />    
+
+    <AlertMessage />
   </main>
 </template>

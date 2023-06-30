@@ -8,7 +8,7 @@ import HomeSlogan from "./HomeSlogan.vue";
 import HomeTabs from "./HomeTabs.vue";
 import HomeStudent from "./HomeStudent.vue";
 import HomeIntro from "./HomeIntro.vue";
-import HomeBlog from "./HomeBlog.vue";
+import HomeSlide from "./HomeSlide.vue";
 import Statistics from "@/components/Common/Statistics/Statistics.vue";
 import Course from "@/components/Common/Course/Course.vue";
 import useLang from "@/common/hooks/useLang";
@@ -40,6 +40,6 @@ const { langs } = useLang();
 
     <HomeIntro :langs="langs" />
 
-    <HomeBlog :langs="langs" />
+    <HomeSlide :langs="langs" />
   </div>
 </template>

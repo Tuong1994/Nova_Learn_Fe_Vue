@@ -1,8 +1,10 @@
 <script lang="ts" setup>
 import { computed, defineComponent } from "vue";
 import { IBreadCrumbItem } from "@/common/interface/base";
+import { useStore } from "@/store";
 import FormLayout from "@/components/FormLayout/FormLayout.vue";
 import useLang from "@/common/hooks/useLang";
+import useAlert from "@/common/hooks/useAlert";
 
 defineComponent({ name: "AdminCategoryFormView" });
 

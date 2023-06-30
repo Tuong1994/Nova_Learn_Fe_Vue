@@ -2,6 +2,12 @@
   .banner-action {
     width: $w-10 * 20;
     margin-top: $m-10 * 2;
+    &:hover * {
+      color: $tPrimary;
+    }
+    .action-link {
+      width: $w-100;
+    }
     @include respond(smPhone) {
       width: $w-100;
     }

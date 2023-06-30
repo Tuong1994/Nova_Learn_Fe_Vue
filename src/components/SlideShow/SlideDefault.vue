@@ -33,7 +33,7 @@ interface NVLSlideDefaultProps {
 const props = withDefaults(defineProps<NVLSlideDefaultProps>(), {
   slideId: "slide",
   time: 5000,
-  theme: "light",
+  theme: "dark",
   slides: () => [],
 });
 
@@ -228,7 +228,7 @@ onUnmounted(() => clearInterval(interval));
       :class="[
         'slide-default-action',
         prevBtnDisabled ? 'slide-default-action-disabled' : '',
-        theme === 'dark' ? 'slide-default-action--white' : '',
+        theme === 'light' ? 'slide-default-action--white' : '',
       ]"
       :disabled="prevBtnDisabled"
       @click="onPrev"
@@ -245,7 +245,7 @@ onUnmounted(() => clearInterval(interval));
       :class="[
         'slide-default-action',
         nextBtnDisabled ? 'slide-default-action-disabled' : '',
-        theme === 'dark' ? 'slide-default-action--white' : '',
+        theme === 'light' ? 'slide-default-action--white' : '',
       ]"
       :disabled="nextBtnDisabled"
       @click="onNext"
@@ -286,7 +286,7 @@ onUnmounted(() => clearInterval(interval));
         :class="[
           'dots-item',
           slidePos === idx ? 'dots-item--active' : '',
-          theme === 'dark' ? 'dots-item--white' : '',
+          theme === 'light' ? 'dots-item--white' : '',
         ]"
         @click="() => jumpToSlide(idx)"
       ></div>

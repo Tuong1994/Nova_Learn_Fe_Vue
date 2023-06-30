@@ -108,10 +108,12 @@ onUnmounted(() => clearTimeout(time));
       <div v-if="hasHeader" :class="['modal-header', headerClass]">
         <slot name="header"></slot>
       </div>
+
       <!-- Modal body -->
       <div :class="['modal-body', bodyClass]">
         <slot name="body"></slot>
       </div>
+      
       <!-- Modal footer -->
       <div v-if="hasFooter" :class="['modal-footer', footerClass]">
         <Button

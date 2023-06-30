@@ -40,7 +40,7 @@ const accounts = computed(() => [
       {{ langs?.contact.transfer.title }}
     </Title>
     <Row>
-      <Col v-for="account in accounts" :key="account.id" :span="12">
+      <Col v-for="account in accounts" :key="account.id" :xs="24" :md="24" :span="12">
         <Card isHover wrapClass="transfer-card" headerClass="card-header">
           <template #header>
             <Title :level="6" theme="light" wrapClass="header-title">

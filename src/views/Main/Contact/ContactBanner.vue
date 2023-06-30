@@ -29,10 +29,10 @@ defineProps<ContactBannerProps>();
         </div>
       </Col>
       <Col :xs="24" :md="24" :lg="10" :span="12">
-        <Title :level="2">
+        <Title :level="2" theme="light">
           {{ langs?.contact.banner.title }}
         </Title>
-        <Paragraph :size="20">
+        <Paragraph :size="20" theme="light">
           {{ langs?.contact.banner.content }}
         </Paragraph>
       </Col>

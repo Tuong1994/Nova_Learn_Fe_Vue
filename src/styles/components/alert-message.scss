@@ -1,0 +1,55 @@
+.nvl-alert-message {
+  min-width: max-content;
+  padding: $p-10;
+  border: 1px solid $gray-1;
+  border-radius: $rounded;
+  background: $secondary;
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  transition: all $durationMd $func;
+  transform: translateX(-50%);
+  .message-icon {
+    width: $w-10 * 2;
+    height: $h-10 * 2;
+    border-radius: $circle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & * {
+      color: $tSecondary;
+    }
+  }
+  .message-text {
+    padding: 0;
+  }
+  .message-icon--success {
+    background: $green-1;
+  }
+  .message-icon--error {
+    background: $red-1;
+  }
+}
+
+.nvl-alert-message--active {
+  top: 100px;
+  opacity: 1;
+  visibility: visible;
+  animation: alert $durationMd $func 1;
+}
+
+@keyframes alert {
+  from {
+    top: 80px;
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    top: 100px;
+    opacity: 1;
+    visibility: visible;
+  }
+}

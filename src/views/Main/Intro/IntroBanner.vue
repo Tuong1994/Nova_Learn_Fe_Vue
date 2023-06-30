@@ -28,7 +28,7 @@ defineProps<IntroBannerProps>();
         <Paragraph theme="light" align="justify">
           {{ langs?.intro.banner.content }}
         </Paragraph>
-        <router-link to="/">
+        <router-link to="/course/list">
           <Button variant="primary" wrapClass="banner-action" size="lg">
             {{ langs?.intro.banner.actions }}
           </Button>

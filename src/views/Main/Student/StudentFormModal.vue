@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { defineComponent, defineProps, defineEmits } from "vue";
+import { defineComponent, defineProps, defineEmits, ref } from "vue";
 import { Langs } from "@/common/lang";
 import Row from "@/components/Grid/Row.vue";
 import Col from "@/components/Grid/Col.vue";
@@ -16,6 +16,8 @@ import IconCalendar from "@/components/Icons/IconCalendar.vue";
 import IconPhone from "@/components/Icons/IconPhone.vue";
 import IconEnvelope from "@/components/Icons/IconEnvelope.vue";
 import IconLocationDot from "@/components/Icons/IconLocationDot.vue";
+import ChangePassModal from "@/components/ChangePassModal/ChangePassModal.vue";
+import DatePicker from "@/components/Fields/DatePicker/DatePicker.vue";
 
 defineComponent({ name: "StudentFormModal" });
 
@@ -28,7 +30,13 @@ defineProps<StudentFormModalProps>();
 
 const emits = defineEmits(["onCancel"]);
 
+const isChangePass = ref<boolean>(false);
+
 const onCancel = () => emits("onCancel");
+
+const onChangePass = () => (isChangePass.value = true);
+
+const onCancelChange = () => (isChangePass.value = false);
 
 const options = [
   { label: "User 1", value: 1 },
@@ -51,18 +59,18 @@ const options = [
       <template #body>
         <!-- Account / Password -->
         <Row align="start">
-          <Col :span="6">
+          <Col :xs="24" :span="6">
             <SingleUpload />
           </Col>
 
-          <Col :span="18">
+          <Col :xs="24" :span="18">
             <Input :label="langs?.common.form.label.account">
               <template #prefix>
                 <IconUser />
               </template>
             </Input>
 
-            <Button ghost variant="danger">
+            <Button ghost variant="danger" @onClick="onChangePass">
               {{ langs?.common.actions.password }}
             </Button>
           </Col>
@@ -77,7 +85,7 @@ const options = [
 
         <Row>
           <!-- First name -->
-          <Col :span="12">
+          <Col :xs="24" :span="12">
             <Input :label="langs?.common.form.label.firstName">
               <template #prefix>
                 <IconUser />
@@ -86,7 +94,7 @@ const options = [
           </Col>
 
           <!-- Last name -->
-          <Col :span="12">
+          <Col :xs="24" :span="12">
             <Input :label="langs?.common.form.label.lastName">
               <template #prefix>
                 <IconUser />
@@ -97,7 +105,7 @@ const options = [
 
         <Row>
           <!-- Gender -->
-          <Col :span="12">
+          <Col :xs="24" :span="12">
             <Select :label="langs?.common.form.label.gender" :options="options">
               <template #prefix>
                 <IconVenusMars />
@@ -106,12 +114,8 @@ const options = [
           </Col>
 
           <!-- Birthday -->
-          <Col :span="12">
-            <Input :label="langs?.common.form.label.birthday">
-              <template #prefix>
-                <IconCalendar />
-              </template>
-            </Input>
+          <Col :xs="24" :span="12">
+            <DatePicker :label="langs?.common.form.label.birthday" />
           </Col>
         </Row>
 
@@ -124,7 +128,7 @@ const options = [
 
         <Row>
           <!-- Phone -->
-          <Col :span="12">
+          <Col :xs="24" :span="12">
             <Input :label="langs?.common.form.label.phone">
               <template #prefix>
                 <IconPhone />
@@ -133,7 +137,7 @@ const options = [
           </Col>
 
           <!-- Email -->
-          <Col :span="12">
+          <Col :xs="24" :span="12">
             <Input :label="langs?.common.form.label.email">
               <template #prefix>
                 <IconEnvelope />
@@ -144,7 +148,7 @@ const options = [
 
         <Row>
           <!-- City -->
-          <Col :span="12">
+          <Col :xs="24" :span="12">
             <Select :label="langs?.common.form.label.city">
               <template #prefix>
                 <IconLocationDot />
@@ -153,7 +157,7 @@ const options = [
           </Col>
 
           <!-- District -->
-          <Col :span="12">
+          <Col :xs="24" :span="12">
             <Select :label="langs?.common.form.label.district">
               <template #prefix>
                 <IconLocationDot />
@@ -164,7 +168,7 @@ const options = [
 
         <Row>
           <!-- Ward -->
-          <Col :span="12">
+          <Col :xs="24" :span="12">
             <Select :label="langs?.common.form.label.ward">
               <template #prefix>
                 <IconLocationDot />
@@ -173,7 +177,7 @@ const options = [
           </Col>
 
           <!-- Address -->
-          <Col :span="12">
+          <Col :xs="24" :span="12">
             <Input :label="langs?.common.form.label.address">
               <template #prefix>
                 <IconLocationDot />
@@ -184,4 +188,6 @@ const options = [
       </template>
     </Modal>
   </Form>
+
+  <ChangePassModal :open="isChangePass" @onCancel="onCancelChange" />
 </template>

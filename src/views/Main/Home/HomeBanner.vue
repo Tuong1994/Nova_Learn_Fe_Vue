@@ -35,7 +35,7 @@ defineProps<HomeBannerProps>();
         <h3 class="detail-title">{{ langs?.home.banner.title }}</h3>
         <p class="detail-text">{{ langs?.home.banner.content }}</p>
         <Divider />
-        <router-link to="/">
+        <router-link to="/course/list">
           <Button variant="primary" size="lg" wrapClass="detail-action">
             {{ langs?.home.banner.action }}
           </Button>
