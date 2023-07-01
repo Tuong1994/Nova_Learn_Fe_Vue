@@ -1,0 +1,54 @@
+.nvl-typing-text {
+  height: $h-10 * 5;
+  display: flex;
+  .typing-text-content {
+    color: $tSecondary;
+  }
+  .typing-text-line {
+    width: 4px;
+    height: $h-100;
+    background: $secondary;
+    animation: fadeIn 1s $func infinite;
+  }
+}
+
+.nvl-typing-text--purple {
+  .typing-text-content {
+    color: $tPurple;
+  }
+  .typing-text-line {
+    background: $primary;
+  }
+}
+.nvl-typing-text--white {
+  .typing-text-content {
+    color: $tSecondary;
+  }
+  .typing-text-line {
+    background: $secondary;
+  }
+}
+.nvl-typing-text--black {
+  .typing-text-content {
+    color: $tPrimary;
+  }
+  .typing-text-line {
+    background: $dark-1;
+  }
+}
+.nvl-typing-text--blue {
+  .typing-text-content {
+    color: $tBlue;
+  }
+  .typing-text-line {
+    background: $blue-1;
+  }
+}
+.nvl-typing-text--red {
+  .typing-text-content {
+    color: $tRed;
+  }
+  .typing-text-line {
+    background: $red-1;
+  }
+}

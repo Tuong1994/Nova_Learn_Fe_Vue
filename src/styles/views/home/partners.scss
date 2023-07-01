@@ -1,0 +1,23 @@
+.home-partners {
+  padding-top: $p-10 * 20;
+  background: $dark-1;
+  .partners-navigator {
+    bottom: -20px;
+    @include respond(lgTablet) {
+      bottom: 50px;
+    }
+  }
+  .partners-card {
+    width: $w-100 - 15;
+    height: $h-10 * 25;
+    border: unset;
+    .card-inner {
+      height: $h-100;
+      background: $gray-1;
+    }
+    @include respond(mdPhone) {
+      width: $w-100;
+      height: $h-10 * 15;
+    }
+  }
+}

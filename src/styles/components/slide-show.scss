@@ -3,7 +3,6 @@
   width: $w-100;
   height: $h-100;
   border-radius: $rounded;
-  overflow: hidden;
   position: relative;
   &:hover .slide-default-action {
     opacity: 1;
@@ -56,6 +55,7 @@
     width: $w-100;
     height: $h-100;
     display: flex;
+    overflow: hidden;
     .container-slide {
       width: $w-100;
       height: $h-100;

@@ -98,6 +98,9 @@ const homeEng = {
     content:
       "“ Nova Learn is a pioneer institute in Vietnam that applies Active Learning and Flipped Learning training methods through practical projects in the field of IT training. Students will act as a Scrum member in the Agile model to become a professional programmer, meeting all recruitment needs of the Enterprise.”",
   },
+  parters: {
+    title: "Nova Learn's partners"
+  }
 };
 
 export default homeEng;
