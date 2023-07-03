@@ -1,8 +1,10 @@
 const courseVn = {
   list: {
     intro: {
-      title: "Thay đổi sự nghiệp - Học lập trình theo lộ trình chuyên biệt tại Nova Learn",
-      content: "Nova Learn vạch ra lộ trình học lập trình một cách chi tiết, bài bản, chuyên nghiệp, chuẩn nghề ĐH Arizona -USA, 100% thực hành theo dự án thực tế tránh lan man, luyện tập tư duy, logic nền tảng chuyên sâu dễ dàng phát triển lên senior, leader. Đi đúng lộ trình Nova Learn bạn sẽ tiết kiệm được thời gian, chi phí và có việc làm tốt nhất và bền vững để thăng tiến"
+      title:
+        "Thay đổi sự nghiệp - Học lập trình theo lộ trình chuyên biệt tại Nova Learn",
+      content:
+        "Nova Learn vạch ra lộ trình học lập trình một cách chi tiết, bài bản, chuyên nghiệp, chuẩn nghề ĐH Arizona -USA, 100% thực hành theo dự án thực tế tránh lan man, luyện tập tư duy, logic nền tảng chuyên sâu dễ dàng phát triển lên senior, leader. Đi đúng lộ trình Nova Learn bạn sẽ tiết kiệm được thời gian, chi phí và có việc làm tốt nhất và bền vững để thăng tiến",
     },
     headerTitle: "Tất cả khóa học",
   },
@@ -45,6 +47,11 @@ const courseVn = {
       schedule: "Lịch khai giảng",
     },
     info: {
+      list_1: "Bạn đang tìm một nghề đang HOT nhất và mức lương cao hiện nay ?",
+      list_2:
+        "Bạn muốn bắt đầu một nghề mới cho mình nhưng chưa biết bắt đầu từ đâ",
+      list_3:
+        "Bạn cần một trung tâm chuyên nghiệp, học xong có việc ngay, đáp ứng mọi nhu cầu tuyển dụng của doanh nghiệp ?",
       subTitle_1: "Nâng cao kỹ năng nghề nghiệp của bạn",
       subTitle_2: "Kết nối bạn với các chuyên gia lập trình",
       subTitle_3: "Hãy để nhà tuyển dụng “chốt đơn” ngay với bạn",

@@ -29,7 +29,7 @@ export default {
       default: "purple",
     },
   },
-  data: () => {
+  data() {
     return {
       typeValue: "",
       charIndex: 0,

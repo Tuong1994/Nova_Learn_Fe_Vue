@@ -61,15 +61,13 @@ const items = computed(() => [
           </Title>
           <List>
             <ListItem>
-              Bạn đang tìm một nghề đang HOT nhất và mức lương cao hiện nay?
+              {{ langs?.course.detail.info.list_1 }}
             </ListItem>
             <ListItem>
-              Bạn muốn bắt đầu một nghề mới cho mình nhưng chưa biết bắt đầu từ
-              đâ
+              {{ langs?.course.detail.info.list_2 }}
             </ListItem>
             <ListItem>
-              Bạn cần một trung tâm chuyên nghiệp, học xong có việc ngay, đáp
-              ứng mọi nhu cầu tuyển dụng của doanh nghiệp ?
+              {{ langs?.course.detail.info.list_3 }}
             </ListItem>
           </List>
         </Col>

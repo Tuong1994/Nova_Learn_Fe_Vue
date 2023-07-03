@@ -348,7 +348,7 @@ const projects = computed(() => [
           {
             id: "1",
             title:
-              " Đăng nhập/Đăng kí cho người dùng, và phân chia loại người dùng",
+              "Đăng nhập/Đăng kí cho người dùng, và phân chia loại người dùng",
           },
           { id: "2", title: "Giao diện cho trang Home" },
           {

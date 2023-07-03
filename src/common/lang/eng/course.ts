@@ -1,8 +1,10 @@
 const courseEng = {
   list: {
     intro: {
-      title: "Change your career - Learn programming by a specialized route at Nova Learn",
-      content: "Nova Learn outlines a detailed, methodical, professional, career-standard programming path at the University of Arizona - USA, 100% practical project-based practice to avoid rambling, thinking practice, deep foundational logic easily develop to senior, leader. Going on the right Nova Learn route, you will save time, money and have the best and sustainable jobs to advance"
+      title:
+        "Change your career - Learn programming by a specialized route at Nova Learn",
+      content:
+        "Nova Learn outlines a detailed, methodical, professional, career-standard programming path at the University of Arizona - USA, 100% practical project-based practice to avoid rambling, thinking practice, deep foundational logic easily develop to senior, leader. Going on the right Nova Learn route, you will save time, money and have the best and sustainable jobs to advance",
     },
     headerTitle: "All courses",
   },
@@ -46,6 +48,12 @@ const courseEng = {
       schedule: "Opening schedule",
     },
     info: {
+      list_1:
+        "Are you looking for a job that is HOT and has a high salary today?",
+      list_2:
+        "You want to start a new career for yourself but don't know where to start",
+      list_3:
+        "Do you need a professional center, have a job after studying, meet all the recruitment needs of businesses?",
       subTitle_1: "Improve your career skills",
       subTitle_2: "Connecting you with programming experts",
       subTitle_3:
@@ -213,7 +221,7 @@ const courseEng = {
       branch_1: "District 1 branch class",
       branch_2: "Phu Nhuan branch class",
       location: "Study location",
-    }
+    },
   },
 };
 
