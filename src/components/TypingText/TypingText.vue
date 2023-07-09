@@ -1,4 +1,4 @@
-<script lang="ts">
+<!-- <script lang="ts">
 import { PropType } from "vue";
 
 export default {
@@ -110,4 +110,4 @@ export default {
     </div>
     <div :class="['typing-text-line', lineClass]"></div>
   </div>
-</template>
+</template> -->

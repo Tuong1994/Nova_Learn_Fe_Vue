@@ -9,7 +9,6 @@ import SlideDefault from "@/components/SlideShow/SlideDefault.vue";
 import Title from "@/components/Typography/Title.vue";
 import Card from "@/components/Card/Card.vue";
 import Image from "@/components/Image/Image.vue";
-import TypingText from "@/components/TypingText/TypingText.vue";
 
 defineComponent({ name: "HomePartners" });
 
@@ -58,8 +57,6 @@ const slideImage = (name: string) => {
         <Title :level="2" theme="light">
           {{ langs?.home.parters.title }}
         </Title>
-
-        <TypingText :texts="partners" />
       </Col>
 
       <Col :xs="24" :md="24" :span="16">
