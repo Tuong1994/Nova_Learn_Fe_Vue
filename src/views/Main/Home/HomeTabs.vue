@@ -73,7 +73,7 @@ const tabs = computed<ITabs[]>(() => [
             <Col :xs="24" :span="12">
               <div class="item-image">
                 <Image
-                  fit="contain"
+                  fit="cover"
                   :src="require('../../../assets/images/banner/banner_2.png')"
                 />
               </div>

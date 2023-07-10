@@ -12,7 +12,6 @@ import Select from "@/components/Fields/Select/Select.vue";
 import Button from "@/components/Button/Button.vue";
 import IconUser from "@/components/Icons/IconUser.vue";
 import IconVenusMars from "@/components/Icons/IconVenusMars.vue";
-import IconCalendar from "@/components/Icons/IconCalendar.vue";
 import IconPhone from "@/components/Icons/IconPhone.vue";
 import IconEnvelope from "@/components/Icons/IconEnvelope.vue";
 import IconLocationDot from "@/components/Icons/IconLocationDot.vue";

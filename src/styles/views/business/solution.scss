@@ -1,5 +1,6 @@
 .business-solution {
   .solution-image {
+    height: $h-10 * 50;
     clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%);
     @include respond(laptop) {
       clip-path: polygon(0 25%, 100% 0, 100% 100%, 0 100%);
