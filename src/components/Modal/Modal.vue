@@ -84,57 +84,55 @@ onUnmounted(() => clearTimeout(time));
 </script>
 
 <template>
-  <Teleport to="#modal-root">
-    <div
-      v-if="render"
-      :class="[
-        'nvl-modal-backdrop',
-        open ? 'nvl-modal-backdrop--active' : '',
-        backdropClass,
-      ]"
-      @click="onCancel"
-    ></div>
+  <div
+    v-if="render"
+    :class="[
+      'nvl-modal-backdrop',
+      open ? 'nvl-modal-backdrop--active' : '',
+      backdropClass,
+    ]"
+    @click="onCancel"
+  ></div>
 
-    <div
-      v-if="render"
-      :class="[
-        'nvl-modal',
-        open ? 'nvl-modal--active' : '',
-        sizeClass,
-        modalClass,
-      ]"
-    >
-      <!-- Modal header -->
-      <div v-if="hasHeader" :class="['modal-header', headerClass]">
-        <slot name="header"></slot>
-      </div>
-
-      <!-- Modal body -->
-      <div :class="['modal-body', bodyClass]">
-        <slot name="body"></slot>
-      </div>
-      
-      <!-- Modal footer -->
-      <div v-if="hasFooter" :class="['modal-footer', footerClass]">
-        <Button
-          v-if="hasCancelBtn"
-          :wrapClass="`footer-action ${cancelButtonProps?.wrapClass}`"
-          :variant="cancelButtonProps?.variant"
-          :disabled="cancelButtonProps?.disabled"
-          @onClick="onCancel"
-        >
-          {{ cancelText ?? langs?.common.actions.cancel }}
-        </Button>
-        <Button
-          v-if="hasOkBtn"
-          :wrapClass="`footer-action ${okButtonProps?.wrapClass}`"
-          :variant="okButtonProps?.variant"
-          :disabled="okButtonProps?.disabled"
-          @onClick="onOk"
-        >
-          {{ okText ?? langs?.common.actions.save }}
-        </Button>
-      </div>
+  <div
+    v-if="render"
+    :class="[
+      'nvl-modal',
+      open ? 'nvl-modal--active' : '',
+      sizeClass,
+      modalClass,
+    ]"
+  >
+    <!-- Modal header -->
+    <div v-if="hasHeader" :class="['modal-header', headerClass]">
+      <slot name="header"></slot>
     </div>
-  </Teleport>
+
+    <!-- Modal body -->
+    <div :class="['modal-body', bodyClass]">
+      <slot name="body"></slot>
+    </div>
+
+    <!-- Modal footer -->
+    <div v-if="hasFooter" :class="['modal-footer', footerClass]">
+      <Button
+        v-if="hasCancelBtn"
+        :wrapClass="`footer-action ${cancelButtonProps?.wrapClass}`"
+        :variant="cancelButtonProps?.variant"
+        :disabled="cancelButtonProps?.disabled"
+        @onClick="onCancel"
+      >
+        {{ cancelText ?? langs?.common.actions.cancel }}
+      </Button>
+      <Button
+        v-if="hasOkBtn"
+        :wrapClass="`footer-action ${okButtonProps?.wrapClass}`"
+        :variant="okButtonProps?.variant"
+        :disabled="okButtonProps?.disabled"
+        @onClick="onOk"
+      >
+        {{ okText ?? langs?.common.actions.save }}
+      </Button>
+    </div>
+  </div>
 </template>

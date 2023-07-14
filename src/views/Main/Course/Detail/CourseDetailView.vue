@@ -134,7 +134,7 @@ const onCancel = () => (isRate.value = false);
         </Col>
       </Row>
     </Section>
-
-    <RateModal :open="isRate" @onCancel="onCancel" />
   </div>
+
+  <RateModal :open="isRate" @onCancel="onCancel" />
 </template>

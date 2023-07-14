@@ -17,6 +17,12 @@ const adminEng = {
     form: {
       addTitle: "Add course",
       editTitle: "Edit course",
+      name: "Course name",
+      desc: "Description",
+      project: "Project general",
+      fee: "Course fee",
+      duration: "Duration",
+      output: "Ouput",
     },
   },
   topic: {
@@ -32,13 +38,13 @@ const adminEng = {
   student: {
     list: {
       title: "Student",
-      action: "Add student"
+      action: "Add student",
     },
     form: {
       addTitle: "Add student",
       editTitle: "Edit student",
-    }
-  }
+    },
+  },
 };
 
 export default adminEng;

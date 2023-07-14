@@ -25,6 +25,11 @@
     padding: $p-10 * 2 $p-10;
     background: $primary;
     color: $tSecondary;
+    & * {
+      margin: 0;
+      padding: 0;
+      color: $tSecondary;
+    }
   }
   .modal-body {
     padding: $p-10 * 2;

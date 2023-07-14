@@ -15,8 +15,7 @@ import SignUpView from "../views/Main/Auth/SignUpView.vue";
 import StudentView from "../views/Main/Student/StudentView.vue";
 import CourseListView from "../views/Main/Course/List/CourseListView.vue";
 import CourseDetailView from "../views/Main/Course/Detail/CourseDetailView.vue";
-import AdminCategoryListView from "../views/Admin/Category/List/AdminCategoryListView.vue";
-import AdminCategoryFormView from "../views/Admin/Category/Form/AdminCategoryFormView.vue";
+import AdminCategoryListView from "../views/Admin/Category/AdminCategoryListView.vue";
 import AdminCourseFormView from "../views/Admin/Course/Form/AdminCourseFormView.vue";
 import AdminCourseListView from "../views/Admin/Course/List/AdminCourseListView.vue";
 import AdminTopicListView from "../views/Admin/Topic/List/AdminTopicListView.vue";
@@ -86,7 +85,7 @@ const routes: Array<RouteRecordRaw> = [
     component: CourseListView,
   },
   {
-    path: "/course/detail/:id",
+    path: "/course/detail/:id?",
     name: "courseDetail",
     component: CourseDetailView,
   },
@@ -95,24 +94,42 @@ const routes: Array<RouteRecordRaw> = [
     name: "blog",
     component: BlogView,
     children: [
-      { path: "", component: BlogListView },
-      { path: "list", component: BlogListView },
-      { path: "detail", component: BlogDetailView },
+      { path: "", name: "default", component: BlogListView },
+      { path: "list", name: "list", component: BlogListView },
+      { path: "detail", name: "detail", component: BlogDetailView },
     ],
   },
   {
     path: "/admin",
     name: "admin",
     children: [
-      { path: "", component: AdminCategoryListView },
-      { path: "category/list", component: AdminCategoryListView },
-      { path: "category/form", component: AdminCategoryFormView },
-      { path: "course/list", component: AdminCourseListView },
-      { path: "course/form", component: AdminCourseFormView },
-      { path: "topic/list", component: AdminTopicListView },
-      { path: "topic/form", component: AdminTopicFormView },
-      { path: "student/list", component: AdminStudentListView },
-      { path: "student/form", component: AdminStudentFormView },
+      {
+        path: "category/list",
+        name: "categoryAdminList",
+        component: AdminCategoryListView,
+      },
+      {
+        path: "course/list",
+        name: "courseAdminList",
+        component: AdminCourseListView,
+      },
+      {
+        path: "course/form",
+        name: "courseAdminForm",
+        component: AdminCourseFormView,
+      },
+      { path: "topic/list", name: "topicAdminList", component: AdminTopicListView },
+      { path: "topic/form", name: "topicAdminForm", component: AdminTopicFormView },
+      {
+        path: "student/list",
+        name: "studentAdminList",
+        component: AdminStudentListView,
+      },
+      {
+        path: "student/form",
+        name: "studentAdminForm",
+        component: AdminStudentFormView,
+      },
     ],
   },
 ];

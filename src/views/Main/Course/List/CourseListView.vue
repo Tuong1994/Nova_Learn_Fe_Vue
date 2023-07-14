@@ -10,7 +10,6 @@ import Pagination from "@/components/Pagination/Pagination.vue";
 import CourseListItem from "./CourseListItem.vue";
 import CourseListIntro from "./CourseListIntro.vue";
 import useLang from "@/common/hooks/useLang";
-import Divider from "@/components/Divider/Divider.vue";
 
 defineComponent({ name: "CourseListView" });
 

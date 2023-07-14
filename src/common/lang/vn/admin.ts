@@ -17,6 +17,12 @@ const adminVn = {
     form: {
       addTitle: "Thêm khóa học",
       editTitle: "Chỉnh sửa khóa học",
+      name: "Tên khóa học",
+      desc: "Mô tả",
+      project: "Tổng quan dự án",
+      fee: "Học phí",
+      duration: "Thời lượng",
+      output: "Đầu ra",
     },
   },
   topic: {

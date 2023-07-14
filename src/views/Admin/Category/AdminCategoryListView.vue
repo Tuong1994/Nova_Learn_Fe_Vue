@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { computed, defineComponent } from "vue";
+import { computed, ref, defineComponent } from "vue";
 import { Columns } from "@/common/interface/table";
 import BodyHeader from "@/components/BodyHeader/BodyHeader.vue";
 import Section from "@/components/Section/Section.vue";
@@ -10,6 +10,7 @@ import Input from "@/components/Fields/Input/Input.vue";
 import Table from "@/components/Table/Table.vue";
 import Pagination from "@/components/Pagination/Pagination.vue";
 import Button from "@/components/Button/Button.vue";
+import AdminCategoryFormModal from "./AdminCategoryFormModal.vue";
 import useLang from "@/common/hooks/useLang";
 
 defineComponent({ name: "AdminCategoryListView" });
@@ -21,6 +22,8 @@ interface IData {
   name: string;
   courses: number;
 }
+
+const openForm = ref<boolean>(false);
 
 const data = computed<IData[]>(() => [
   { id: "1", name: "From Zero to Hero", courses: 8 },
@@ -39,6 +42,10 @@ const columns = computed<Columns<any>>(() => [
     dataIndex: "courses",
   },
 ]);
+
+const onOpenForm = () => (openForm.value = true);
+
+const onCancel = () => (openForm.value = false);
 </script>
 
 <template>
@@ -54,11 +61,9 @@ const columns = computed<Columns<any>>(() => [
       </Title>
     </template>
     <template #right>
-      <router-link to="/admin/category/form">
-        <Button variant="primary">
-          {{ langs?.admin.category.list.action }}
-        </Button>
-      </router-link>
+      <Button variant="primary" @onClick="onOpenForm">
+        {{ langs?.admin.category.list.action }}
+      </Button>
     </template>
   </BodyHeader>
 
@@ -81,4 +86,10 @@ const columns = computed<Columns<any>>(() => [
 
     <Pagination hasContent />
   </Section>
+
+  <AdminCategoryFormModal
+    :open="openForm"
+    :langs="langs"
+    @onCancel="onCancel"
+  />
 </template>
